@@ -1,13 +1,18 @@
 # Data Scientist
 
-#### Languages: Python, SQL, Pyspark, Java, C++, Perl
-
+#### Languages: Python, SQL, Pyspark, Java
 #### Software: Databricks, Kafka, MongoDB, SQL Server, Redis, Synapse, Data Factory, Jenkins, Terraform
-
 #### Clouds: Microsoft Azure, Google Cloud Platform
+
 
 ## Education	 			        		
 B.Tech., Information Technology | SRM Institute of Science and Technology, Chennai, India (_May 2019_)
+
+## Certifications	 			        		
+- DP-203 Azure Data Engineering Associate, Microsoft, Jan 2024
+- Machine Learning Specialisation, DeepLearning.AI Coursera, Aug 2022
+- AZ-900 Azure Fundamentals, Microsoft, Aug 2021
+- IBM Data Science Professional Certificate, IBM, Oct 2019
 
 ## Work Experience
 **Lead Data Engineer & Founding Member - Data Platform @ Adani Digital Labs (_Nov 2021 - Present_)**
@@ -20,40 +25,40 @@ B.Tech., Information Technology | SRM Institute of Science and Technology, Chenn
 - Created an application ProCreate File Validator, Quality Check Framework (QC) that validates the security data received from custodians and a preprocessor to the ETL process
 - Developed an ETL wrapper to the Aladdin Loading Engine named CDI Persister Converter converting complex data structures (unrectifiable post-validation) into suitable formats for loading
 
-## Projects
-### Data-Driven EEG Band Discovery with Decision Trees
-[Publication](https://www.mdpi.com/1424-8220/22/8/3048)
+## Publications
+### Advancing Web-Based Visual Question Answering with Efficient Text Alignment
+[Publication in Progress in Springer Journal] (https://drive.google.com/file/d/1zGYiLEjOg1Y8kgOhoJcjmnC0cq0Cn4Zt/view?usp=sharing)
 
 Developed objective strategy for discovering optimal EEG bands based on signal power spectra using **Python**. This data-driven approach led to better characterization of the underlying power spectrum by identifying bands that outperformed the more commonly used band boundaries by a factor of two. The proposed method provides a fully automated and flexible approach to capturing key signal components and possibly discovering new indices of brain activity.
 
-![EEG Band Discovery](/assets/img/eeg_band_discovery.jpeg)
+### Extraction of Cumulative Blobs from Dynamic Gestures
+[Publication](https://www.worldwidejournals.com/international-journal-of-scientific-research-(IJSR)/recent_issues_pdf/2021/September/extraction-of-cumulative-blobs-from-dynamic-gestures_September_2021_1606633349_6832750.pdf)
 
-### Decoding Physical and Cognitive Impacts of Particulate Matter Concentrations at Ultra-Fine Scales
-[Publication](https://www.mdpi.com/1424-8220/22/11/4240)
+Developed objective strategy for discovering optimal EEG bands based on signal power spectra using **Python**. This data-driven approach led to better characterization of the underlying power spectrum by identifying bands that outperformed the more commonly used band boundaries by a factor of two. The proposed method provides a fully automated and flexible approach to capturing key signal components and possibly discovering new indices of brain activity.
+
+
+### Multi-Category and Multi-Criteria Recommendation System Using Collaborative Filtering
+[Publication](https://www.ijsr.net/getabstract.php?paperid=MR21824001401)
 
 Used **Matlab** to train over 100 machine learning models which estimated particulate matter concentrations based on a suite of over 300 biometric variables. We found biometric variables can be used to accurately estimate particulate matter concentrations at ultra-fine spatial scales with high fidelity (r2 = 0.91) and that smaller particles are better estimated than larger ones. Inferring environmental conditions solely from biometric measurements allows us to disentangle key interactions between the environment and the body.
 
-![Bike Study](/assets/img/bike_study.jpeg)
 
-## Talks & Lectures
-- Causality: The new science of an old question - GSP Seminar, Fall 2021
-- Guest Lecture: Dimensionality Reduction - Big Data and Machine Learning for Scientific Discovery (PHYS 5336), Spring 2021
-- Guest Lecture: Fourier and Wavelet Transforms - Scientific Computing (PHYS 5315), Fall 2020
-- A Brief Introduction to Optimization - GSP Seminar, Fall 2019
-- Weeks of Welcome Poster Competition - UTD, Fall 2019
-- A Brief Introduction to Networks - GSP Seminar, Spring 2019
+## Projects
+### Number Plate Detection and Recognition
 
-- [Data Science YouTube](https://www.youtube.com/channel/UCa9gErQ9AE5jT2DZLjXBIdA)
+The project 'Number Plate Detection and Recognition' aimed to create an automatic number plate detection pipeline, covering detection, localization, and extraction of car number plates from input images. Initially utilizing the YOLO real-time object detection model, there was a recognized need for improved recognition capabilities, leading to the seamless adoption of the ImageAI framework. The hands-on experience in implementing car and number plate recognition on the NVIDIA Jetson Nano using Python showcased technical proficiency and strategic optimization. The achieved results include a groundbreaking 98% accuracy in car detection, 97% accuracy in number plate detection, and 96.7% accuracy in Optical Character Recognition, emphasizing a commitment to excellence in computer vision applications.
 
-## Publications
-1. Talebi S., Lary D.J., Wijeratne L. OH., and Lary, T. Modeling Autonomic Pupillary Responses from External Stimuli Using Machine Learning (2019). DOI: 10.26717/BJSTR.2019.20.003446
-2. Wijeratne, L.O.; Kiv, D.R.; Aker, A.R.; Talebi, S.; Lary, D.J. Using Machine Learning for the Calibration of Airborne Particulate Sensors. Sensors 2020, 20, 99.
-3. Lary, D.J.; Schaefer, D.; Waczak, J.; Aker, A.; Barbosa, A.; Wijeratne, L.O.H.; Talebi, S.; Fernando, B.; Sadler, J.; Lary, T.; Lary, M.D. Autonomous Learning of New Environments with a Robotic Team Employing Hyper-Spectral Remote Sensing, Comprehensive In-Situ Sensing and Machine Learning. Sensors 2021, 21, 2240. https://doi.org/10.3390/s21062240
-4. Zhang, Y.; Wijeratne, L.O.H.; Talebi, S.; Lary, D.J. Machine Learning for Light Sensor Calibration. Sensors 2021, 21, 6259. https://doi.org/10.3390/s21186259
-5. Talebi, S.; Waczak, J.; Fernando, B.; Sridhar, A.; Lary, D.J. Data-Driven EEG Band Discovery with Decision Trees. Preprints 2022, 2022030145 (doi: 10.20944/preprints202203.0145.v1).
-6. Fernando, B.A.; Sridhar, A.; Talebi, S.; Waczak, J.; Lary, D.J. Unsupervised Blink Detection Using Eye Aspect Ratio Values. Preprints 2022, 2022030200 (doi: 10.20944/preprints202203.0200.v1).
-7. Talebi, S. et al. Decoding Physical and Cognitive Impacts of PM Concentrations at Ultra-fine Scales, 29 March 2022, PREPRINT (Version 1) available at Research Square [https://doi.org/10.21203/rs.3.rs-1499191/v1]
-8. Lary, D.J. et al. (2022). Machine Learning, Big Data, and Spatial Tools: A Combination to Reveal Complex Facts That Impact Environmental Health. In: Faruque, F.S. (eds) Geospatial Technology for Human Well-Being and Health. Springer, Cham. https://doi.org/10.1007/978-3-030-71377-5_12
-9. Wijerante, L.O.H. et al. (2022). Advancement in Airborne Particulate Estimation Using Machine Learning. In: Faruque, F.S. (eds) Geospatial Technology for Human Well-Being and Health. Springer, Cham. https://doi.org/10.1007/978-3-030-71377-5_13
+### RAG based Question Answering on a Document
 
-- [Data Science Blog](https://medium.com/@shawhin)
+The project 'Number Plate Detection and Recognition' aimed to create an automatic number plate detection pipeline, covering detection, localization, and extraction of car number plates from input images. Initially utilizing the YOLO real-time object detection model, there was a recognized need for improved recognition capabilities, leading to the seamless adoption of the ImageAI framework. The hands-on experience in implementing car and number plate recognition on the NVIDIA Jetson Nano using Python showcased technical proficiency and strategic optimization. The achieved results include a groundbreaking 98% accuracy in car detection, 97% accuracy in number plate detection, and 96.7% accuracy in Optical Character Recognition, emphasizing a commitment to excellence in computer vision applications.
+
+
+### RAG based Question Answering on a Document
+
+The project 'Number Plate Detection and Recognition' aimed to create an automatic number plate detection pipeline, covering detection, localization, and extraction of car number plates from input images. Initially utilizing the YOLO real-time object detection model, there was a recognized need for improved recognition capabilities, leading to the seamless adoption of the ImageAI framework. The hands-on experience in implementing car and number plate recognition on the NVIDIA Jetson Nano using Python showcased technical proficiency and strategic optimization. The achieved results include a groundbreaking 98% accuracy in car detection, 97% accuracy in number plate detection, and 96.7% accuracy in Optical Character Recognition, emphasizing a commitment to excellence in computer vision applications.
+
+## EXTRA CURRICULAR ACTIVITIES
+- Launched “IT on wheels” initiative to boost computer literacy as a Volunteer for Adani Foundation (NGO), teaching underprivileged students in remote areas of Gujarat post 2022 onwards
+- Awarded with Employee of the Month in June 2022 for creating a resilient and scalable near real-time data platform.
+- Accoladed BLK Impact Creator Award for achieving a time save of 10 FTE (Full Time Equivalent) in 2021.
+- Co-led as Joint Vice President, IT Association, 2018, orchestrating social welfare events in Kattankulathur,aiding 800+ victims of Gaja cyclone in Chennai.

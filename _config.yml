@@ -1,11 +1,9 @@
 title: Shubham Gaur
-logo: /assets/img/front.png
+logo: /assets/img/selfie.png
 description: 
-#### Languages: Python, SQL, Pyspark, Java, C++, Perl
-
-#### Software: Databricks, Kafka, MongoDB, SQL Server, Redis, Synapse, Data Factory, Jenkins, Terraform
-
-#### Clouds: Microsoft Azure, Google Cloud Platform
+Languages: Python, SQL, Pyspark, Java, C++, Perl
+Software: Databricks, Kafka, MongoDB, SQL Server, Redis, Synapse, Data Factory, Jenkins, Terraform
+Clouds: Microsoft Azure, Google Cloud Platform
 
 # show_downloads: true
 theme: jekyll-theme-minimal
