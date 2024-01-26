@@ -1,7 +1,9 @@
 # Data Scientist
 
 #### Languages: Python, SQL, Pyspark, Java, C++, Perl
+
 #### Software: Databricks, Kafka, MongoDB, SQL Server, Redis, Synapse, Data Factory, Jenkins, Terraform
+
 #### Clouds: Microsoft Azure, Google Cloud Platform
 
 ## Education	 			        		
