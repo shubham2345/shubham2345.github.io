@@ -27,26 +27,25 @@ B.Tech., Information Technology | SRM Institute of Science and Technology, Chenn
 
 ## Publications
 ### Advancing Web-Based Visual Question Answering with Efficient Text Alignment
-[Publication in Progress in Springer Journal] (https://drive.google.com/file/d/1zGYiLEjOg1Y8kgOhoJcjmnC0cq0Cn4Zt/view?usp=sharing)
+[To be published in Springer](https://drive.google.com/file/d/1zGYiLEjOg1Y8kgOhoJcjmnC0cq0Cn4Zt/view?usp=sharing)
 
-Developed objective strategy for discovering optimal EEG bands based on signal power spectra using **Python**. This data-driven approach led to better characterization of the underlying power spectrum by identifying bands that outperformed the more commonly used band boundaries by a factor of two. The proposed method provides a fully automated and flexible approach to capturing key signal components and possibly discovering new indices of brain activity.
+This paper is a contribution to WebQA, a recent benchmark by Microsoft that combines visual and text reasoning for answers. Exploring alternatives to WebQA's baseline models like vision language pre-training (VLP) models, my aim was to enhance accuracy through (a) a lighter model, (b) detector-free visual encoder, and (c) knowledge distillation methods such as RoBERTa. Comparing VLP and RoBERTa on single and multi-source questions revealed **RoBERTa's superior performance at 54.91% and 30.11%, respectively, compared to VLP's 51.49% and 28.73%. This research serves as an advancement to Bing Search**.
 
 ### Extraction of Cumulative Blobs from Dynamic Gestures
 [Publication](https://www.worldwidejournals.com/international-journal-of-scientific-research-(IJSR)/recent_issues_pdf/2021/September/extraction-of-cumulative-blobs-from-dynamic-gestures_September_2021_1606633349_6832750.pdf)
 
-Developed objective strategy for discovering optimal EEG bands based on signal power spectra using **Python**. This data-driven approach led to better characterization of the underlying power spectrum by identifying bands that outperformed the more commonly used band boundaries by a factor of two. The proposed method provides a fully automated and flexible approach to capturing key signal components and possibly discovering new indices of brain activity.
+In this project, we're diving into the world of gesture recognition, a game-changer in the way we interact with computers. Imagine controlling your computer without the need for a mouse or keyboard – that's the magic of gesture recognition. But here's the catch – it struggles in low-light conditions due to its reliance on cameras. To tackle this, we got creative and introduced a night vision camera. It's like giving our system a pair of night-vision goggles, making it thrive where others struggle. We've set up a Raspberry Pi with OpenCV, teaching it to spot and track dynamic gestures. With the help of a nifty machine learning algorithm, we're now recognizing patterns and seamlessly controlling the Raspberry Pi's GPIOs for various tasks. Guess what? We've hit an impressive **99.62% accuracy**, proving that even in the dark, our gesture recognition system shines bright.
 
 
 ### Multi-Category and Multi-Criteria Recommendation System Using Collaborative Filtering
 [Publication](https://www.ijsr.net/getabstract.php?paperid=MR21824001401)
 
-Used **Matlab** to train over 100 machine learning models which estimated particulate matter concentrations based on a suite of over 300 biometric variables. We found biometric variables can be used to accurately estimate particulate matter concentrations at ultra-fine spatial scales with high fidelity (r2 = 0.91) and that smaller particles are better estimated than larger ones. Inferring environmental conditions solely from biometric measurements allows us to disentangle key interactions between the environment and the body.
-
+Incorporated the K-Nearest Neighbor Algorithm, the system assesses the similarity of unknown entities or users through past ratings, providing a robust foundation for collaborative filtering. It extends the capabilities of the Collaborative Filtering Algorithm to span multiple categories. The resulting recommendation system stands out for its adaptability and accuracy, offering personalized suggestions across diverse categories and criteria.
 
 ## Projects
 ### Number Plate Detection and Recognition
 
-The project 'Number Plate Detection and Recognition' aimed to create an automatic number plate detection pipeline, covering detection, localization, and extraction of car number plates from input images. Initially utilizing the YOLO real-time object detection model, there was a recognized need for improved recognition capabilities, leading to the seamless adoption of the ImageAI framework. The hands-on experience in implementing car and number plate recognition on the NVIDIA Jetson Nano using Python showcased technical proficiency and strategic optimization. The achieved results include a groundbreaking 98% accuracy in car detection, 97% accuracy in number plate detection, and 96.7% accuracy in Optical Character Recognition, emphasizing a commitment to excellence in computer vision applications.
+The project 'Number Plate Detection and Recognition' aimed to create an automatic number plate detection pipeline, covering detection, localization, and extraction of car number plates from input images. Initially utilizing the YOLO real-time object detection model, there was a recognized need for improved recognition capabilities, leading to the seamless adoption of the ImageAI framework. The hands-on experience in implementing car and number plate recognition on the NVIDIA Jetson Nano using Python showcased technical proficiency and strategic optimization. The achieved results include a groundbreaking **98% accuracy in car detection, 97% accuracy in number plate detection, and 96.7% accuracy in Optical Character Recognition**, emphasizing a commitment to excellence in computer vision applications.
 
 ### RAG based Question Answering on a Document
 
