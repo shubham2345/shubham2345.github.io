@@ -1,22 +1,22 @@
 # Data Scientist
 
-#### Programming Languages Skills: Python, SQL, Pyspark, Java, C++
+#### Languages: Python, SQL, Pyspark, Java, C++, Perl
 #### Software: Databricks, Kafka, MongoDB, SQL Server, Redis, Synapse, Data Factory, Jenkins, Terraform
 #### Clouds: Microsoft Azure, Google Cloud Platform
 
 ## Education	 			        		
-- B.Tech., Information Technology | SRM Institute of Science and Technology, Chennai, India (_May 2019_)
+B.Tech., Information Technology | SRM Institute of Science and Technology, Chennai, India (_May 2019_)
 
 ## Work Experience
-**Deputy Manager (Lead Data Engineer & Founding Member - Data Platform) @ Adani Digital Labs (_Nov 2021 - Present_)**
+**Lead Data Engineer & Founding Member - Data Platform @ Adani Digital Labs (_Nov 2021 - Present_)**
 - Led a team of 4 data engineers to architect and create a near real-time Customer Data Platform (CDP) using Spark Structured Streaming and onboarded 30+ data sources with 25+ million customers on CDP
 - Optimized data platform enabling time-to-warehouse within 15 minutes (90% improvement against the existing standard)
 - Achieved savings of INR 110 million by utilizing LLMs to create descriptions for 33,000 hotels on AdaniOne
 - Empowered marketing channels via CDP with 30+ cohorts translating to 50+ campaign journeys aggregating to a revenue of INR 4.5 million
 
 **Analyst - Data Engineer @ BlackRock (_Jul 2019 - Present_)**
-- Created an application ProCreate File Validator, Quality Check Framework (QC) that validates the security data received from custodians and a preprocessor to the ETL process using Perl, Python & SQL
-- Developed an ETL wrapper to the Aladdin Loading Engine named CDI Persister Converter converting complex data structures (unrectifiable post-validation) into suitable formats for loading using Python, SQL
+- Created an application ProCreate File Validator, Quality Check Framework (QC) that validates the security data received from custodians and a preprocessor to the ETL process
+- Developed an ETL wrapper to the Aladdin Loading Engine named CDI Persister Converter converting complex data structures (unrectifiable post-validation) into suitable formats for loading
 
 ## Projects
 ### Data-Driven EEG Band Discovery with Decision Trees
