@@ -14,7 +14,7 @@ B.Tech., Information Technology | SRM Institute of Science and Technology, Chenn
 - Achieved savings of INR 110 million by utilizing LLMs to create descriptions for 33,000 hotels on AdaniOne
 - Empowered marketing channels via CDP with 30+ cohorts translating to 50+ campaign journeys aggregating to a revenue of INR 4.5 million
 
-**Analyst - Data Engineer @ BlackRock (_Jul 2019 - Present_)**
+**Analyst - Data Engineer @ BlackRock (_Jul 2019 - Oct 2021_)**
 - Created an application ProCreate File Validator, Quality Check Framework (QC) that validates the security data received from custodians and a preprocessor to the ETL process
 - Developed an ETL wrapper to the Aladdin Loading Engine named CDI Persister Converter converting complex data structures (unrectifiable post-validation) into suitable formats for loading
 
