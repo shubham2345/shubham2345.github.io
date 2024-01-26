@@ -1,20 +1,22 @@
 # Data Scientist
 
-#### Technical Skills: Python, SQL, AWS, Snowflake, MATLAB
+#### Programming Languages Skills: Python, SQL, Pyspark, Java, C++
+#### Software: Databricks, Kafka, MongoDB, SQL Server, Redis, Synapse, Data Factory, Jenkins, Terraform
+#### Clouds: Microsoft Azure, Google Cloud Platform
 
-## Education
-- Ph.D., Physics | The University of Texas at Dallas (_May 2022_)								       		
-- M.S., Physics	| The University of Texas at Dallas (_December 2019_)	 			        		
-- B.S., Physics | The University of Texas at Dallas (_May 2017_)
+## Education	 			        		
+- B.Tech., Information Technology | SRM Institute of Science and Technology, Chennai, India (_May 2019_)
 
 ## Work Experience
-**Data Scientist @ Toyota Financial Services (_June 2022 - Present_)**
-- Uncovered and corrected missing step in production data pipeline which impacted over 70% of active accounts
-- Redeveloped loan originations model which resulted in 50% improvement in model performance and saving 1 million dollars in potential losses
+**Deputy Manager (Lead Data Engineer & Founding Member - Data Platform) @ Adani Digital Labs (_Nov 2021 - Present_)**
+- Led a team of 4 data engineers to architect and create a near real-time Customer Data Platform (CDP) using Spark Structured Streaming and onboarded 30+ data sources with 25+ million customers on CDP
+- Optimized data platform enabling time-to-warehouse within 15 minutes (90% improvement against the existing standard)
+- Achieved savings of INR 110 million by utilizing LLMs to create descriptions for 33,000 hotels on AdaniOne
+- Empowered marketing channels via CDP with 30+ cohorts translating to 50+ campaign journeys aggregating to a revenue of INR 4.5 million
 
-**Data Science Consultant @ Shawhin Talebi Ventures LLC (_December 2020 - Present_)**
-- Conducted data collection, processing, and analysis for novel study evaluating the impact of over 300 biometrics variables on human performance in hyper-realistic, live-fire training scenarios
-- Applied unsupervised deep learning approaches to longitudinal ICU data to discover novel sepsis sub-phenotypes
+**Analyst - Data Engineer @ BlackRock (_Jul 2019 - Present_)**
+- Created an application ProCreate File Validator, Quality Check Framework (QC) that validates the security data received from custodians and a preprocessor to the ETL process using Perl, Python & SQL
+- Developed an ETL wrapper to the Aladdin Loading Engine named CDI Persister Converter converting complex data structures (unrectifiable post-validation) into suitable formats for loading using Python, SQL
 
 ## Projects
 ### Data-Driven EEG Band Discovery with Decision Trees
