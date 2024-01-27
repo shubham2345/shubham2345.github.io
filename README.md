@@ -49,12 +49,12 @@ The project 'Number Plate Detection and Recognition' aimed to create an automati
 
 ### Retrieval Augmented Generation (RAG) based Question Answering on a document
 
-This project aimed to create a responsive Question-Answering (QA) system for swift data interactions, delivering precise responses within 3 seconds. Utilizing a simplified Retrieval Augmented Generation model with ROBERTA, challenges such as similarity scoring and ambiguity resolution were addressed. The user-friendly interface, developed with Streamlit, facilitated seamless interactions. Elasticsearch served as a versatile storage solution for various document formats. The project successfully integrated efficient storage, heuristic methods for ambiguity resolution, and an intuitive user interface for optimal data interaction and rapid response delivery.
+This project aimed to create a responsive Question-Answering (QA) system for swift data interactions, delivering precise responses within 3 seconds. Utilizing a simplified Retrieval Augmented Generation model with **ROBERTA**, challenges such as similarity scoring and ambiguity resolution were addressed. The user-friendly interface, developed with Streamlit, facilitated seamless interactions. Elasticsearch served as a versatile storage solution for various document formats. The project successfully integrated efficient storage, heuristic methods for ambiguity resolution, and an intuitive user interface for optimal data interaction and rapid response delivery.
 
 
 ### Extract Skill Entities from a resume using Named Entity Recognition
 
- The primary objective was to craft a tailored Named Entity Recognition Model (NER) using spaCy. The expedition traversed vital prerequisites, encompassing annotated data and user-friendly tools like the NER Annotator for spaCy. To streamline PDF text extraction, an ingenious Python script leveraging PyPDF2 was developed. The project's evolution involved meticulous steps, including environment setup, spaCy configuration, data processing, and model training. This undertaking contributes valuable insights and practical guidance for enthusiasts venturing into the dynamic landscape of NLP and personalized NER model creation.
+ The primary objective was to craft a tailored **Named Entity Recognition Model (NER) using spaCy**. The expedition traversed vital prerequisites, encompassing annotated data and user-friendly tools like the NER Annotator for spaCy. To streamline PDF text extraction, an ingenious Python script leveraging PyPDF2 was developed. The project's evolution involved meticulous steps, including environment setup, spaCy configuration, data processing, and model training. This undertaking contributes valuable insights and practical guidance for enthusiasts venturing into the dynamic landscape of NLP and personalized NER model creation.
 
 
 ## EXTRA CURRICULAR ACTIVITIES
