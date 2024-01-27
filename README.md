@@ -9,7 +9,7 @@
 B.Tech., Information Technology | SRM Institute of Science and Technology, Chennai, India (_May 2019_)
 
 ## Certifications	 			        		
-- DP-203 Azure Data Engineering Associate, Microsoft, Jan 2024
+- DP-203 Azure Data Engineering Associate, Microsoft, Sep 2023
 - Machine Learning Specialisation, DeepLearning.AI Coursera, Aug 2022
 - AZ-900 Azure Fundamentals, Microsoft, Aug 2021
 - IBM Data Science Professional Certificate, IBM, Oct 2019
