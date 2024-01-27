@@ -9,10 +9,10 @@
 B.Tech., Information Technology | SRM Institute of Science and Technology, Chennai, India (_May 2019_)
 
 ## Certifications	 			        		
-- DP-203 Azure Data Engineering Associate, Microsoft, Sep 2023
-- Machine Learning Specialisation, DeepLearning.AI Coursera, Aug 2022
-- AZ-900 Azure Fundamentals, Microsoft, Aug 2021
-- IBM Data Science Professional Certificate, IBM, Oct 2019
+- DP-203 Azure Data Engineering Associate, Microsoft, _Sep 2023_
+- Machine Learning Specialisation, DeepLearning.AI Coursera, _Aug 2022_
+- AZ-900 Azure Fundamentals, Microsoft, _Aug 2021_
+- IBM Data Science Professional Certificate, IBM, _Oct 2019_
 
 ## Work Experience
 **Lead Data Engineer & Founding Member - Data Platform @ Adani Digital Labs (_Nov 2021 - Present_)**
