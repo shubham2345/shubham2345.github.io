@@ -1,5 +1,7 @@
 ## 👋 About Me
-Hello! I'm Shubham Gaur, a Machine Learning Engineer with 5+ years of experience in Natural Language Processing (NLP), Computer Vision, and MLOps. Currently pursuing my Master’s in NLP at [UC Santa Cruz](https://nlp.ucsc.edu/), I’m passionate about developing AI solutions that deliver real-world impact. 💼 My journey in AI has taken me through innovative projects at Adani Group and BlackRock.
+Hello! I'm Shubham Gaur, a Machine Learning Engineer with 5+ years of experience in Natural Language Processing (NLP), Computer Vision, and MLOps. Currently pursuing my Master’s in NLP at [UC Santa Cruz](https://nlp.ucsc.edu/), I’m passionate about developing AI solutions that deliver real-world impact. 
+
+💼 My journey in AI has taken me through innovative projects at Adani Group and BlackRock.
 
 🔍 My research interests include NLP, multimodal systems, RAG, and knowledge representation.
 
@@ -43,12 +45,12 @@ In this project, we're diving into the world of gesture recognition, a game-chan
 
 ## Research Projects
 
-[**ADMIRE: Advancing Multimodal Idiomatic Understanding in NLP**](https://github.com/azernik/semeval_2025_task1)  
+**ADMIRE: Advancing Multimodal Idiomatic Understanding in NLP** [Code](https://github.com/azernik/semeval_2025_task1)  
 [SemEval 2025](https://semeval2025-task1.github.io/)  
 - Fine-tuned **Vision Language Models (VLMs)**, such as **CLIP**, to rank images based on idiomatic meanings within context sentences, achieving a **top-1 accuracy of 77%**.
 
 
-[**Question Answering using Retrieval Augmented Generation (RAG)**](https://github.com/shubham2345/RAG-LangChain-QA)   
+**Question Answering using Retrieval Augmented Generation (RAG)** [Code](https://github.com/shubham2345/RAG-LangChain-QA)   
 - Developed a **retrieval-augmented QA system** using the **FLAN-T5 language model** and **FAISS vector database** in **LangChain**.
 
 
@@ -86,7 +88,7 @@ SRM Institute of Science and Technology (SRMIST), Chennai, India
 
 - LinkedIn: [linkedin.com/in/shubhamggaur](https://linkedin.com/in/shubhamggaur)
 
-- Email: [sgaur2@ucsc.edu](sgaur2@ucsc.edu)
+- Email: [sgaur2@ucsc.edu](mailto:sgaur2@ucsc.edu)
 
 - [Google Scholar](https://scholar.google.com/citations?user=afguXvoAAAAJ&hl=en)
 
