@@ -45,12 +45,12 @@ In this project, we're diving into the world of gesture recognition, a game-chan
 
 ## Research Projects
 
-**ADMIRE: Advancing Multimodal Idiomatic Understanding in NLP** [Code](https://github.com/azernik/semeval_2025_task1)  
+**ADMIRE: Advancing Multimodal Idiomatic Understanding in NLP** [(Code)](https://github.com/azernik/semeval_2025_task1)  
 [SemEval 2025](https://semeval2025-task1.github.io/)  
 - Fine-tuned **Vision Language Models (VLMs)**, such as **CLIP**, to rank images based on idiomatic meanings within context sentences, achieving a **top-1 accuracy of 77%**.
 
 
-**Question Answering using Retrieval Augmented Generation (RAG)** [Code](https://github.com/shubham2345/RAG-LangChain-QA)   
+**Question Answering using Retrieval Augmented Generation (RAG)** [(Code)](https://github.com/shubham2345/RAG-LangChain-QA)   
 - Developed a **retrieval-augmented QA system** using the **FLAN-T5 language model** and **FAISS vector database** in **LangChain**.
 
 
