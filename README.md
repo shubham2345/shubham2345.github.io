@@ -7,7 +7,7 @@ Hello! I'm Shubham Gaur, a Machine Learning Engineer with 5+ years of experience
 
 🤝 I’m always eager to collaborate on AI projects and explore new ideas. Let’s connect and build solutions that matter!
 
-📄 [Download Resume 🔗](https://drive.google.com/file/d/1qWF_plAtrw-xIMotwpYXmvTbosadkc6J/view?usp=drive_link)
+
 
 
 
