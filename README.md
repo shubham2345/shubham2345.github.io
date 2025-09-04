@@ -1,13 +1,12 @@
 # Shubham Gaur
 
-**AI/ML Research Engineer | MS NLP @ UC Santa Cruz**
+**AI/ML Research Engineer** | **MS NLP @ UC Santa Cruz**
 
 🌍 San Francisco Bay Area, CA, USA  
 📧 sgaur2@ucsc.edu  
 📱 (408) 640-5717  
-🔗 [LinkedIn](https://linkedin.com/in/shubhamggaur) | [GitHub](https://github.com/shubham2345) | [Website](https://shubham2345.github.io) | [Google Scholar](https://scholar.google.com)
+🔗 [LinkedIn](https://linkedin.com/in/shubhamggaur) | [GitHub](https://github.com/shubham2345) | [Website](https://shubham2345.github.io) | [Google Scholar](https://scholar.google.com/citations?user=afguXvoAAAAJ&hl=en)
 
----
 
 ## 🎯 About Me
 
@@ -91,14 +90,14 @@ Graduate Student in Natural Language Processing at UC Santa Cruz (Silicon Valley
 
 ## 📝 Publications
 
-1. **"Leveraging LLMs and VLMs for idiomatic understanding"** | [Paper](https://aclanthology.org/2025.semeval-1.274/)  
-   *ACL'25 Workshop (SemEval)* | Judith Clymo, Adam Zernik, **Shubham Gaur**
+1. **"Leveraging LLMs and VLMs for idiomatic understanding"** | *ACL'25 Workshop (SemEval)* [Paper](https://aclanthology.org/2025.semeval-1.274/)  
+Judith Clymo, Adam Zernik, **Shubham Gaur**
 
-2. **"Advancing Web-Based Visual Question Answering with Efficient Image-Text Alignment"** | [Paper](https://link.springer.com/chapter/10.1007/978-981-97-1111-6_28)  
-   *ICRAAI'24* | Saketh Kilaru, **Shubham Gaur**, Spandan Rout
+2. **"Advancing Web-Based Visual Question Answering with Efficient Image-Text Alignment"** | *ICRAAI'24* [Paper](https://link.springer.com/chapter/10.1007/978-981-97-1111-6_28)  
+Saketh Kilaru, **Shubham Gaur**, Spandan Rout
 
-3. **"Extraction of Cumulative Blobs Using Dynamic Gestures"** | [Paper](https://arxiv.org/abs/2501.04002)  
-   *IJSR'21* | Rishabh Naulakha, **Shubham Gaur**, Dhairya Lodha, Mehek Tulsyan, Utsav Kotecha
+3. **"Extraction of Cumulative Blobs Using Dynamic Gestures"** | *IJSR'21* [Paper](https://arxiv.org/abs/2501.04002)  
+Rishabh Naulakha, **Shubham Gaur**, Dhairya Lodha, Mehek Tulsyan, Utsav Kotecha
 
 ---
 
