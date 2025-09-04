@@ -1,12 +1,13 @@
 # Shubham Gaur
 
-**AI/ML Research Engineer** | **MS NLP @ UC Santa Cruz**
+**AI/ML Research Engineer | MS NLP @ UC Santa Cruz**
 
 🌍 San Francisco Bay Area, CA, USA  
 📧 sgaur2@ucsc.edu  
 📱 (408) 640-5717  
 🔗 [LinkedIn](https://linkedin.com/in/shubhamggaur) | [GitHub](https://github.com/shubham2345) | [Website](https://shubham2345.github.io) | [Google Scholar](https://scholar.google.com/citations?user=afguXvoAAAAJ&hl=en)
 
+---
 
 ## 🎯 About Me
 
