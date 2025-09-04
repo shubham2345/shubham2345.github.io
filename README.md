@@ -1,100 +1,168 @@
-## 👋 About Me
-Hello! I'm Shubham Gaur, a Machine Learning Engineer with 5+ years of experience in Natural Language Processing (NLP), Computer Vision, and MLOps. Currently pursuing my Master’s in NLP at [UC Santa Cruz](https://nlp.ucsc.edu/), I’m passionate about developing AI solutions that deliver real-world impact. 
+# Shubham Gaur
 
-💼 My journey in AI has taken me through innovative projects at Adani Group and BlackRock.
+**AI/ML Research Engineer | MS NLP @ UC Santa Cruz**
 
-🔍 My research interests include NLP, multimodal systems, RAG, and knowledge representation.
+🌍 San Francisco Bay Area, CA, USA  
+📧 sgaur2@ucsc.edu  
+📱 (408) 640-5717  
+🔗 [LinkedIn](https://linkedin.com/in/shubhamggaur) | [GitHub](https://github.com/shubham2345) | [Website](https://shubham2345.github.io) | [Google Scholar](https://scholar.google.com)
 
-🤝 I’m always eager to collaborate on AI projects and explore new ideas. Let’s connect and build solutions that matter!
+---
 
+## 🎯 About Me
 
+Graduate Student in Natural Language Processing at UC Santa Cruz (Silicon Valley Campus) with 5+ years of industry experience at **Nokia**, **Adani Group**, and **BlackRock**. Currently based in Santa Clara, CA, working on advancing generalist AI through multimodal systems and agentic AI.
 
+**Research Interests:**
+- 🎯 Alignment & Reasoning in AI Systems
 
+- 🔧 Efficiency in Large Language Models
 
-## Work Experience
-**Lead Machine Learning Engineer @ [Adani Group](https://www.adani.com/)  (_Nov 2021 - Aug 2024_)**
+- 🤖 Multimodal Systems (text, image, video)
 
-***AI Solutions for Business Optimization***
-- Built AdaniOne Chat, an LLM chatbot with Delta table-backed vector search.
-- Deployed GPT-3 models for automated hotel description generation across 33K listings, saving $130K annually.
-- Developed a churn prediction model using Random Forest & XGBoost, reducing customer churn by 48%.
-- Applied BERT model to process customer feedback, increasing customer lifetime value by 15%.
-- Created a recommendation system, increasing duty-free engagement by 87% and boosting revenue by 20%.
+- 🎯 Agentic Systems (Conversational AI, GUI Agents)
 
-***Scalable Infrastructure and Data Pipelines***
-- Led a 10-member team to build a real-time Customer Data Platform (CDP), managing data for 100M+ customers.
-- Conducted cohort analysis on Databricks, driving 50+ personalized campaigns and generating $55K in revenue.
+---
 
+## 🎓 Education
 
-**Machine Learning Engineer @ [BlackRock](https://blackrock.com/) (_Jul 2019 - Oct 2021_)**
-- Developed a neural network-based solution for portfolio and index tree generation, scaling to 100 portfolios across clients.
-- Built and deployed ETL tools for data validation and securities loading, saving time equivalent to 7 FTEs.
-- Streamlined financial index summaries, reducing manual effort by 2 FTEs and improving reporting efficiency.
+### University of California, Santa Cruz (UCSC) | Santa Clara, CA
+**M.S. in Natural Language Processing (Major: AI)** | *Sept 2024 - Dec 2025*
+- **GPA:** 4.0/4.0
 
-## Publications
-### Advancing Web-Based Visual Question Answering with Efficient Text Alignment
-[Publication](https://link.springer.com/chapter/10.1007/978-981-97-1111-6_28)
+### SRM Institute of Science & Technology (SRMIST) | Chennai, India  
+**B.S. in Information Technology (Major: ML)** | *Jul 2015 - May 2019*
+- **GPA:** 3.8/4.0
 
-This paper is a contribution to WebQA, a recent benchmark by Microsoft that combines visual and text reasoning for answers. Exploring alternatives to WebQA's baseline models like vision language pre-training (VLP) models, my aim was to enhance accuracy through (a) a lighter model, (b) detector-free visual encoder, and (c) knowledge distillation methods such as RoBERTa. Comparing VLP and RoBERTa on single and multi-source questions revealed **RoBERTa's superior performance at 54.91% and 30.11%, respectively, compared to VLP's 51.49% and 28.73%. This research serves as an advancement to Bing Search**.
+---
 
-### Extraction of Cumulative Blobs from Dynamic Gestures
-[Publication](https://arxiv.org/abs/2501.04002)
+## 💼 Work Experience
 
-In this project, we're diving into the world of gesture recognition, a game-changer in the way we interact with computers. Imagine controlling your computer without the need for a mouse or keyboard – that's the magic of gesture recognition. But here's the catch – it struggles in low-light conditions due to its reliance on cameras. To tackle this, we got creative and introduced a night vision camera. It's like giving our system a pair of night-vision goggles, making it thrive where others struggle. We've set up a Raspberry Pi with OpenCV, teaching it to spot and track dynamic gestures. With the help of a nifty machine learning algorithm, we're now recognizing patterns and seamlessly controlling the Raspberry Pi's GPIOs for various tasks. Guess what? We've hit an impressive **99.62% accuracy**, proving that even in the dark, our gesture recognition system shines bright.
+### 🔵 Nokia | Machine Learning Intern | *Jun 2025 - Present*
+*Naperville, USA*
+- Built **Graph Neural Network-based anomaly detection models** and applied PageRank algorithms
+- Developed **transformer-based forecasting pipeline** for network optimization
+- Created **agentic multimodal RAG pipeline** (LangChain + Qdrant + Azure ML) for enterprise knowledge retrieval
 
+### 🟢 Adani Group | Lead Machine Learning Engineer | *Nov 2021 - Aug 2024*
+*Gurgaon, India*
+- Built a **100M+ user real-time Customer Data Platform** with 10-member team, powering personalized AI/ML applications across travel, retail, and finance
+- Developed **AdaniOne Chat**, an LLM-powered multi-tenant chatbot with Delta Lake-backed vector search
+- Deployed **GPT-3.5 SFT models** for automated hotel description generation across 33K listings (**saved $130K**)
+- Applied transformer-based models (BERT, GPT) for feedback analysis and churn prediction: **improved customer retention by 48%** and **CLV by 15%**
+- Developed recommendation system with advanced ranking techniques: **increased duty-free engagement by 87%** and **revenue by 20%**
 
-## Research Projects
+### 🔴 BlackRock | Machine Learning Engineer | *Jul 2019 - Oct 2021*
+*Mumbai, India*
+- Developed **neural network-based solution** for portfolio and index tree generation, scaling to **100 portfolios**
+- Built and deployed **ETL tools** for data validation and securities loading, **saving time equivalent to 7 FTEs**
+- Designed **XGBoost and Random Forest-based models** for risk scoring and ranking investment instruments
 
-**ADMIRE: Advancing Multimodal Idiomatic Understanding in NLP** [(Code)](https://github.com/azernik/semeval_2025_task1)  
-[SemEval 2025](https://semeval2025-task1.github.io/)  
-- Fine-tuned **Vision Language Models (VLMs)**, such as **CLIP**, to rank images based on idiomatic meanings within context sentences, achieving a **top-1 accuracy of 77%**.
+---
 
+## 🔬 Research Projects
 
-**Question Answering using Retrieval Augmented Generation (RAG)** [(Code)](https://github.com/shubham2345/RAG-LangChain-QA)   
-- Developed a **retrieval-augmented QA system** using the **FLAN-T5 language model** and **FAISS vector database** in **LangChain**.
+### 🤖 GUI Agents (in collaboration with Samsung Research America)
+*May 2025 - Present*
+- Building **web action agents** combining DOM, accessibility trees, and **reinforcement learning (PPO)** with visual cues
+- Developing reliable **multi-modal UI automation** systems
+- Creating benchmarks for web-based task generalization
 
+### 🏠 HomeHelper - Multimodal Agent for Appliance Troubleshooting
+*Apr - June 2025*
+- Multi-agent system integrating **images, text, and video** for household appliance support
+- **LangChain orchestrator-based system** with Self-Improving RAG loop (SIM-RAG)
+- Models: BLIP, GPT, Mistral, LLaMA with memory for conversations
+- **Dataset:** [3,000+ synthetic multi-turn conversations](https://huggingface.co/datasets/shubhamggaur/HomeHelper-Conversations)
 
-## Education
-University of California, Santa Cruz (UCSC), Santa Clara, CA
-- Master of Science in Natural Language Processing (_Sept 2024 - Dec 2025_)
-  
-SRM Institute of Science and Technology (SRMIST), Chennai, India
-- Bachelor of Technology in Information Technology (_Jul 2015 - May 2019_)
+### 📊 Evaluation of Faithfulness over ARMs and Diffusion Language Models | [Code](https://github.com/shubham2345/llada-faithful-summarization)
+*Apr - June 2025*
+- Benchmarked **diffusion-based LLMs (LLaDA)** against ARMs (LLaMA-3, SmolLM) across summarization datasets
+- Demonstrated **LLaDA's robustness** through zero-shot, chain-of-thought, and adversarial prompting
+- Used **BERTScore** (semantic) + **AlignScore** (faithfulness) for comprehensive evaluation
 
-## Technical Skills
+### 🎨 Leveraging LLMs and VLMs for Idiomatic Understanding | [Code](https://github.com/azernik/semeval_2025_task1)
+*SemEval'25 Research*
+- Used **LLMs & VLMs** (OpenCLIP, BLIP, ALIGN) to interpret idiomatic sentences
+- Developed **image-text alignment** strategies for contextual meaning interpretation
+- **Publication:** Submitted to SemEval 2025 (ACL Workshop)
 
-- **Programming Languages**: Python, C, C++, Java, Perl, SQL, HTML, Node.js
+---
 
-- **Machine Learning & Deep Learning**: PyTorch, TensorFlow, Keras, HuggingFace Transformers, JAX, LoRA Fine-Tuning, CNN
+## 📝 Publications
 
-- **Data Analysis & Scientific Computing**: pandas, numpy, scipy, scikit-learn, matplotlib, OpenCV
+1. **"Leveraging LLMs and VLMs for idiomatic understanding"** | [Paper](https://aclanthology.org/2025.semeval-1.274/)  
+   *ACL'25 Workshop (SemEval)* | Judith Clymo, Adam Zernik, **Shubham Gaur**
 
-- **NLP & LLM Tools**: LangChain, HuggingFace Transformers, AutoGen
+2. **"Advancing Web-Based Visual Question Answering with Efficient Image-Text Alignment"** | [Paper](https://link.springer.com/chapter/10.1007/978-981-97-1111-6_28)  
+   *ICRAAI'24* | Saketh Kilaru, **Shubham Gaur**, Spandan Rout
 
-- **Development & Deployment**: Jupyter, Git, Linux, CUDA, Docker, Kubernetes, FastAPI, Rest API, Streamlit
+3. **"Extraction of Cumulative Blobs Using Dynamic Gestures"** | [Paper](https://arxiv.org/abs/2501.04002)  
+   *IJSR'21* | Rishabh Naulakha, **Shubham Gaur**, Dhairya Lodha, Mehek Tulsyan, Utsav Kotecha
 
-- **MLOps & DevOps**: MLflow, Airflow, Pinecone, MLOps, CI/CD, Data Factory
+---
 
-- **Big Data & Distributed Systems**: Apache Spark, Kafka, Hadoop, Databricks
+## 🛠️ Technical Skills
 
-- **Databases & Data Warehousing**: PostgreSQL, MySQL, MongoDB, SQL Server, Redis, BigQuery, Synapse
+### Programming & Data Science
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![R](https://img.shields.io/badge/R-276DC3?style=flat&logo=r&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=java&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=cplusplus&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat&logo=postgresql&logoColor=white)
 
-- **Cloud Platforms**: Azure, AWS, GCP
+**Libraries:** pandas, NumPy, SciPy, scikit-learn, Matplotlib, Jupyter
 
-- **Visualization & Reporting**: Tableau, Power BI
+### Machine Learning & AI
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white)
+![HuggingFace](https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=flat&logoColor=black)
 
-## Contact
-- GitHub: [github.com/shubham2345](https://github.com/shubham2345)
+**Specializations:** Computer Vision (CNN, OpenCV), Reinforcement Learning, LoRA/PEFT, Diffusion Models
 
-- LinkedIn: [linkedin.com/in/shubhamggaur](https://linkedin.com/in/shubhamggaur)
+### Generative AI & LLMs
+**Models:** BERT, GPT-3/4, LLaMA, CLIP, ALIGN  
+**Frameworks:** LangChain/LangGraph, AutoGen, Retrieval Augmented Generation  
+**Vector Databases:** Pinecone, Qdrant  
+**Techniques:** Supervised Fine Tuning, RLHF, PPO, Instruction-Tuned LLMs
 
-- Email: [sgaur2@ucsc.edu](mailto:sgaur2@ucsc.edu)
+### Big Data & Cloud
+![Azure](https://img.shields.io/badge/Microsoft_Azure-0089D0?style=flat&logo=microsoft-azure&logoColor=white)
+![AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=flat&logo=amazonaws&logoColor=white)
+![GCP](https://img.shields.io/badge/Google_Cloud-4285F4?style=flat&logo=google-cloud&logoColor=white)
 
-- [Google Scholar](https://scholar.google.com/citations?user=afguXvoAAAAJ&hl=en)
+**Technologies:** Apache Spark, Hadoop, Kafka, Databricks, BigQuery, Synapse, Data Factory
 
+### Deployment & MLOps
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
 
-## EXTRA CURRICULAR ACTIVITIES
-- Launched “IT on wheels” initiative to boost computer literacy as a Volunteer for Adani Foundation (NGO), teaching underprivileged students in remote areas of Gujarat post 2022 onwards
-- Awarded with Employee of the Month in June 2022 for creating a resilient and scalable near real-time data platform.
-- Accoladed BLK Impact Creator Award for achieving a time save of 10 FTE (Full Time Equivalent) in 2021.
-- Co-led as Joint Vice President, IT Association, 2018, orchestrating social welfare events in Kattankulathur,aiding 800+ victims of Gaja cyclone in Chennai.
+**Tools:** FastAPI, MLflow, Airflow, CI/CD, Redis, PostgreSQL, MySQL, MongoDB
+
+---
+
+## 🏆 Key Achievements
+
+- 🚀 Built **100M+ user platform** at Adani Group
+- 💰 **Saved $130K** through automated content generation
+- 📈 **Improved customer retention by 48%** using AI/ML models
+- 💼 **Increased revenue by 20%** through recommendation systems
+- ⚡ **Saved equivalent of 7 FTEs** through automation at BlackRock
+- 🎓 Maintained **4.0 GPA** in graduate studies
+- 📚 **3 research publications** across AI/ML conferences
+
+---
+
+## 📞 Let's Connect!
+
+I'm always interested in discussing AI research, collaboration opportunities, or innovative projects. Feel free to reach out!
+
+- 📧 **Email:** sgaur2@ucsc.edu
+- 💼 **LinkedIn:** [shubhamggaur](https://linkedin.com/in/shubhamggaur)
+- 🐙 **GitHub:** [shubham2345](https://github.com/shubham2345)
+- 🌐 **Website:** [shubham2345.github.io](https://shubham2345.github.io)
+- 🎓 **Google Scholar:** [Profile](https://scholar.google.com)
+
+---
+
+*"Advancing AI systems that understand, reason, and act across multiple modalities with human-level reliability."*
