@@ -11,13 +11,16 @@
 
 ## 🎯 About Me
 
-Graduate Student in Natural Language Processing at UC Santa Cruz (Silicon Valley Campus) with 5+ years of industry experience at **Nokia**, **BlackRock** and **Adani Group**. Currently based in Santa Clara, CA, working on advancing generalist AI through multimodal systems and agentic AI.
+Graduate Student in Natural Language Processing at UC Santa Cruz (Silicon Valley Campus) with 5+ years of industry experience at **Nokia**, **Adani Group**, and **BlackRock**. Currently based in Santa Clara, CA, working on advancing generalist AI through multimodal systems and agentic AI.
 
 **Research Interests:**
-🎯 Alignment & Reasoning in AI Systems
-🔧 Efficiency in Large Language Models
-🤖 Multimodal Systems (text, image, video)
-🎯 Agentic Systems (Conversational AI, GUI Agents)
+- 🎯 Alignment & Reasoning in AI Systems
+
+- 🔧 Efficiency in Large Language Models
+
+- 🤖 Multimodal Systems (text, image, video)
+
+- 🎯 Agentic Systems (Conversational AI, GUI Agents)
 
 ---
 
@@ -72,13 +75,13 @@ Graduate Student in Natural Language Processing at UC Santa Cruz (Silicon Valley
 - Models: BLIP, GPT, Mistral, LLaMA with memory for conversations
 - **Dataset:** [3,000+ synthetic multi-turn conversations](https://huggingface.co/datasets/shubhamggaur/HomeHelper-Conversations)
 
-### 📊 Evaluation of Faithfulness over ARMs and Diffusion Language Models [Code](https://github.com/shubham2345/llada-faithful-summarization)
+### 📊 Evaluation of Faithfulness over ARMs and Diffusion Language Models | [Code](https://github.com/shubham2345/llada-faithful-summarization)
 *Apr - June 2025*
 - Benchmarked **diffusion-based LLMs (LLaDA)** against ARMs (LLaMA-3, SmolLM) across summarization datasets
 - Demonstrated **LLaDA's robustness** through zero-shot, chain-of-thought, and adversarial prompting
 - Used **BERTScore** (semantic) + **AlignScore** (faithfulness) for comprehensive evaluation
 
-### 🎨 Leveraging LLMs and VLMs for Idiomatic Understanding [Code](https://github.com/azernik/semeval_2025_task1)
+### 🎨 Leveraging LLMs and VLMs for Idiomatic Understanding | [Code](https://github.com/azernik/semeval_2025_task1)
 *SemEval'25 Research*
 - Used **LLMs & VLMs** (OpenCLIP, BLIP, ALIGN) to interpret idiomatic sentences
 - Developed **image-text alignment** strategies for contextual meaning interpretation
@@ -138,14 +141,6 @@ Graduate Student in Natural Language Processing at UC Santa Cruz (Silicon Valley
 
 ---
 
-## 📊 GitHub Stats
-
-![Shubham's GitHub stats](https://github-readme-stats.vercel.app/api?username=shubham2345&show_icons=true&theme=radical)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=shubham2345&layout=compact&theme=radical)
-
----
-
 ## 🏆 Key Achievements
 
 - 🚀 Built **100M+ user platform** at Adani Group
@@ -155,18 +150,6 @@ Graduate Student in Natural Language Processing at UC Santa Cruz (Silicon Valley
 - ⚡ **Saved equivalent of 7 FTEs** through automation at BlackRock
 - 🎓 Maintained **4.0 GPA** in graduate studies
 - 📚 **3 research publications** across AI/ML conferences
-
----
-
-## 🎯 Current Focus
-
-Working on **"Advancing Generalist AI: My Journey towards Multinet"** - developing AI systems that can seamlessly handle multiple modalities and tasks with human-level understanding and reliability.
-
-**Active Research Areas:**
-- 🤖 **Agentic AI Systems** for complex task automation
-- 🔍 **Multimodal Understanding** across text, image, and video
-- 📊 **Faithfulness & Reliability** in large language models
-- 🌐 **GUI Agents** for web and application automation
 
 ---
 
