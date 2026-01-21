@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubham Gaur | Portfolio</title>
+    <meta name="description" content="Portfolio of Shubham Gaur, Masters Student in NLP at UC Santa Cruz.">
+    <link rel="canonical" href="https://shubham2345.github.io/">
+
+    <!-- Open Graph (using placeholders) -->
+    <meta property="og:title" content="Shubham Gaur | NLP Researcher">
+    <meta property="og:description" content="AI Researcher at UC Santa Cruz">
+    <meta property="og:url" content="https://shubham2345.github.io/">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 70px;
+        }
+
+        :root {
+            /* Apple Palette */
+            --bg-color: #ffffff;
+            --secondary-bg: #f5f5f7;
+            --text-main: #1d1d1f;
+            --text-secondary: #86868b;
+            --accent-blue: #0071e3;
+            --border-color: #d2d2d7;
+            --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+            /* Apple structural transition */
+            --apple-structure-timing: 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+            /* Apple text/color transition */
+            --apple-text-timing: 0.1s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.47059;
+            font-weight: 400;
+            letter-spacing: -0.022em;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 22px;
+        }
+
+        /* Sticky Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-content {
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 16px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            margin-left: 20px;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 1;
+            color: var(--accent-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0 60px;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .hero-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 65px;
+            object-fit: cover;
+            object-position: top center;
+            background-color: var(--secondary-bg);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            line-height: 1.08349;
+            font-weight: 600;
+            letter-spacing: -0.003em;
+            margin: 0 0 10px 0;
+        }
+
+        .hero-subtitle {
+            font-size: 21px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links a {
+            font-size: 22px;
+            color: var(--text-main);
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Typography & Headings */
+        h2 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Education Layout */
+        .edu-entry {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: var(--secondary-bg);
+            border-radius: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition:
+                transform var(--apple-text-timing),
+                box-shadow var(--apple-structure-timing),
+                background-color var(--apple-structure-timing),
+                color var(--apple-structure-timing);
+        }
+
+        .edu-entry:hover {
+            transform: scale(1.005);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            background: #fff;
+            border-color: transparent;
+        }
+
+        .edu-info strong {
+            font-size: 18px;
+        }
+
+        .edu-date {
+            color: var(--text-secondary);
+            font-size: 15px;
+            text-align: right;
+        }
+
+        /* Publication Cards */
+        .pub-card {
+            background: var(--secondary-bg);
+            margin-bottom: 32px;
+            padding: 24px;
+            border-radius: 24px;
+            transition:
+                transform var(--apple-text-timing),
+                box-shadow var(--apple-structure-timing),
+                background-color var(--apple-structure-timing),
+                color var(--apple-structure-timing);
+        }
+
+        .pub-card:hover {
+            transform: scale(1.005);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            background: #fff;
+            border-color: transparent;
+        }
+
+        .pub-container {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            /* Modified for better text alignment when no image */
+        }
+
+        .pub-figure {
+            flex: 0 0 240px;
+        }
+
+        .pub-figure img {
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid #eee;
+        }
+
+        .pub-details {
+            flex: 1;
+        }
+
+        /* Added flexibility */
+
+        .pub-title {
+            font-size: 20px;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .pub-authors {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        /* Highlighting author name */
+        .me {
+            color: var(--text-main);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        .btn-group {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 6px 16px;
+            border-radius: 20px;
+            background: #0071e3;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 500;
+            transition: background 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--text-main);
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: #0071e3;
+            color: #fff;
+        }
+
+        /* Grid Layouts for Skills/Honors */
+        .honors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .honor-card {
+            background: var(--secondary-bg);
+            padding: 24px;
+            border-radius: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            transition:
+                transform var(--apple-text-timing),
+                box-shadow var(--apple-structure-timing),
+                background-color var(--apple-structure-timing),
+                color var(--apple-structure-timing);
+            height: 100%;
+        }
+
+        .honor-card:hover {
+            transform: scale(1.005);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            background: #fff;
+            border-color: transparent;
+        }
+
+        .honor-icon {
+            font-size: 24px;
+            color: var(--accent-blue);
+            margin-top: 4px;
+        }
+
+        .honor-content strong {
+            display: block;
+            font-size: 17px;
+            color: var(--text-main);
+            margin-bottom: 4px;
+            line-height: 1.2;
+        }
+
+        .honor-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        /* Experience Bullet Points */
+        .exp-list {
+            padding-left: 20px;
+            margin-top: 10px;
+            color: var(--text-main);
+            font-size: 15px;
+        }
+
+        .exp-list li {
+            margin-bottom: 5px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 40px;
+            }
+
+            .pub-container {
+                flex-direction: column;
+            }
+
+            .hero-img {
+                width: 180px;
+                height: 180px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+        }
+
+        .prose {
+            text-align: justify;
+            text-justify: inter-word;
+            hyphens: auto;
+        }
+
+        .prose-narrow {
+            max-width: 980px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="container nav-content">
+            <div style="font-weight: 600; font-size: 21px;">Shubham Gaur</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#experience">Experience</a>
+                <a href="#publications">Publications</a>
+                <a href="#posters">Posters</a>
+                <a href="#skills">Skills</a>
+                <a href="#teaching">Teaching</a>
+                <a href="blog.html">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero" id="about">
+            <img src="assets/img/nye.jpeg" alt="Shubham Gaur" class="hero-img">
+            <div class="hero-content">
+                <h1>Shubham Gaur</h1>
+                <p class="hero-subtitle">AI Researcher at UC Santa Cruz</p>
+                <div class="social-links">
+                    <a href="mailto:gshubhaur@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="#"><i class="fas fa-graduation-cap"></i></a> <!-- Google Scholar Placeholder -->
+                    <a href="https://github.com/shubham2345"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/shubhamggaur"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div style="margin-top: 30px;">
+                    <!-- Placeholder for CV -->
+                    <a href="https://drive.google.com/file/d/1_m4kCvjgYq22rph-e5kM6Pu_3GVgldWJ/view?usp=sharing"
+                        class="btn btn-primary" style="font-size: 15px; padding: 10px 24px;">Download CV</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me -->
+        <section>
+            <h2>About Me</h2>
+            <p class="prose prose-narrow" style="font-size: 19px; color: var(--text-secondary); line-height: 1.6;">
+                I am a machine learning engineer and researcher with 5+ years of experience across Nokia, Adani Group,
+                and BlackRock. My research interests center on <strong>AI Safety</strong> and <strong>Agentic
+                    AI</strong>,
+                with an emphasis on post-training behavior, evaluation, and alignment—understanding where capable models
+                fail and how to make their behavior more predictable and robust in practice.
+            </p>
+
+        </section>
+
+        <!-- Education -->
+        <section id="education">
+            <h2>Education</h2>
+            <div class="edu-entry">
+                <div class="edu-info">
+                    <strong>University of California, Santa Cruz</strong><br>
+                    <span style="color: var(--text-secondary)">Masters in Natural Language Processing (4.0/4.0)</span>
+                </div>
+                <div class="edu-date">Sept, 2024 - March 2026<br>Santa Clara, USA</div>
+            </div>
+
+            <div class="edu-entry">
+                <div class="edu-info">
+                    <strong>SRM Institute of Science and Technology</strong><br>
+                    <span style="color: var(--text-secondary)">Bachelors in Information Technology (3.8/4.0)</span>
+                </div>
+                <div class="edu-date">July 2015 - May 2019<br>Chennai, India</div>
+            </div>
+        </section>
+
+        <!-- Experience (Research + Industry) -->
+        <section id="experience">
+            <h2>Experience</h2>
+
+            <!-- Research Experience -->
+            <h3 style="font-size: 24px; margin-top:20px; margin-bottom:15px; color: var(--text-main);">Research
+                Experience</h3>
+
+            <div class="pub-card">
+                <div class="pub-container">
+                    <div class="pub-details">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <div>
+                                <span class="pub-title" style="margin-bottom: 4px;">Graduate Research Assistant</span>
+                                <span class="pub-authors">
+                                    <a href="https://cgraywang.github.io/" target="_blank"
+                                        style="color: inherit; text-decoration: none; border-bottom: 1px dashed var(--text-secondary);">Dr.
+                                        Chenguang Wang</a>’s Lab
+                                </span>
+                            </div>
+                            <div
+                                style="text-align: right; color: var(--text-secondary); font-size: 15px; min-width: 140px; line-height: 1.4;">
+                                Oct 2025 - Present<br>Santa Clara, USA
+                            </div>
+                        </div>
+                        <ul class="exp-list">
+                            <li>Contributing to <strong>MassGen</strong>, an open-source multi-agent system that
+                                coordinates multiple language models to solve complex tasks.
+                                <div style="margin-top: 8px;"><a href="https://github.com/massgen/MassGen" class="btn"
+                                        style="padding: 4px 12px; font-size: 12px;">Code</a></div>
+                            </li>
+                            <li>Exploring research directions to add diversity in agent’s responses, voting in
+                                multi-agents to solve open-ended tasks.</li>
+                            <li>Developing <strong>RCABench</strong>, a benchmark for evaluating agent-based root-cause
+                                localization via multi-hop causal reasoning over codebases.
+                                <div style="margin-top: 8px;"><a href="https://github.com/JianhongTu/RCAbench"
+                                        class="btn" style="padding: 4px 12px; font-size: 12px;">Code</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-card">
+                <div class="pub-container">
+                    <div class="pub-details">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <div>
+                                <span class="pub-title" style="margin-bottom: 4px;">Research Apprentice</span>
+                                <span class="pub-authors"><a href="https://sra.samsung.com/" target="_blank"
+                                        style="color: inherit; text-decoration: none; border-bottom: 1px dashed var(--text-secondary);">Samsung
+                                        Research America</a> (advised by <a href="http://www.bethannhockey.com/"
+                                        target="_blank"
+                                        style="color: inherit; text-decoration: none; border-bottom: 1px dashed var(--text-secondary);">Dr.
+                                        Beth Ann Hockey</a>)</span>
+                            </div>
+                            <div
+                                style="text-align: right; color: var(--text-secondary); font-size: 15px; min-width: 140px; line-height: 1.4;">
+                                Apr 2025 - Present<br>Santa Clara, USA
+                            </div>
+                        </div>
+                        <ul class="exp-list">
+                            <li>Developing a <strong>novel data collection pipeline</strong> for capturing high-quality
+                                human interaction trajectories on ServiceNow using the WorkArena benchmark.</li>
+                            <li>Designed end-to-end preprocessing and post-processing of JavaScript interaction events
+                                to BrowserGym compatible actions.
+                                <div style="margin-top: 8px;"><a href="https://github.com/jclymo/event-capture"
+                                        class="btn" style="padding: 4px 12px; font-size: 12px;">Code</a></div>
+                            </li>
+                            <li>Collected <strong>50+ human trajectories</strong> on WorkArena L1 tasks, showing a 30s
+                                reduction in agent (GPT-5) execution time via in-context learning.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-card">
+                <div class="pub-container">
+                    <div class="pub-details">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <div>
+                                <span class="pub-title" style="margin-bottom: 4px;">Graduate Research Assistant (NLP 244
+                                    Coursework)</span>
+                                <span class="pub-authors">
+                                    <a href="https://jflanigan.github.io/" target="_blank"
+                                        style="color: inherit; text-decoration: none; border-bottom: 1px dashed var(--text-secondary);">Dr.
+                                        Jeffrey Flanigan</a>
+                                </span>
+                            </div>
+                            <div
+                                style="text-align: right; color: var(--text-secondary); font-size: 15px; min-width: 140px; line-height: 1.4;">
+                                Apr 2025 - Jun 2025<br>Santa Clara, USA
+                            </div>
+                        </div>
+                        <ul class="exp-list">
+                            <li>Benchmarked <strong>diffusion language models (LLaDA)</strong> against autoregressive
+                                LLMs (LLaMA-3, SmolLM) for faithfulness on summarization datasets.
+                                <div style="margin-top: 8px;"><a
+                                        href="https://github.com/shubham2345/llada-faithful-summarization" class="btn"
+                                        style="padding: 4px 12px; font-size: 12px;">Code</a></div>
+                            </li>
+                            <li>Analyzed robustness under zero-shot, chain-of-thought, and adversarial prompting
+                                settings.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-card">
+                <div class="pub-container">
+                    <div class="pub-details">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <div>
+                                <span class="pub-title" style="margin-bottom: 4px;">Graduate Research Assistant (NLP 243
+                                    Coursework)</span>
+                                <span class="pub-authors">
+                                    <a href="https://www.linkedin.com/in/amita-misra/" target="_blank"
+                                        style="color: inherit; text-decoration: none; border-bottom: 1px dashed var(--text-secondary);">Dr.
+                                        Amita Misra</a>
+                                </span>
+                            </div>
+                            <div
+                                style="text-align: right; color: var(--text-secondary); font-size: 15px; min-width: 140px; line-height: 1.4;">
+                                Sept 2024 - Dec 2025<br>Santa Clara, USA
+                            </div>
+                        </div>
+                        <ul class="exp-list">
+                            <li>Contributed to an <strong>ACL 2025 Workshop paper</strong> from SemEval-2025 Task 1
+                                (AdMIRe), studying idiomatic sentence–image ranking where pretrained VLMs exhibit strong
+                                literal bias.</li>
+                            <li>Developed a prompting-based approach using GPT-4 to generate idiomatic definitions prior
+                                to ranking, improving Top-1 accuracy from 43% to 87%.
+                                <div style="margin-top: 8px;"><a href="https://github.com/azernik/semeval_2025_task1"
+                                        class="btn" style="padding: 4px 12px; font-size: 12px;">Code</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Industry Experience -->
+            <h3 style="font-size: 24px; margin-top:20px; margin-bottom:15px; color: var(--text-main);">Industry
+                Experience</h3>
+
+            <div class="pub-card">
+                <div class="pub-container">
+                    <div class="pub-details">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <div>
+                                <span class="pub-title" style="margin-bottom: 4px;">Applied Research Intern</span>
+                                <span class="pub-authors"><a href="https://www.nokia.com/" target="_blank"
+                                        style="color: inherit; text-decoration: none; border-bottom: 1px dashed var(--text-secondary);">Nokia
+                                        Bell Labs</a></span>
+                            </div>
+                            <div
+                                style="text-align: right; color: var(--text-secondary); font-size: 15px; min-width: 140px; line-height: 1.4;">
+                                Jun 2025 - Aug 2025<br>Naperville, USA
+                            </div>
+                        </div>
+                        <ul class="exp-list">
+                            <li>Built <strong>Graph Neural Network</strong>-based anomaly detection models, applied
+                                PageRank algorithms, and developed transformer based forecasting pipeline for software
+                                releases.</li>
+                            <li>Developed an <strong>agentic multimodal RAG pipeline</strong> for enterprise knowledge
+                                retrieval.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-card">
+                <div class="pub-container">
+                    <div class="pub-details">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <div>
+                                <span class="pub-title" style="margin-bottom: 4px;">Founding Lead ML Engineer</span>
+                                <span class="pub-authors"><a href="https://www.adani.com/" target="_blank"
+                                        style="color: inherit; text-decoration: none; border-bottom: 1px dashed var(--text-secondary);">Adani
+                                        Group</a></span>
+                            </div>
+                            <div
+                                style="text-align: right; color: var(--text-secondary); font-size: 15px; min-width: 140px; line-height: 1.4;">
+                                Nov 2021 - Aug 2024<br>Gurgaon, India
+                            </div>
+                        </div>
+                        <ul class="exp-list">
+                            <li>Developed and deployed LLM-based systems (GPT, BERT) for large-scale text understanding
+                                tasks, including feedback analysis and churn modeling.</li>
+                            <li>Built and evaluated an <strong>LLM-powered</strong>, multi-tenant conversational agent
+                                with vector search over enterprise data using Delta Lake–backed retrieval.</li>
+                            <li>Fine-tuned GPT-3.5 models for controlled text generation (hotel descriptions) across 33K
+                                listings.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-card">
+                <div class="pub-container">
+                    <div class="pub-details">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <div>
+                                <span class="pub-title" style="margin-bottom: 4px;">ML Engineer</span>
+                                <span class="pub-authors"><a href="https://www.blackrock.com/" target="_blank"
+                                        style="color: inherit; text-decoration: none; border-bottom: 1px dashed var(--text-secondary);">BlackRock</a></span>
+                            </div>
+                            <div
+                                style="text-align: right; color: var(--text-secondary); font-size: 15px; min-width: 140px; line-height: 1.4;">
+                                Jul 2019 - Oct 2021<br>Mumbai, India
+                            </div>
+                        </div>
+                        <ul class="exp-list">
+                            <li>Developed a neural network-based solution for portfolio and index tree generation,
+                                scaling to 100 portfolios.</li>
+                            <li>Built and deployed ETL tools for data validation and securities loading, saving time
+                                equivalent to 7 FTEs.</li>
+                            <li>Designed XGBoost and Random Forest–based models for risk scoring and ranking investment
+                                instruments.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Publications -->
+        <section id="publications">
+            <h2>Publications</h2>
+
+            <div class="pub-card">
+                <div class="pub-container">
+                    <div class="pub-details">
+                        <span class="pub-title">UCSC NLP T6 at SemEval-2025 Task 1: Leveraging LLMs and VLMs for
+                            Idiomatic Understanding</span>
+                        <span class="pub-authors">Judith Clymo, Adam Zernik, <span class="me">Shubham Gaur</span></span>
+                        <div style="color: var(--accent-blue); font-weight: 500; font-size: 14px; margin-bottom: 10px;">
+                            <i>In Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025),
+                                pages 2103–2115, Vienna, Austria. Association for Computational Linguistics.</i>
+                        </div>
+                        <div class="btn-group">
+                            <a href="https://aclanthology.org/2025.semeval-1.274/" class="btn">Paper</a>
+                            <a href="https://github.com/azernik/semeval_2025_task1" class="btn">Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-card">
+                <div class="pub-container">
+                    <div class="pub-details">
+                        <span class="pub-title">Advancing Web-Based Visual Question Answering with Efficient Image-Text
+                            Alignment</span>
+                        <span class="pub-authors">Saketh Kilaru, <span class="me">Shubham Gaur</span>, Spandan
+                            Rout</span>
+                        <div style="color: var(--accent-blue); font-weight: 500; font-size: 14px; margin-bottom: 10px;">
+                            <i>Proceedings of the International Conference on Recent Advancements in Artificial
+                                Intelligence (ICRAAI 2024).</i>
+                        </div>
+                        <div class="btn-group">
+                            <a href="https://link.springer.com/chapter/10.1007/978-981-97-1111-6_28"
+                                class="btn">Paper</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-card">
+                <div class="pub-container">
+                    <div class="pub-details">
+                        <span class="pub-title">Extraction of Cumulative Blobs Using Dynamic Gestures</span>
+                        <span class="pub-authors">Rishabh Naulakha, <span class="me">Shubham Gaur</span>, Dhairya Lodha,
+                            Mehek Tulsyan, Utsav Kotecha</span>
+                        <div style="color: var(--accent-blue); font-weight: 500; font-size: 14px; margin-bottom: 10px;">
+                            <i>International Journal of Scientific Research (IJSR), 2021.</i>
+                        </div>
+                        <div class="btn-group">
+                            <a href="https://arxiv.org/abs/2501.04002" class="btn">Paper</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section (Honors Grid Style) -->
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="honors-grid">
+                <div class="honor-card">
+                    <div class="honor-icon"><i class="fas fa-robot"></i></div>
+                    <div class="honor-content">
+                        <strong>AI Safety & Alignment</strong>
+                        <span class="honor-desc">Faithfulness, Hallucination Eval, Robustness Testing, Adversarial
+                            Prompting, RLHF, PPO.</span>
+                    </div>
+                </div>
+
+                <div class="honor-card">
+                    <div class="honor-icon"><i class="fas fa-brain"></i></div>
+                    <div class="honor-content">
+                        <strong>Models & Analysis</strong>
+                        <span class="honor-desc">PyTorch, Transformers, Diffusion Models, Causal Reasoning,
+                            Interpretability.</span>
+                    </div>
+                </div>
+
+                <div class="honor-card">
+                    <div class="honor-icon"><i class="fas fa-network-wired"></i></div>
+                    <div class="honor-content">
+                        <strong>Agentic Systems</strong>
+                        <span class="honor-desc">Multi-Agent Systems, Agent Routing, Tool-Calling LLMs,
+                            Human-in-the-Loop.</span>
+                    </div>
+                </div>
+
+                <div class="honor-card">
+                    <div class="honor-icon"><i class="fas fa-server"></i></div>
+                    <div class="honor-content">
+                        <strong>Engineering & Infra</strong>
+                        <span class="honor-desc">Docker, Kubernetes, FastAPI, MLflow, Airflow, Vector Databases (FAISS,
+                            Qdrant).</span>
+                    </div>
+                </div>
+
+                <div class="honor-card">
+                    <div class="honor-icon"><i class="fas fa-code"></i></div>
+                    <div class="honor-content">
+                        <strong>Languages</strong>
+                        <span class="honor-desc">Python (NumPy, SciPy, pandas), SQL, C/C++, Java, Bash.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teaching Section -->
+        <section id="teaching">
+            <h2>Teaching Experience (TA)</h2>
+            <div class="edu-entry">
+                <div class="edu-info">
+                    <strong>ARTG 91: Intro to Game Art Production</strong>
+                </div>
+                <div class="edu-date">Present (Winter 2026)</div>
+            </div>
+            <div class="edu-entry">
+                <div class="edu-info">
+                    <strong>THEA 80C: Monsters</strong>
+                </div>
+                <div class="edu-date">Fall 2025</div>
+            </div>
+            <div class="edu-entry">
+                <div class="edu-info">
+                    <strong>TIM 172B: Intro to Tech Management II</strong>
+                </div>
+                <div class="edu-date">Winter 2025</div>
+            </div>
+            <div class="edu-entry">
+                <div class="edu-info">
+                    <strong>TIM 172A: Introduction to Technology Management I</strong>
+                </div>
+                <div class="edu-date">Fall 2024</div>
+            </div>
+        </section>
+
+        <section id="posters">
+            <h2>Poster Presentations</h2>
+            <div class="pub-card">
+                <div class="pub-container" style="align-items: center;">
+                    <div class="pub-details">
+                        <span class="pub-title">What Web Agents Need Isn't Data - It's High Quality Data</span>
+                        <div style="color: var(--text-secondary); font-size: 14px; margin-top:5px;">Capstone
+                            Presentation, UC Santa Cruz (2025)</div>
+                    </div>
+                    <div class="pub-figure" style="flex: 0 0 150px; margin-left: 20px;">
+                        <a href="assets/img/capstone-poster.png" target="_blank">
+                            <img src="assets/img/capstone-poster.png" alt="Poster Thumbnail"
+                                style="width: 100%; border-radius: 8px; border: 1px solid #eee;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="pub-card">
+                <div class="pub-container" style="align-items: center;">
+                    <div class="pub-details">
+                        <span class="pub-title">Advancing Web-Based Visual Question Answering with Efficient Image-Text
+                            Alignment</span>
+                        <div style="color: var(--text-secondary); font-size: 14px; margin-top:5px;">SciML Symposium,
+                            Georgia Tech (2024)</div>
+                    </div>
+                    <div class="pub-figure" style="flex: 0 0 150px; margin-left: 20px;">
+                        <a href="assets/img/webqa_poster.png" target="_blank">
+                            <img src="assets/img/webqa_poster.png" alt="Poster Thumbnail"
+                                style="width: 100%; border-radius: 8px; border: 1px solid #eee;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer
+            style="margin: 80px 0 40px; padding-top: 40px; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 13px;">
+            <p>© 2026 Shubham Gaur.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

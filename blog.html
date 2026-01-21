@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubham Gaur | Blogs</title>
+    <meta name="description" content="Blogs by Shubham Gaur on NLP, Machine Learning, and AI.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 70px;
+        }
+
+        :root {
+            /* Apple Palette */
+            --bg-color: #ffffff;
+            --secondary-bg: #f5f5f7;
+            --text-main: #1d1d1f;
+            --text-secondary: #86868b;
+            --accent-blue: #0071e3;
+            --border-color: #d2d2d7;
+            --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+            /* Apple structural transition */
+            --apple-structure-timing: 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+            /* Apple text/color transition */
+            --apple-text-timing: 0.1s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.47059;
+            font-weight: 400;
+            letter-spacing: -0.022em;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 22px;
+        }
+
+        /* Sticky Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-content {
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 16px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            margin-left: 20px;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            opacity: 1;
+            color: var(--accent-blue);
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-weight: 600;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        /* Blog Card Styles */
+        .blog-card {
+            background: var(--secondary-bg);
+            margin-bottom: 32px;
+            padding: 24px;
+            border-radius: 24px;
+            transition: transform var(--apple-text-timing), box-shadow var(--apple-structure-timing), background-color var(--apple-structure-timing);
+            text-decoration: none;
+            display: block;
+            color: inherit;
+        }
+
+        .blog-card:hover {
+            transform: scale(1.005);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            background: #fff;
+        }
+
+        .blog-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--accent-blue);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .blog-source {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 500;
+        }
+
+        .blog-desc {
+            font-size: 15px;
+            color: var(--text-main);
+            line-height: 1.5;
+        }
+
+        footer {
+            margin: 80px 0 40px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="container nav-content">
+            <div style="font-weight: 600; font-size: 21px;"><a href="index.html"
+                    style="color: inherit; text-decoration: none; margin-left: 0;">Shubham Gaur</a></div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="blog.html" class="active">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top: 40px;">
+        <h1>Technical Blog</h1>
+        <p style="font-size: 19px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 40px;">
+            Thoughts and deep dives into Natural Language Processing, Machine Learning, and Agentic Systems.
+        </p>
+
+        <a href="https://amused-honey-44b.notion.site/Chain-of-Thought-Reasoning-without-Prompting-13f22d3f4e7f8043bb57f24a9bb7a2a9?pvs=74"
+            target="_blank" class="blog-card">
+            <span class="blog-source"><i class="fas fa-edit"></i> Notion</span>
+            <span class="blog-title">Chain-of-Thought Reasoning without Prompting</span>
+            <span class="blog-desc">An exploration of implicit reasoning capabilities in large language models without
+                explicit chain-of-thought prompting.</span>
+        </a>
+
+        <a href="https://amused-honey-44b.notion.site/Direct-Logit-Attribution-2e422d3f4e7f80b8b997fef015da952b?pvs=74"
+            target="_blank" class="blog-card">
+            <span class="blog-source"><i class="fas fa-edit"></i> Notion</span>
+            <span class="blog-title">Direct Logit Attribution</span>
+            <span class="blog-desc">Deep dive into interpretability methods for understanding model predictions through
+                logit attribution.</span>
+        </a>
+
+        <a href="https://medium.com/@shubhamggaur/baylearn-machine-learning-symposium-2024-b20e0b93a036" target="_blank"
+            class="blog-card">
+            <span class="blog-source"><i class="fab fa-medium"></i> Medium</span>
+            <span class="blog-title">BayLearn Machine Learning Symposium 2024</span>
+            <span class="blog-desc">Key takeaways and highlights from the BayLearn 2024 symposium, covering the latest
+                in ML research.</span>
+        </a>
+
+        <a href="https://medium.com/@shubhamggaur/multi-label-classification-of-user-utterances-from-natural-language-91d6b0c68716"
+            target="_blank" class="blog-card">
+            <span class="blog-source"><i class="fab fa-medium"></i> Medium</span>
+            <span class="blog-title">Multi-label Classification of User Utterances from Natural Language</span>
+            <span class="blog-desc">A technical walkthrough of building multi-label classification systems for user
+                intent understanding.</span>
+        </a>
+    </div>
+
+    <div class="container">
+        <footer>
+            <p>© 2026 Shubham Gaur.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
