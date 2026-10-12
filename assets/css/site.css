@@ -326,9 +326,12 @@ h3 {
     display: block;
 }
 
-/* teaser figure from the paper itself */
+/* Teaser figure from the paper itself: full card width, above the entry, so
+   dense pipeline diagrams are readable without opening the paper. Clicking
+   opens the full-resolution file. */
 .pub-teaser {
-    flex: 0 0 240px;
+    display: block;
+    margin-bottom: 18px;
 }
 
 .pub-teaser img {
@@ -337,7 +340,16 @@ h3 {
     border-radius: 10px;
     border: 1px solid var(--border-color);
     background: var(--figure-bg);
-    padding: 6px;
+    padding: 8px;
+    transition: border-color 0.2s ease;
+}
+
+a.pub-teaser:hover img {
+    border-color: var(--accent-blue);
+}
+
+a.pub-teaser {
+    text-decoration: none;
 }
 
 .pub-details {
@@ -653,8 +665,7 @@ footer {
         flex-direction: column;
     }
 
-    .pub-figure,
-    .pub-teaser {
+    .pub-figure {
         flex: 1 1 auto;
         width: 100%;
     }

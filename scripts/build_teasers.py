@@ -16,10 +16,12 @@ import urllib.request
 from pathlib import Path
 
 import fitz
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "assets" / "img" / "teasers"
-TARGET_WIDTH = 760          # rendered px; cards display these at ~260px
+TARGET_WIDTH = 1400         # rendered px; cards show these ~670px wide, so this
+                            # stays sharp on 2x displays
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/131.0 Safari/537.36"
 
 # slug -> (url, caption to anchor on, or an explicit (page, rect) fallback)
@@ -91,9 +93,13 @@ def main() -> int:
             rect = (rect + (-3, -3, 3, 3)) & doc[pno].rect
             dpi = max(72, min(400, round(72 * TARGET_WIDTH / rect.width)))
             pix = doc[pno].get_pixmap(clip=rect, dpi=dpi)
+            # these are flat-colour diagrams, so a 256-colour palette is visually
+            # identical at a third of the file size
+            img = Image.open(io.BytesIO(pix.tobytes("png"))).convert("RGB")
+            img = img.quantize(colors=256, method=Image.MEDIANCUT)
             path = OUT / f"{slug}.png"
-            pix.save(path)
-            print(f"{slug:12s} p{pno + 1} {pix.width}x{pix.height} "
+            img.save(path, "PNG", optimize=True)
+            print(f"{slug:12s} p{pno + 1} {img.width}x{img.height} "
                   f"-> {path.relative_to(ROOT)} ({path.stat().st_size // 1024} KiB)")
         except Exception as exc:                       # noqa: BLE001 - report and continue
             failures.append(slug)
