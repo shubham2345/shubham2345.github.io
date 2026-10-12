@@ -75,7 +75,7 @@ body {
 }
 
 .container {
-    max-width: 1080px;
+    max-width: 1180px;
     margin: 0 auto;
     padding: 0 22px;
 }
@@ -134,8 +134,9 @@ nav {
     text-decoration: none;
 }
 
-/* --- Two-column layout: sticky profile rail + content ------------------- */
+/* --- Layouts ------------------------------------------------------------ */
 
+/* Homepage: sticky profile rail beside the content. */
 .layout {
     display: grid;
     grid-template-columns: 260px minmax(0, 1fr);
@@ -149,9 +150,14 @@ nav {
     top: 84px;
 }
 
+/* Every other page: single column, no rail. */
+.page {
+    padding: 48px 0 0;
+}
+
 .profile-img {
     width: 100%;
-    max-width: 240px;
+    max-width: 150px;
     aspect-ratio: 1 / 1;
     border-radius: 24px;
     object-fit: cover;
@@ -326,12 +332,17 @@ h3 {
     display: block;
 }
 
-/* Teaser figure from the paper itself: full card width, above the entry, so
-   dense pipeline diagrams are readable without opening the paper. Clicking
-   opens the full-resolution file. */
+/* Teaser figure from the paper itself, in a left column beside the entry.
+   Sized as a share of the card so it stays large on the full-width
+   publications page. Clicking opens the full-resolution file. */
 .pub-teaser {
-    display: block;
-    margin-bottom: 18px;
+    flex: 0 0 38%;
+    min-width: 0;
+    align-self: flex-start;
+}
+
+.layout .pub-teaser {
+    flex-basis: 42%;
 }
 
 .pub-teaser img {
@@ -641,6 +652,10 @@ footer {
         padding-top: 36px;
     }
 
+    .page {
+        padding-top: 32px;
+    }
+
     .sidebar {
         position: static;
     }
@@ -665,7 +680,8 @@ footer {
         flex-direction: column;
     }
 
-    .pub-figure {
+    .pub-figure,
+    .pub-teaser {
         flex: 1 1 auto;
         width: 100%;
     }
