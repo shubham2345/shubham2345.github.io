@@ -5,7 +5,7 @@
 
 Source of truth is `main 2.tex` in the repo root. This builds it with whichever
 TeX engine is on PATH and copies the result to assets/cv/Shubham_Gaur_CV.pdf,
-which is what cv.html renders and what the Download buttons serve.
+which is what the CV links on the site serve.
 
 If no engine is installed, compile `main 2.tex` elsewhere (Overleaf works) and
 drop the PDF at that path by hand. A self-contained option that needs no TeX

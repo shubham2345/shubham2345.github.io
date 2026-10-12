@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 310" width="900" height="310"
+     role="img" aria-labelledby="blobs-title blobs-desc"
+     font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <title id="blobs-title">Cumulative blob extraction from dynamic gestures</title>
+  <desc id="blobs-desc">A retroreflective wand tip is captured as a bright blob by a night-vision
+    camera. OpenCV on a Raspberry Pi tracks the tip across frames and accumulates the trail into a
+    single shape, an SVM classifies the drawn pattern, and the result drives a GPIO action.</desc>
+
+  <!-- Deliberately built from flat shapes only: no gradients, markers or
+       tspan offsets, so it renders identically in every SVG engine. -->
+
+  <rect width="900" height="310" fill="#ffffff"/>
+
+  <!-- ── The scene: the one place this figure spends any colour ─────────── -->
+  <rect x="24" y="34" width="248" height="190" rx="12" fill="#16121f"/>
+
+  <!-- the accumulated trail, older samples dimmer than the live tip -->
+  <path d="M 70 180 C 102 96 138 92 158 132 C 176 168 202 170 226 108"
+        fill="none" stroke="#7e22ce" stroke-opacity="0.35"
+        stroke-width="14" stroke-linecap="round"/>
+  <path d="M 70 180 C 102 96 138 92 158 132 C 176 168 202 170 226 108"
+        fill="none" stroke="#c084fc" stroke-opacity="0.9"
+        stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- the live blob, as stacked discs rather than a gradient -->
+  <circle cx="226" cy="108" r="26" fill="#7e22ce" fill-opacity="0.18"/>
+  <circle cx="226" cy="108" r="17" fill="#a855f7" fill-opacity="0.32"/>
+  <circle cx="226" cy="108" r="10" fill="#e9d5ff" fill-opacity="0.75"/>
+  <circle cx="226" cy="108" r="5" fill="#ffffff"/>
+
+  <text x="148" y="250" text-anchor="middle" font-size="14" fill="#1d1d1f">
+    Retroreflective tip, no visible light
+  </text>
+  <text x="148" y="270" text-anchor="middle" font-size="13" fill="#86868b">
+    NoIR camera, infrared only
+  </text>
+
+  <!-- ── Processing chain ───────────────────────────────────────────────── -->
+  <g stroke="#d2d2d7" stroke-width="1.5" fill="#f5f5f7">
+    <rect x="338" y="69" width="168" height="120" rx="12"/>
+    <rect x="546" y="69" width="168" height="120" rx="12"/>
+    <rect x="754" y="69" width="122" height="120" rx="12"/>
+  </g>
+
+  <!-- arrows, drawn as explicit shafts and heads -->
+  <g stroke="#86868b" stroke-width="1.5">
+    <path d="M 288 129 L 326 129"/>
+    <path d="M 512 129 L 530 129"/>
+    <path d="M 720 129 L 738 129"/>
+  </g>
+  <g fill="#86868b">
+    <path d="M 326 123 L 338 129 L 326 135 Z"/>
+    <path d="M 530 123 L 542 129 L 530 135 Z"/>
+    <path d="M 738 123 L 750 129 L 738 135 Z"/>
+  </g>
+
+  <!-- step 1: accumulate -->
+  <text x="422" y="99" text-anchor="middle" font-size="15" font-weight="600" fill="#1d1d1f">Accumulate</text>
+  <path d="M 368 152 C 386 122 402 120 412 140"
+        fill="none" stroke="#7e22ce" stroke-width="2.5" stroke-linecap="round"/>
+  <g fill="#7e22ce">
+    <circle cx="368" cy="152" r="3" fill-opacity="0.3"/>
+    <circle cx="386" cy="131" r="3" fill-opacity="0.55"/>
+    <circle cx="403" cy="126" r="3" fill-opacity="0.8"/>
+    <circle cx="412" cy="140" r="4.5"/>
+  </g>
+  <text x="430" y="139" font-size="13" fill="#86868b">frame</text>
+  <text x="430" y="155" font-size="13" fill="#86868b">by frame</text>
+  <text x="422" y="178" text-anchor="middle" font-size="12" fill="#86868b">OpenCV on a Raspberry Pi</text>
+
+  <!-- step 2: classify, as a separating boundary -->
+  <text x="630" y="99" text-anchor="middle" font-size="15" font-weight="600" fill="#1d1d1f">Classify</text>
+  <path d="M 575 162 L 686 120" stroke="#1d1d1f" stroke-width="1.5" fill="none"/>
+  <g fill="#7e22ce">
+    <circle cx="593" cy="128" r="3.5"/>
+    <circle cx="615" cy="122" r="3.5"/>
+    <circle cx="641" cy="114" r="3.5"/>
+  </g>
+  <g fill="none" stroke="#86868b" stroke-width="1.5">
+    <circle cx="606" cy="164" r="3.5"/>
+    <circle cx="638" cy="154" r="3.5"/>
+    <circle cx="664" cy="146" r="3.5"/>
+  </g>
+  <text x="630" y="178" text-anchor="middle" font-size="12" fill="#86868b">SVM on the blob shape</text>
+
+  <!-- step 3: act -->
+  <text x="815" y="99" text-anchor="middle" font-size="15" font-weight="600" fill="#1d1d1f">Act</text>
+  <g stroke="#86868b" stroke-width="1.5" fill="none">
+    <path d="M 790 125 h 50"/>
+    <path d="M 790 141 h 50"/>
+    <path d="M 790 157 h 50"/>
+  </g>
+  <g fill="#7e22ce">
+    <circle cx="790" cy="125" r="3.5"/>
+    <circle cx="790" cy="141" r="3.5"/>
+    <circle cx="790" cy="157" r="3.5"/>
+  </g>
+  <text x="815" y="178" text-anchor="middle" font-size="12" fill="#86868b">GPIO</text>
+
+  <text x="338" y="252" font-size="15" font-weight="600" fill="#1d1d1f">99.62%</text>
+  <text x="404" y="252" font-size="14" fill="#86868b">pattern recognition accuracy, in the dark</text>
+</svg>

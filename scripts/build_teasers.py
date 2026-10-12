@@ -9,6 +9,11 @@ paper is updated or a new one is added; it is deliberately idempotent.
 
 Papers behind a bot wall (OpenReview) or a paywall (Springer) cannot be
 fetched, so those entries carry no teaser and their cards render text-only.
+
+The gesture-recognition paper is deliberately absent: its only diagram is a
+face-recognition figure from its own literature review, which misrepresents the
+work, so assets/img/teasers/blobs.svg is drawn by hand instead. Do not
+regenerate it from the PDF.
 """
 import io
 import sys
@@ -32,8 +37,6 @@ PAPERS = {
     "sdo":         ("https://arxiv.org/pdf/2606.06708", "Figure 1.", None),
     # Figure 1 is a single generated image; Figure 2 shows the actual task setup
     "semeval":     ("https://aclanthology.org/2025.semeval-1.274.pdf", "Figure 2:", None),
-    # no text captions in this one, so point straight at the first real figure
-    "blobs":       ("https://arxiv.org/pdf/2501.04002", None, (1, (38, 328, 258, 436))),
 }
 
 
