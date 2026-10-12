@@ -8,6 +8,19 @@
     <meta name="description"
         content="Publications, preprints and posters by Shubham Gaur, Ph.D. student in Computer Science at UC Santa Cruz.">
     <link rel="canonical" href="https://shubham2345.github.io/publications.html">
+
+    <script>
+        // set the theme before first paint so the page never flashes
+        (function () {
+            var stored = null;
+            try { stored = localStorage.getItem("theme"); } catch (e) { /* private mode */ }
+            var dark = stored
+                ? stored === "dark"
+                : window.matchMedia("(prefers-color-scheme: dark)").matches;
+            document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+        })();
+    </script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/site.css">
 </head>
@@ -22,6 +35,10 @@
                 <a href="cv.html">CV</a>
                 <a href="blog.html">Blog</a>
                 <a href="misc.html">Misc</a>
+                <button class="theme-toggle" type="button" aria-label="Switch theme">
+                    <i class="fas fa-moon icon-light" aria-hidden="true"></i>
+                    <i class="fas fa-sun icon-dark" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
     </nav>
@@ -67,70 +84,91 @@
                     <h3>Preprints &amp; Under Review</h3>
 
                     <div class="pub-card">
-                        <div class="pub-details">
-                            <span class="pub-title">RELATE: An Evaluation Framework for Measuring Relational
-                                Orientation of Large Language Models</span>
-                            <span class="pub-authors">Shivam Shukla*, Jihye Kim*, <span class="me">Shubham
-                                    Gaur</span>*, Mahnaz Roshanaei, Magy Seif El-Nasr</span>
-                            <div class="pub-venue">Under review at ICLR 2027 &middot; 2026</div>
-                            <div class="tag-row" style="margin-top: 0;">
-                                <span class="tag">Human-Centered AI</span>
-                                <span class="tag">Alignment &amp; Safety</span>
-                                <span class="tag">Evaluation</span>
+                        <div class="pub-container">
+                            <div class="pub-teaser">
+                                <img src="assets/img/teasers/relate.png"
+                                    alt="RELATE pipeline: source situations, interactive dialogue environment, and sentence-level evaluation"
+                                    loading="lazy">
                             </div>
-                            <p class="pub-highlight">Across 1,596 dialogues and seven LLMs, supportive models drift
-                                inward: the share of sentences positioning the AI as the user's ongoing source of
-                                support is higher at the sixth assistant turn than the first, while language
-                                encouraging real-world human connection is substantially lower for hesitant, indirect
-                                users than for explicit, reassurance-seeking ones.</p>
-                            <div class="btn-group">
-                                <a href="https://arxiv.org/abs/2610.09569" class="btn" target="_blank"
-                                    rel="noopener">arXiv</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pub-card">
-                        <div class="pub-details">
-                            <span class="pub-title">BenchShield: Formal Model-Backed Instrumentation for Reward
-                                Integrity in LLM-Agent Evaluation Infrastructure</span>
-                            <span class="pub-authors">S. Zheng, Z. Di, Y. Liu, &hellip;, <span class="me">Shubham
-                                    Gaur</span>, Z. Ye, H. Wang, X. Li, D. Song, C. Hauser</span>
-                            <div class="pub-venue">Preprint &middot; 2026</div>
-                            <div class="tag-row" style="margin-top: 0;">
-                                <span class="tag">Agent Evaluation</span>
-                                <span class="tag">Alignment &amp; Safety</span>
-                            </div>
-                            <p class="pub-highlight">Grounding reward-hack detection in a formal lifecycle model of an
-                                evaluation lifts full-chain recall from 23&ndash;94% to 77&ndash;100% and cuts per-task
-                                cost by up to 65%; runtime analysis reaches 96% accuracy from infrastructure-side
-                                evidence alone. Built on a corpus of 456 human-adjudicated trajectories drawn from
-                                31,000+ public agent runs.</p>
-                            <div class="btn-group">
-                                <a href="https://arxiv.org/abs/2609.11028" class="btn" target="_blank"
-                                    rel="noopener">arXiv</a>
+                            <div class="pub-details">
+                                <span class="pub-title">RELATE: An Evaluation Framework for Measuring Relational
+                                    Orientation of Large Language Models</span>
+                                <span class="pub-authors">Shivam Shukla*, Jihye Kim*, <span class="me">Shubham
+                                        Gaur</span>*, Mahnaz Roshanaei, Magy Seif El-Nasr</span>
+                                <div class="pub-venue">Under review at ICLR 2027 &middot; 2026</div>
+                                <div class="tag-row" style="margin-top: 0;">
+                                    <span class="tag">Human-Centered AI</span>
+                                    <span class="tag">Alignment &amp; Safety</span>
+                                    <span class="tag">Evaluation</span>
+                                </div>
+                                <p class="pub-highlight">Across 1,596 dialogues and seven LLMs, supportive models
+                                    drift inward: the share of sentences positioning the AI as the user's ongoing
+                                    source of support is higher at the sixth assistant turn than the first, while
+                                    language encouraging real-world human connection is substantially lower for
+                                    hesitant, indirect users than for explicit, reassurance-seeking ones.</p>
+                                <div class="btn-group">
+                                    <a href="https://arxiv.org/abs/2610.09569" class="chip" target="_blank"
+                                        rel="noopener"><i class="fas fa-file-lines"></i> arXiv</a>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="pub-card">
-                        <div class="pub-details">
-                            <span class="pub-title">MAAT: Multi-phase Adapter-Aware Targeted Unlearning</span>
-                            <span class="pub-authors">Suryash Yagnik, <span class="me">Shubham Gaur</span>, Saksham
-                                Thakur, Vinija Jain, Aman Chadha, Amitava Das</span>
-                            <div class="pub-venue">Preprint &middot; 2026</div>
-                            <div class="tag-row" style="margin-top: 0;">
-                                <span class="tag">Post-Training</span>
-                                <span class="tag">Unlearning</span>
+                        <div class="pub-container">
+                            <div class="pub-teaser">
+                                <img src="assets/img/teasers/benchshield.png"
+                                    alt="BenchShield: two reward-hacking case studies with agent authority and trusted reward paths"
+                                    loading="lazy">
                             </div>
-                            <p class="pub-highlight">Why-type causal questions make up under 1.3% of standard
-                                unlearning benchmarks, so a method that fails on causal knowledge can still score well
-                                in aggregate. 5WBench (5,000 samples, balanced across Who/What/When/Where/Why) makes
-                                that failure measurable, and MAAT is the first method to reach high forgetting and high
-                                retention on Why-type knowledge simultaneously.</p>
-                            <div class="btn-group">
-                                <a href="https://arxiv.org/abs/2605.30514" class="btn" target="_blank"
-                                    rel="noopener">arXiv</a>
+                            <div class="pub-details">
+                                <span class="pub-title">BenchShield: Formal Model-Backed Instrumentation for Reward
+                                    Integrity in LLM-Agent Evaluation Infrastructure</span>
+                                <span class="pub-authors">S. Zheng, Z. Di, Y. Liu, &hellip;, <span class="me">Shubham
+                                        Gaur</span>, Z. Ye, H. Wang, X. Li, D. Song, C. Hauser</span>
+                                <div class="pub-venue">Preprint &middot; 2026</div>
+                                <div class="tag-row" style="margin-top: 0;">
+                                    <span class="tag">Agent Evaluation</span>
+                                    <span class="tag">Alignment &amp; Safety</span>
+                                </div>
+                                <p class="pub-highlight">Grounding reward-hack detection in a formal lifecycle model
+                                    of an evaluation lifts full-chain recall from 23&ndash;94% to 77&ndash;100% and
+                                    cuts per-task cost by up to 65%; runtime analysis reaches 96% accuracy from
+                                    infrastructure-side evidence alone. Built on a corpus of 456 human-adjudicated
+                                    trajectories drawn from 31,000+ public agent runs.</p>
+                                <div class="btn-group">
+                                    <a href="https://arxiv.org/abs/2609.11028" class="chip" target="_blank"
+                                        rel="noopener"><i class="fas fa-file-lines"></i> arXiv</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pub-card">
+                        <div class="pub-container">
+                            <div class="pub-teaser">
+                                <img src="assets/img/teasers/maat.png"
+                                    alt="MAAT: three-phase unlearning framework over LoRA adapter weights"
+                                    loading="lazy">
+                            </div>
+                            <div class="pub-details">
+                                <span class="pub-title">MAAT: Multi-phase Adapter-Aware Targeted Unlearning</span>
+                                <span class="pub-authors">Suryash Yagnik, <span class="me">Shubham Gaur</span>,
+                                    Saksham Thakur, Vinija Jain, Aman Chadha, Amitava Das</span>
+                                <div class="pub-venue">Preprint &middot; 2026</div>
+                                <div class="tag-row" style="margin-top: 0;">
+                                    <span class="tag">Post-Training</span>
+                                    <span class="tag">Unlearning</span>
+                                </div>
+                                <p class="pub-highlight">Why-type causal questions make up under 1.3% of standard
+                                    unlearning benchmarks, so a method that fails on causal knowledge can still score
+                                    well in aggregate. 5WBench (5,000 samples, balanced across Who/What/When/Where/Why)
+                                    makes that failure measurable, and MAAT is the first method to reach high
+                                    forgetting and high retention on Why-type knowledge simultaneously.</p>
+                                <div class="btn-group">
+                                    <a href="https://arxiv.org/abs/2605.30514" class="chip" target="_blank"
+                                        rel="noopener"><i class="fas fa-file-lines"></i> arXiv</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -138,110 +176,137 @@
                     <h3>Peer-Reviewed</h3>
 
                     <div class="pub-card">
-                        <div class="pub-details">
-                            <span class="pub-title">Signal-Driven Observation for Long-Horizon Web Agents</span>
-                            <span class="pub-authors"><span class="me">Shubham Gaur</span>, Ian Lane</span>
-                            <div class="pub-venue">ICML 2026 Workshop on Failure Modes in Agentic AI (FAGEN), position
-                                paper</div>
-                            <div class="tag-row" style="margin-top: 0;">
-                                <span class="tag">LLM Agents</span>
+                        <div class="pub-container">
+                            <div class="pub-teaser">
+                                <img src="assets/img/teasers/sdo.png"
+                                    alt="Signal-Driven Observation architecture: root LM, browser, signal detector and sub-RLM"
+                                    loading="lazy">
                             </div>
-                            <p class="pub-highlight">Long-horizon web agents re-ingest tens of thousands of DOM tokens
-                                at every action step, eroding reasoning before the task completes. Decoupling
-                                observation from action &mdash; a sub-call that returns only task-relevant elements,
-                                re-invoked only when a URL change, a newly visible element, or an action failure fires
-                                &mdash; makes observation compression an architectural decision rather than a prompting
-                                one.</p>
-                            <div class="btn-group">
-                                <a href="https://arxiv.org/abs/2606.06708" class="btn" target="_blank"
-                                    rel="noopener">arXiv</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pub-card">
-                        <div class="pub-details">
-                            <span class="pub-title">FAULTLOC: Evaluating AI Coding Agents for Fault Localization from
-                                Crash to Cause</span>
-                            <span class="pub-authors">J. Tu, <span class="me">Shubham Gaur</span>, R. Murtinty, Z.
-                                Wang, T. Shi, D. Song, C. Wang</span>
-                            <div class="pub-venue">ICML 2026 AIWILD Workshop: Safety, Security, and Beyond</div>
-                            <div class="tag-row" style="margin-top: 0;">
-                                <span class="tag">Agent Evaluation</span>
-                            </div>
-                            <p class="pub-highlight">A 900-CVE benchmark tracing a crash back to its root cause, with
-                                ablations across frontier models: coding agents recover the true root cause in only 40%
-                                of cases.</p>
-                            <div class="btn-group">
-                                <a href="https://openreview.net/forum?id=3q6yWfaQ8R" class="btn" target="_blank"
-                                    rel="noopener">OpenReview</a>
-                                <a href="https://github.com/JianhongTu/FLBench" class="btn" target="_blank"
-                                    rel="noopener">Code</a>
+                            <div class="pub-details">
+                                <span class="pub-title">Signal-Driven Observation for Long-Horizon Web Agents</span>
+                                <span class="pub-authors"><span class="me">Shubham Gaur</span>, Ian Lane</span>
+                                <div class="pub-venue">ICML 2026 Workshop on Failure Modes in Agentic AI (FAGEN),
+                                    position paper</div>
+                                <div class="tag-row" style="margin-top: 0;">
+                                    <span class="tag">LLM Agents</span>
+                                </div>
+                                <p class="pub-highlight">Long-horizon web agents re-ingest tens of thousands of DOM
+                                    tokens at every action step, eroding reasoning before the task completes.
+                                    Decoupling observation from action &mdash; a sub-call that returns only
+                                    task-relevant elements, re-invoked only when a URL change, a newly visible element,
+                                    or an action failure fires &mdash; makes observation compression an architectural
+                                    decision rather than a prompting one.</p>
+                                <div class="btn-group">
+                                    <a href="https://arxiv.org/abs/2606.06708" class="chip" target="_blank"
+                                        rel="noopener"><i class="fas fa-file-lines"></i> arXiv</a>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="pub-card">
-                        <div class="pub-details">
-                            <span class="pub-title">SkillOptimizer: Agent Skill Optimization Through Subskills Without
-                                Task Supervision</span>
-                            <span class="pub-authors">N. Crispino, <span class="me">Shubham Gaur</span>, X. Yang, A.
-                                Yu, B. Ercevik, C. Sapugay, Y. Potter, D. Song, C. Wang</span>
-                            <div class="pub-venue">ICML 2026 AIWILD Workshop: Safety, Security, and Beyond</div>
-                            <div class="tag-row" style="margin-top: 0;">
-                                <span class="tag">LLM Agents</span>
-                                <span class="tag">Post-Training</span>
-                            </div>
-                            <p class="pub-highlight">Improves an agent's skills with no task supervision by decomposing
-                                each skill into a subskill DAG and optimizing for coverage, raising task pass rates
-                                across 192 skills and three agent families.</p>
-                            <div class="btn-group">
-                                <a href="https://openreview.net/forum?id=nZYF0aPAMP" class="btn" target="_blank"
-                                    rel="noopener">OpenReview</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pub-card">
-                        <div class="pub-details">
-                            <span class="pub-title">UCSC NLP T6 at SemEval-2025 Task 1: Leveraging LLMs and VLMs for
-                                Idiomatic Understanding</span>
-                            <span class="pub-authors">Judith Clymo, Adam Zernik, <span class="me">Shubham
-                                    Gaur</span></span>
-                            <div class="pub-venue">Proceedings of the 19th International Workshop on Semantic
-                                Evaluation (SemEval-2025), pp. 2103&ndash;2115, ACL</div>
-                            <div class="tag-row" style="margin-top: 0;">
-                                <span class="tag">Vision-Language</span>
-                            </div>
-                            <p class="pub-highlight">Pretrained vision-language models carry a strong literal bias on
-                                idiomatic phrases. Prompting GPT-4 to state the idiom's meaning <em>before</em> ranking
-                                candidate images lifts Top-1 accuracy from 43% to 87%.</p>
-                            <div class="btn-group">
-                                <a href="https://aclanthology.org/2025.semeval-1.274/" class="btn" target="_blank"
-                                    rel="noopener">Paper</a>
-                                <a href="https://github.com/azernik/semeval_2025_task1" class="btn" target="_blank"
-                                    rel="noopener">Code</a>
+                        <div class="pub-container">
+                            <div class="pub-details">
+                                <span class="pub-title">FAULTLOC: Evaluating AI Coding Agents for Fault Localization
+                                    from Crash to Cause</span>
+                                <span class="pub-authors">J. Tu, <span class="me">Shubham Gaur</span>, R. Murtinty, Z.
+                                    Wang, T. Shi, D. Song, C. Wang</span>
+                                <div class="pub-venue">ICML 2026 AIWILD Workshop: Safety, Security, and Beyond</div>
+                                <div class="tag-row" style="margin-top: 0;">
+                                    <span class="tag">Agent Evaluation</span>
+                                </div>
+                                <p class="pub-highlight">A 900-CVE benchmark tracing a crash back to its root cause,
+                                    with ablations across frontier models: coding agents recover the true root cause in
+                                    only 40% of cases.</p>
+                                <div class="btn-group">
+                                    <a href="https://openreview.net/forum?id=3q6yWfaQ8R" class="chip" target="_blank"
+                                        rel="noopener"><i class="fas fa-file-lines"></i> OpenReview</a>
+                                    <a href="https://github.com/JianhongTu/FLBench" class="chip" target="_blank"
+                                        rel="noopener"><i class="fas fa-code"></i> Code</a>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="pub-card">
-                        <div class="pub-details">
-                            <span class="pub-title">Advancing Web-Based Visual Question Answering with Efficient
-                                Image-Text Alignment</span>
-                            <span class="pub-authors">Saketh Kilaru, <span class="me">Shubham Gaur</span>, Spandan
-                                Rout</span>
-                            <div class="pub-venue">Recent Advancements in Artificial Intelligence: Proceedings of
-                                ICRAAI 2023, pp. 343&ndash;359, Springer</div>
-                            <div class="tag-row" style="margin-top: 0;">
-                                <span class="tag">Vision-Language</span>
+                        <div class="pub-container">
+                            <div class="pub-details">
+                                <span class="pub-title">SkillOptimizer: Agent Skill Optimization Through Subskills
+                                    Without Task Supervision</span>
+                                <span class="pub-authors">N. Crispino, <span class="me">Shubham Gaur</span>, X. Yang,
+                                    A. Yu, B. Ercevik, C. Sapugay, Y. Potter, D. Song, C. Wang</span>
+                                <div class="pub-venue">ICML 2026 AIWILD Workshop: Safety, Security, and Beyond</div>
+                                <div class="tag-row" style="margin-top: 0;">
+                                    <span class="tag">LLM Agents</span>
+                                    <span class="tag">Post-Training</span>
+                                </div>
+                                <p class="pub-highlight">Improves an agent's skills with no task supervision by
+                                    decomposing each skill into a subskill DAG and optimizing for coverage, raising
+                                    task pass rates across 192 skills and three agent families.</p>
+                                <div class="btn-group">
+                                    <a href="https://openreview.net/forum?id=nZYF0aPAMP" class="chip" target="_blank"
+                                        rel="noopener"><i class="fas fa-file-lines"></i> OpenReview</a>
+                                </div>
                             </div>
-                            <p class="pub-highlight">A lighter, detector-free distilled pipeline beats the WebQA
-                                vision-language pre-training baseline on both single-source (54.91% vs 51.49%) and
-                                multi-source (30.11% vs 28.73%) questions.</p>
-                            <div class="btn-group">
-                                <a href="https://link.springer.com/chapter/10.1007/978-981-97-1111-6_28" class="btn"
-                                    target="_blank" rel="noopener">Paper</a>
+                        </div>
+                    </div>
+
+                    <div class="pub-card">
+                        <div class="pub-container">
+                            <div class="pub-teaser">
+                                <img src="assets/img/teasers/semeval.png"
+                                    alt="Image ranking for an idiomatic phrase: literal, idiomatic and distractor candidates"
+                                    loading="lazy">
+                            </div>
+                            <div class="pub-details">
+                                <span class="pub-title">UCSC NLP T6 at SemEval-2025 Task 1: Leveraging LLMs and VLMs
+                                    for Idiomatic Understanding</span>
+                                <span class="pub-authors">Judith Clymo, Adam Zernik, <span class="me">Shubham
+                                        Gaur</span></span>
+                                <div class="pub-venue">Proceedings of the 19th International Workshop on Semantic
+                                    Evaluation (SemEval-2025), pp. 2103&ndash;2115, ACL</div>
+                                <div class="tag-row" style="margin-top: 0;">
+                                    <span class="tag">Vision-Language</span>
+                                </div>
+                                <p class="pub-highlight">Pretrained vision-language models carry a strong literal bias
+                                    on idiomatic phrases. Prompting GPT-4 to state the idiom's meaning <em>before</em>
+                                    ranking candidate images lifts Top-1 accuracy from 43% to 87%.</p>
+                                <div class="btn-group">
+                                    <a href="https://aclanthology.org/2025.semeval-1.274/" class="chip" target="_blank"
+                                        rel="noopener"><i class="fas fa-file-lines"></i> Paper</a>
+                                    <a href="https://github.com/azernik/semeval_2025_task1" class="chip"
+                                        target="_blank" rel="noopener"><i class="fas fa-code"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pub-card">
+                        <div class="pub-container">
+                            <div class="pub-teaser">
+                                <img src="assets/img/webqa_poster.png"
+                                    alt="Poster for Advancing Web-Based Visual Question Answering" loading="lazy">
+                            </div>
+                            <div class="pub-details">
+                                <span class="pub-title">Advancing Web-Based Visual Question Answering with Efficient
+                                    Image-Text Alignment</span>
+                                <span class="pub-authors">Saketh Kilaru, <span class="me">Shubham Gaur</span>, Spandan
+                                    Rout</span>
+                                <div class="pub-venue">Recent Advancements in Artificial Intelligence: Proceedings of
+                                    ICRAAI 2023, pp. 343&ndash;359, Springer</div>
+                                <div class="tag-row" style="margin-top: 0;">
+                                    <span class="tag">Vision-Language</span>
+                                </div>
+                                <p class="pub-highlight">A lighter, detector-free distilled pipeline beats the WebQA
+                                    vision-language pre-training baseline on both single-source (54.91% vs 51.49%) and
+                                    multi-source (30.11% vs 28.73%) questions.</p>
+                                <div class="btn-group">
+                                    <a href="https://link.springer.com/chapter/10.1007/978-981-97-1111-6_28"
+                                        class="chip" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i>
+                                        Paper</a>
+                                    <a href="assets/img/webqa_poster.png" class="chip" target="_blank"
+                                        rel="noopener"><i class="fas fa-image"></i> Poster</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -249,21 +314,28 @@
                     <h3>Earlier Work</h3>
 
                     <div class="pub-card">
-                        <div class="pub-details">
-                            <span class="pub-title">Extraction of Cumulative Blobs from Dynamic Gestures</span>
-                            <span class="pub-authors">Rishabh Naulakha, <span class="me">Shubham Gaur</span>, Dhairya
-                                Lodha, Mehek Tulsyan, Utsav Kotecha</span>
-                            <div class="pub-venue">International Journal of Scientific Research (IJSR), 10(9), 2021
+                        <div class="pub-container">
+                            <div class="pub-teaser">
+                                <img src="assets/img/teasers/blobs.png"
+                                    alt="Gesture recognition pipeline: camera, face detection, downsampling and recognition subsystems"
+                                    loading="lazy">
                             </div>
-                            <div class="tag-row" style="margin-top: 0;">
-                                <span class="tag">Computer Vision</span>
-                            </div>
-                            <p class="pub-highlight">Gesture recognition breaks down in low light because it depends on
-                                an ordinary camera. Pairing a night-vision camera with a Raspberry Pi and OpenCV
-                                recovers dynamic gesture tracking in the dark at 99.62% accuracy.</p>
-                            <div class="btn-group">
-                                <a href="https://arxiv.org/abs/2501.04002" class="btn" target="_blank"
-                                    rel="noopener">Paper</a>
+                            <div class="pub-details">
+                                <span class="pub-title">Extraction of Cumulative Blobs from Dynamic Gestures</span>
+                                <span class="pub-authors">Rishabh Naulakha, <span class="me">Shubham Gaur</span>,
+                                    Dhairya Lodha, Mehek Tulsyan, Utsav Kotecha</span>
+                                <div class="pub-venue">International Journal of Scientific Research (IJSR), 10(9), 2021
+                                </div>
+                                <div class="tag-row" style="margin-top: 0;">
+                                    <span class="tag">Computer Vision</span>
+                                </div>
+                                <p class="pub-highlight">Gesture recognition breaks down in low light because it
+                                    depends on an ordinary camera. Pairing a night-vision camera with a Raspberry Pi
+                                    and OpenCV recovers dynamic gesture tracking in the dark at 99.62% accuracy.</p>
+                                <div class="btn-group">
+                                    <a href="https://arxiv.org/abs/2501.04002" class="chip" target="_blank"
+                                        rel="noopener"><i class="fas fa-file-lines"></i> Paper</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -274,32 +346,33 @@
 
                     <div class="pub-card">
                         <div class="pub-container">
+                            <div class="pub-teaser">
+                                <a href="assets/img/capstone-poster.png" target="_blank" rel="noopener">
+                                    <img src="assets/img/capstone-poster.png"
+                                        alt="Poster: What Web Agents Need Isn't Data — It's High Quality Data"
+                                        loading="lazy">
+                                </a>
+                            </div>
                             <div class="pub-details">
                                 <span class="pub-title">What Web Agents Need Isn't Data &mdash; It's High Quality
                                     Data</span>
                                 <div class="pub-venue">Capstone Presentation, UC Santa Cruz, 2025</div>
-                            </div>
-                            <div class="pub-figure">
-                                <a href="assets/img/capstone-poster.png" target="_blank" rel="noopener">
-                                    <img src="assets/img/capstone-poster.png"
-                                        alt="Poster: What Web Agents Need Isn't Data — It's High Quality Data">
-                                </a>
                             </div>
                         </div>
                     </div>
 
                     <div class="pub-card">
                         <div class="pub-container">
+                            <div class="pub-teaser">
+                                <a href="assets/img/webqa_poster.png" target="_blank" rel="noopener">
+                                    <img src="assets/img/webqa_poster.png"
+                                        alt="Poster: Advancing Web-Based Visual Question Answering" loading="lazy">
+                                </a>
+                            </div>
                             <div class="pub-details">
                                 <span class="pub-title">Advancing Web-Based Visual Question Answering with Efficient
                                     Image-Text Alignment</span>
                                 <div class="pub-venue">SciML Symposium, Georgia Tech, 2024</div>
-                            </div>
-                            <div class="pub-figure">
-                                <a href="assets/img/webqa_poster.png" target="_blank" rel="noopener">
-                                    <img src="assets/img/webqa_poster.png"
-                                        alt="Poster: Advancing Web-Based Visual Question Answering">
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -308,9 +381,9 @@
                 <section id="code">
                     <h2>Code &amp; Open Source</h2>
                     <ul class="list-compact">
-                        <li><a href="https://github.com/massgen/MassGen" target="_blank"
-                                rel="noopener">MassGen</a> &mdash; open-source multi-agent LLM framework for
-                            coordinating heterogeneous models on open-ended tasks.</li>
+                        <li><a href="https://github.com/massgen/MassGen" target="_blank" rel="noopener">MassGen</a>
+                            &mdash; open-source multi-agent LLM framework for coordinating heterogeneous models on
+                            open-ended tasks.</li>
                         <li><a href="https://github.com/wang-research-lab/RCAbench" target="_blank"
                                 rel="noopener">RCABench</a> &mdash; benchmark infrastructure for multi-hop causal
                             reasoning and root-cause localization over large codebases.</li>
@@ -329,6 +402,8 @@
             </main>
         </div>
     </div>
+
+    <script src="assets/js/theme.js" defer></script>
 </body>
 
 </html>

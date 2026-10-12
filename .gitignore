@@ -1,3 +1,7 @@
 .DS_Store
-# source resume: the published CV is the redacted assets/cv/Shubham_Gaur_CV.pdf
+
+# CV source PDFs that live in the repo root but are not published.
+# The published CV is assets/cv/Shubham_Gaur_CV.pdf, built from "main 2.tex"
+# by scripts/build_cv.py.
 Shubham_phd_intern_27_resume.pdf
+Shubham_Research_26*.pdf

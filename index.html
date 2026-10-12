@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shubham Gaur</title>
     <meta name="description"
-        content="Shubham Gaur is a Ph.D. student in Computer Science at UC Santa Cruz working on LLM post-training, factuality, and the safety-focused evaluation of language models and agents.">
+        content="Shubham Gaur is a Ph.D. student in Computer Science at UC Santa Cruz working on LLM post-training, factuality, and safety-focused evaluation of language models and agents.">
     <link rel="canonical" href="https://shubham2345.github.io/">
 
     <meta property="og:title" content="Shubham Gaur | Ph.D. Student, UC Santa Cruz">
@@ -14,6 +14,18 @@
         content="LLM post-training, factuality, and safety-focused evaluation of language models and agents.">
     <meta property="og:url" content="https://shubham2345.github.io/">
     <meta property="og:type" content="website">
+
+    <script>
+        // set the theme before first paint so the page never flashes
+        (function () {
+            var stored = null;
+            try { stored = localStorage.getItem("theme"); } catch (e) { /* private mode */ }
+            var dark = stored
+                ? stored === "dark"
+                : window.matchMedia("(prefers-color-scheme: dark)").matches;
+            document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+        })();
+    </script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/site.css">
@@ -29,6 +41,10 @@
                 <a href="cv.html">CV</a>
                 <a href="blog.html">Blog</a>
                 <a href="misc.html">Misc</a>
+                <button class="theme-toggle" type="button" aria-label="Switch theme">
+                    <i class="fas fa-moon icon-light" aria-hidden="true"></i>
+                    <i class="fas fa-sun icon-dark" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
     </nav>
@@ -73,16 +89,17 @@
                     <h2>About</h2>
                     <p class="prose">
                         I am a first-year Ph.D. student in Computer Science at UC Santa Cruz, advised by
-                        <a href="https://scholar.google.com/citations?user=t1_WKx4AAAAJ" target="_blank" rel="noopener">Dr. Ian Lane</a>.
+                        <a href="https://scholar.google.com/citations?user=t1_WKx4AAAAJ" target="_blank"
+                            rel="noopener">Dr. Ian Lane</a>.
                         My research is on <strong>LLM post-training, factuality, and the safety-focused evaluation of
                             language models and agents</strong> &mdash; where capable models quietly fail, and how to
                         measure it well enough to fix it.
                     </p>
                     <p class="prose" style="margin-top: 14px;">
-                        That work currently spans agent benchmarks, reward hacking in agent evaluation infrastructure,
-                        and how supportive language models shape a user's reliance on them. Before returning to
-                        research I spent six years building production ML at Nokia Bell Labs, Adani Group, and
-                        BlackRock, at 100M+ user scale.
+                        That work currently spans agent benchmarks, reward hacking in agent evaluation
+                        infrastructure, and how supportive language models shape a user's reliance on them. Before
+                        returning to research I spent six years building production ML at Nokia Bell Labs, Adani
+                        Group, and BlackRock, at 100M+ user scale.
                     </p>
                     <div class="tag-row">
                         <span class="tag tag-accent">LLM Agents</span>
@@ -97,7 +114,8 @@
                         <li>
                             <span class="news-date">Oct 2026</span>
                             <span><strong>RELATE</strong> is under review at ICLR 2027 (co-first author) &mdash;
-                                <a href="https://arxiv.org/abs/2610.09569" target="_blank" rel="noopener">arXiv</a></span>
+                                <a href="https://arxiv.org/abs/2610.09569" target="_blank"
+                                    rel="noopener">arXiv</a></span>
                         </li>
                         <li>
                             <span class="news-date">Sep 2026</span>
@@ -108,18 +126,20 @@
                             <span class="news-date">Sep 2026</span>
                             <span><strong>BenchShield</strong> preprint is out, on reward integrity in LLM-agent
                                 evaluation infrastructure &mdash;
-                                <a href="https://arxiv.org/abs/2609.11028" target="_blank" rel="noopener">arXiv</a></span>
+                                <a href="https://arxiv.org/abs/2609.11028" target="_blank"
+                                    rel="noopener">arXiv</a></span>
                         </li>
                         <li>
                             <span class="news-date">Jul 2026</span>
-                            <span>Joined <a href="https://www.benchflow.ai/" target="_blank" rel="noopener">BenchFlow</a>
-                                as an open-source contributor.</span>
+                            <span>Joined <a href="https://www.benchflow.ai/" target="_blank"
+                                    rel="noopener">BenchFlow</a> as an open-source contributor.</span>
                         </li>
                         <li>
                             <span class="news-date">Jun 2026</span>
-                            <span><strong>Signal-Driven Observation for Long-Horizon Web Agents</strong> accepted to the
-                                ICML 2026 FAGEN workshop &mdash;
-                                <a href="https://arxiv.org/abs/2606.06708" target="_blank" rel="noopener">arXiv</a></span>
+                            <span><strong>Signal-Driven Observation for Long-Horizon Web Agents</strong> accepted to
+                                the ICML 2026 FAGEN workshop &mdash;
+                                <a href="https://arxiv.org/abs/2606.06708" target="_blank"
+                                    rel="noopener">arXiv</a></span>
                         </li>
                         <li>
                             <span class="news-date">Jun 2026</span>
@@ -153,341 +173,89 @@
                     </ul>
                 </section>
 
-                <section id="research">
-                    <h2>Research</h2>
-                    <p class="section-note">Four threads, and the projects that sit under each.</p>
-
-                    <div class="pub-card">
-                        <div class="pub-details">
-                            <span class="pub-title">Agent Evaluation &amp; Benchmarks</span>
-                            <p class="prose" style="font-size: 15px; margin: 0;">
-                                Benchmarks fail quietly: an agent can raise its score by exploiting the reward-relevant
-                                trajectory instead of solving the task, and a benchmark that never asks the hard
-                                question cannot report that it was missed. I build evaluation infrastructure that
-                                makes those failures measurable &mdash; <strong>FAULTLOC</strong> for fault
-                                localization from crash to cause, <strong>RCABench</strong> for multi-hop causal
-                                reasoning over large codebases, and reward-hacking adjudication for
-                                <strong>BenchShield</strong>.
-                            </p>
-                            <div class="tag-row">
-                                <span class="tag">Agent Evaluation</span>
-                                <span class="tag">Alignment &amp; Safety</span>
-                            </div>
-                            <div class="btn-group">
-                                <a href="https://github.com/JianhongTu/FLBench" class="btn btn-sm" target="_blank"
-                                    rel="noopener">FAULTLOC code</a>
-                                <a href="https://github.com/wang-research-lab/RCAbench" class="btn btn-sm"
-                                    target="_blank" rel="noopener">RCABench code</a>
-                                <a href="https://arxiv.org/abs/2609.11028" class="btn btn-sm" target="_blank"
-                                    rel="noopener">BenchShield</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pub-card">
-                        <div class="pub-details">
-                            <span class="pub-title">Long-Horizon Web Agents</span>
-                            <p class="prose" style="font-size: 15px; margin: 0;">
-                                Web agents re-ingest the full DOM and accessibility tree at every action step, so
-                                context degrades long before the task ends. I argue this coupling of observation to
-                                action is an architectural mistake, and propose <strong>Signal-Driven
-                                    Observation</strong>: re-read only when a lightweight signal fires. Related work on
-                                human interaction trajectories for WorkArena feeds the same question from the data
-                                side.
-                            </p>
-                            <div class="tag-row">
-                                <span class="tag">LLM Agents</span>
-                            </div>
-                            <div class="btn-group">
-                                <a href="https://arxiv.org/abs/2606.06708" class="btn btn-sm" target="_blank"
-                                    rel="noopener">Paper</a>
-                                <a href="https://github.com/jclymo/event-capture" class="btn btn-sm" target="_blank"
-                                    rel="noopener">Event capture code</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pub-card">
-                        <div class="pub-details">
-                            <span class="pub-title">Human-Centered Alignment</span>
-                            <p class="prose" style="font-size: 15px; margin: 0;">
-                                Evaluations of supportive models ask whether a response is safe, empathetic, or
-                                helpful. <strong>RELATE</strong> asks a different question: where does the model point
-                                the user for support next &mdash; back to itself, or outward to the people in their
-                                life? Measured at the sentence level across multi-turn dialogue.
-                            </p>
-                            <div class="tag-row">
-                                <span class="tag">Human-Centered AI</span>
-                                <span class="tag">Alignment &amp; Safety</span>
-                            </div>
-                            <div class="btn-group">
-                                <a href="https://arxiv.org/abs/2610.09569" class="btn btn-sm" target="_blank"
-                                    rel="noopener">Paper</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pub-card">
-                        <div class="pub-details">
-                            <span class="pub-title">Post-Training, Unlearning &amp; Factuality</span>
-                            <p class="prose" style="font-size: 15px; margin: 0;">
-                                Causal, Why-type knowledge is nearly absent from standard unlearning benchmarks, which
-                                lets a method look good in aggregate while failing exactly where it matters.
-                                <strong>5WBench</strong> and <strong>MAAT</strong> address that gap; alongside it I am
-                                investigating long-tail factual recall in LLMs through reasoning and post-training, and
-                                skill optimization without task supervision in <strong>SkillOptimizer</strong>.
-                            </p>
-                            <div class="tag-row">
-                                <span class="tag">Post-Training</span>
-                                <span class="tag">Unlearning</span>
-                            </div>
-                            <div class="btn-group">
-                                <a href="https://arxiv.org/abs/2605.30514" class="btn btn-sm" target="_blank"
-                                    rel="noopener">MAAT</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
                 <section id="publications">
                     <h2>Selected Publications</h2>
                     <p class="section-note">* denotes equal contribution. <a href="publications.html">See all
                             publications &rarr;</a></p>
 
                     <div class="pub-card">
-                        <div class="pub-details">
-                            <span class="pub-title">RELATE: An Evaluation Framework for Measuring Relational
-                                Orientation of Large Language Models</span>
-                            <span class="pub-authors">Shivam Shukla*, Jihye Kim*, <span class="me">Shubham
-                                    Gaur</span>*, Mahnaz Roshanaei, Magy Seif El-Nasr</span>
-                            <div class="pub-venue">Under review at ICLR 2027</div>
-                            <div class="tag-row" style="margin-top: 0;">
-                                <span class="tag">Human-Centered AI</span>
-                                <span class="tag">Alignment &amp; Safety</span>
+                        <div class="pub-container">
+                            <div class="pub-teaser">
+                                <img src="assets/img/teasers/relate.png"
+                                    alt="RELATE pipeline: source situations, interactive dialogue environment, and sentence-level evaluation"
+                                    loading="lazy">
                             </div>
-                            <p class="pub-highlight">Across 1,596 dialogues and seven LLMs, supportive models drift
-                                inward: the share of sentences positioning the AI as the user's ongoing source of
-                                support is higher at the sixth assistant turn than the first, while language
-                                encouraging real-world human connection is substantially lower for hesitant, indirect
-                                users than for explicit ones.</p>
-                            <div class="btn-group">
-                                <a href="https://arxiv.org/abs/2610.09569" class="btn" target="_blank"
-                                    rel="noopener">arXiv</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pub-card">
-                        <div class="pub-details">
-                            <span class="pub-title">FAULTLOC: Evaluating AI Coding Agents for Fault Localization from
-                                Crash to Cause</span>
-                            <span class="pub-authors">J. Tu, <span class="me">Shubham Gaur</span>, R. Murtinty, Z.
-                                Wang, T. Shi, D. Song, C. Wang</span>
-                            <div class="pub-venue">ICML 2026 AIWILD Workshop: Safety, Security, and Beyond</div>
-                            <div class="tag-row" style="margin-top: 0;">
-                                <span class="tag">Agent Evaluation</span>
-                            </div>
-                            <p class="pub-highlight">A 900-CVE benchmark tracing a crash back to its root cause:
-                                frontier coding agents recover the true root cause in only 40% of cases.</p>
-                            <div class="btn-group">
-                                <a href="https://openreview.net/forum?id=3q6yWfaQ8R" class="btn" target="_blank"
-                                    rel="noopener">OpenReview</a>
-                                <a href="https://github.com/JianhongTu/FLBench" class="btn" target="_blank"
-                                    rel="noopener">Code</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pub-card">
-                        <div class="pub-details">
-                            <span class="pub-title">Signal-Driven Observation for Long-Horizon Web Agents</span>
-                            <span class="pub-authors"><span class="me">Shubham Gaur</span>, Ian Lane</span>
-                            <div class="pub-venue">ICML 2026 Workshop on Failure Modes in Agentic AI (FAGEN),
-                                position paper</div>
-                            <div class="tag-row" style="margin-top: 0;">
-                                <span class="tag">LLM Agents</span>
-                            </div>
-                            <p class="pub-highlight">Long-horizon web agents re-ingest tens of thousands of DOM tokens
-                                at every action step, eroding reasoning before the task completes. Decoupling
-                                observation from action &mdash; re-reading only when a URL change, a newly visible
-                                element, or an action failure fires &mdash; makes observation compression an
-                                architectural decision rather than a prompting one.</p>
-                            <div class="btn-group">
-                                <a href="https://arxiv.org/abs/2606.06708" class="btn" target="_blank"
-                                    rel="noopener">arXiv</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="experience">
-                    <h2>Experience</h2>
-
-                    <h3>Research</h3>
-
-                    <div class="pub-card">
-                        <div class="pub-details">
-                            <div class="pub-head">
-                                <div>
-                                    <span class="pub-title">Graduate Researcher</span>
-                                    <span class="pub-authors">University of California, Santa Cruz &middot; advised by
-                                        <a href="https://scholar.google.com/citations?user=t1_WKx4AAAAJ" target="_blank"
-                                            rel="noopener">Dr. Ian Lane</a></span>
+                            <div class="pub-details">
+                                <span class="pub-title">RELATE: An Evaluation Framework for Measuring Relational
+                                    Orientation of Large Language Models</span>
+                                <span class="pub-authors">Shivam Shukla*, Jihye Kim*, <span class="me">Shubham
+                                        Gaur</span>*, Mahnaz Roshanaei, Magy Seif El-Nasr</span>
+                                <div class="pub-venue">Under review at ICLR 2027</div>
+                                <div class="tag-row" style="margin-top: 0;">
+                                    <span class="tag">Human-Centered AI</span>
+                                    <span class="tag">Alignment &amp; Safety</span>
                                 </div>
-                                <div class="pub-meta">Apr 2026 &ndash; Present<br>Santa Cruz, CA</div>
+                                <p class="pub-highlight">Across 1,596 dialogues and seven LLMs, supportive models
+                                    drift inward: the share of sentences positioning the AI as the user's ongoing
+                                    source of support is higher at the sixth assistant turn than the first, while
+                                    language encouraging real-world human connection is substantially lower for
+                                    hesitant, indirect users than for explicit ones.</p>
+                                <div class="btn-group">
+                                    <a href="https://arxiv.org/abs/2610.09569" class="chip" target="_blank"
+                                        rel="noopener"><i class="fas fa-file-lines"></i> arXiv</a>
+                                </div>
                             </div>
-                            <ul class="exp-list">
-                                <li>Investigating long-tail factual recall in LLMs via reasoning and post-training.</li>
-                                <li>Defined observation over-ingestion as a root cause of context rot and goal drift in
-                                    long-horizon web agents, and proposed Signal-Driven Observation (first author, ICML
-                                    2026 FAGEN).</li>
-                            </ul>
                         </div>
                     </div>
 
                     <div class="pub-card">
-                        <div class="pub-details">
-                            <div class="pub-head">
-                                <div>
-                                    <span class="pub-title">Graduate Research Assistant</span>
-                                    <span class="pub-authors"><a href="https://cgraywang.github.io/" target="_blank"
-                                            rel="noopener">Dr. Chenguang Wang</a>'s Research Lab &middot; with UC
-                                        Berkeley RDI (<a href="https://dawnsong.io/" target="_blank"
-                                            rel="noopener">Prof. Dawn Song</a>)</span>
+                        <div class="pub-container">
+                            <div class="pub-details">
+                                <span class="pub-title">FAULTLOC: Evaluating AI Coding Agents for Fault Localization
+                                    from Crash to Cause</span>
+                                <span class="pub-authors">J. Tu, <span class="me">Shubham Gaur</span>, R. Murtinty, Z.
+                                    Wang, T. Shi, D. Song, C. Wang</span>
+                                <div class="pub-venue">ICML 2026 AIWILD Workshop: Safety, Security, and Beyond</div>
+                                <div class="tag-row" style="margin-top: 0;">
+                                    <span class="tag">Agent Evaluation</span>
                                 </div>
-                                <div class="pub-meta">Oct 2025 &ndash; Aug 2026<br>Santa Clara, CA</div>
+                                <p class="pub-highlight">A 900-CVE benchmark tracing a crash back to its root cause:
+                                    frontier coding agents recover the true root cause in only 40% of cases.</p>
+                                <div class="btn-group">
+                                    <a href="https://openreview.net/forum?id=3q6yWfaQ8R" class="chip" target="_blank"
+                                        rel="noopener"><i class="fas fa-file-lines"></i> OpenReview</a>
+                                    <a href="https://github.com/JianhongTu/FLBench" class="chip" target="_blank"
+                                        rel="noopener"><i class="fas fa-code"></i> Code</a>
+                                </div>
                             </div>
-                            <ul class="exp-list">
-                                <li>Designed <strong>FAULTLOC</strong>, a 900-CVE benchmark evaluating AI coding agents
-                                    on fault localization, with ablations across frontier models.</li>
-                                <li>Built <strong>RCABench</strong>, benchmark infrastructure for multi-hop causal
-                                    reasoning and root-cause localization over large codebases; surfaced systematic
-                                    multi-agent coordination failures under realistic security conditions.</li>
-                                <li>Developed <strong>SkillOptimizer</strong>, improving agent skills without task
-                                    supervision via subskill DAG decomposition and coverage-driven optimization.</li>
-                                <li>Contributed to <strong>MassGen</strong>, an open-source multi-agent framework for
-                                    coordinating heterogeneous models on open-ended tasks.
-                                    <div class="btn-group" style="margin-top: 8px;">
-                                        <a href="https://github.com/massgen/MassGen" class="btn btn-sm" target="_blank"
-                                            rel="noopener">Code</a>
-                                    </div>
-                                </li>
-                            </ul>
                         </div>
                     </div>
 
                     <div class="pub-card">
-                        <div class="pub-details">
-                            <div class="pub-head">
-                                <div>
-                                    <span class="pub-title">Open-Source Contributor</span>
-                                    <span class="pub-authors"><a href="https://www.benchflow.ai/" target="_blank"
-                                            rel="noopener">BenchFlow</a></span>
-                                </div>
-                                <div class="pub-meta">Jul 2026 &ndash; Present</div>
+                        <div class="pub-container">
+                            <div class="pub-teaser">
+                                <img src="assets/img/teasers/sdo.png"
+                                    alt="Signal-Driven Observation architecture: root LM, browser, signal detector and sub-RLM"
+                                    loading="lazy">
                             </div>
-                            <ul class="exp-list">
-                                <li>Adjudicated reward-hacking trajectories for 35 tasks against a structured rubric for
-                                    BenchShield, contributing to a 456-trajectory human-adjudicated corpus drawn from
-                                    31,000+ agent runs.</li>
-                                <li>Contributing to <a href="https://www.benchflow.ai/frontierphysics" target="_blank"
-                                        rel="noopener">FrontierPhysics</a>, a benchmark of specialist-level physics
-                                    research tasks: surveyed the physics-evaluation literature, built a platform
-                                    connecting the project with Nobel laureate physicists, and fixed bugs in
-                                    BenchFlow's evaluation infrastructure.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="pub-card">
-                        <div class="pub-details">
-                            <div class="pub-head">
-                                <div>
-                                    <span class="pub-title">Research Apprentice</span>
-                                    <span class="pub-authors"><a href="https://sra.samsung.com/" target="_blank"
-                                            rel="noopener">Samsung Research America</a> &middot; advised by <a
-                                            href="http://www.bethannhockey.com/" target="_blank" rel="noopener">Dr. Beth
-                                            Ann Hockey</a></span>
+                            <div class="pub-details">
+                                <span class="pub-title">Signal-Driven Observation for Long-Horizon Web Agents</span>
+                                <span class="pub-authors"><span class="me">Shubham Gaur</span>, Ian Lane</span>
+                                <div class="pub-venue">ICML 2026 Workshop on Failure Modes in Agentic AI (FAGEN),
+                                    position paper</div>
+                                <div class="tag-row" style="margin-top: 0;">
+                                    <span class="tag">LLM Agents</span>
                                 </div>
-                                <div class="pub-meta">Apr 2025 &ndash; Present<br>Santa Clara, CA</div>
-                            </div>
-                            <ul class="exp-list">
-                                <li>Built a data collection pipeline for capturing high-quality human interaction
-                                    trajectories on ServiceNow using the WorkArena benchmark, including preprocessing
-                                    of raw JavaScript interaction events into BrowserGym-compatible actions.
-                                    <div class="btn-group" style="margin-top: 8px;">
-                                        <a href="https://github.com/jclymo/event-capture" class="btn btn-sm"
-                                            target="_blank" rel="noopener">Code</a>
-                                    </div>
-                                </li>
-                                <li>Collected 50+ human trajectories on WorkArena L1 tasks, showing a 30s reduction in
-                                    agent (GPT-5) execution time via in-context learning.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <h3>Industry</h3>
-
-                    <div class="pub-card">
-                        <div class="pub-details">
-                            <div class="pub-head">
-                                <div>
-                                    <span class="pub-title">Applied Research Intern</span>
-                                    <span class="pub-authors"><a href="https://www.nokia.com/" target="_blank"
-                                            rel="noopener">Nokia Bell Labs</a></span>
+                                <p class="pub-highlight">Long-horizon web agents re-ingest tens of thousands of DOM
+                                    tokens at every action step, eroding reasoning before the task completes.
+                                    Decoupling observation from action &mdash; re-reading only when a URL change, a
+                                    newly visible element, or an action failure fires &mdash; makes observation
+                                    compression an architectural decision rather than a prompting one.</p>
+                                <div class="btn-group">
+                                    <a href="https://arxiv.org/abs/2606.06708" class="chip" target="_blank"
+                                        rel="noopener"><i class="fas fa-file-lines"></i> arXiv</a>
                                 </div>
-                                <div class="pub-meta">Jun 2025 &ndash; Aug 2025<br>Naperville, IL</div>
                             </div>
-                            <ul class="exp-list">
-                                <li>Designed a multimodal retrieval pipeline for enterprise knowledge search over vector
-                                    databases (FAISS, Chroma), evaluating retrieval latency and ranking quality with
-                                    custom metrics and A/B tests.</li>
-                                <li>Built transformer-based time-series forecasting and graph neural network anomaly
-                                    detection, optimizing serving via GPU acceleration and ONNX conversion.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="pub-card">
-                        <div class="pub-details">
-                            <div class="pub-head">
-                                <div>
-                                    <span class="pub-title">Founding Lead Machine Learning Engineer</span>
-                                    <span class="pub-authors"><a href="https://www.adani.com/" target="_blank"
-                                            rel="noopener">Adani Group</a></span>
-                                </div>
-                                <div class="pub-meta">Nov 2021 &ndash; Aug 2024<br>Gurgaon, India</div>
-                            </div>
-                            <ul class="exp-list">
-                                <li>Architected ML infrastructure for a 100M+ user personalization system, running
-                                    controlled A/B experiments across 50+ model variants.</li>
-                                <li>Built an end-to-end PyTorch training and deployment pipeline with data and model
-                                    drift monitoring and automated retraining, cutting model refresh time by 60%.</li>
-                                <li>Part of the team that won the <a
-                                        href="https://www.mongodb.com/company/blog/events/congratulations-2023-apac-innovation-award-winners"
-                                        target="_blank" rel="noopener">MongoDB APAC Innovation Award 2023</a> (From
-                                    Batch to Real-Time) for re-architecting the AdaniOne SuperApp data platform from
-                                    batch to real-time event streaming.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="pub-card">
-                        <div class="pub-details">
-                            <div class="pub-head">
-                                <div>
-                                    <span class="pub-title">Machine Learning Engineer</span>
-                                    <span class="pub-authors"><a href="https://www.blackrock.com/" target="_blank"
-                                            rel="noopener">BlackRock</a></span>
-                                </div>
-                                <div class="pub-meta">Jul 2019 &ndash; Oct 2021<br>Mumbai, India</div>
-                            </div>
-                            <ul class="exp-list">
-                                <li>Built deep neural networks for fixed-income and equity portfolio optimization,
-                                    cutting inference latency 60% via quantization and pruning.</li>
-                                <li>Developed risk-scoring ensembles with SHAP explainability and
-                                    significance-tested model comparisons.</li>
-                            </ul>
                         </div>
                     </div>
                 </section>
@@ -504,9 +272,10 @@
                         <li><strong>2026</strong> &middot; 1st place, Cybersecurity Agent track, <a
                                 href="https://agentbeats.dev/shubham2345/rcabench-green-agent" target="_blank"
                                 rel="noopener">UC Berkeley AgentBeats Competition</a>.</li>
-                        <li><strong>2026</strong> &middot; <a href="https://bluedot.org/certification?id=recnD2SmHRuWdEyF0"
-                                target="_blank" rel="noopener">BlueDot Impact AI Safety Fellowship</a>, a selective
-                            cohort-based AI alignment program.</li>
+                        <li><strong>2026</strong> &middot; <a
+                                href="https://bluedot.org/certification?id=recnD2SmHRuWdEyF0" target="_blank"
+                                rel="noopener">BlueDot Impact AI Safety Fellowship</a>, a selective cohort-based AI
+                            alignment program.</li>
                         <li><strong>2025</strong> &middot; Thinking Machines Lab Tinker Research Grant, with Dr.
                             Chenguang Wang.</li>
                         <li><strong>2023</strong> &middot; MongoDB APAC Innovation Award (team), From Batch to
@@ -554,27 +323,10 @@
                         </div>
                         <div class="edu-date">Jul 2015 &ndash; May 2019<br>Chennai, India</div>
                     </div>
-                </section>
-
-                <section id="teaching">
-                    <h2>Teaching</h2>
-                    <p class="section-note">Teaching Assistant, UC Santa Cruz.</p>
-                    <div class="edu-entry">
-                        <div class="edu-info"><strong>ARTG 91: Introduction to Game Art Production</strong></div>
-                        <div class="edu-date">Winter 2026</div>
-                    </div>
-                    <div class="edu-entry">
-                        <div class="edu-info"><strong>THEA 80C: Monsters</strong></div>
-                        <div class="edu-date">Fall 2025</div>
-                    </div>
-                    <div class="edu-entry">
-                        <div class="edu-info"><strong>TIM 172B: Introduction to Technology Management II</strong></div>
-                        <div class="edu-date">Winter 2025</div>
-                    </div>
-                    <div class="edu-entry">
-                        <div class="edu-info"><strong>TIM 172A: Introduction to Technology Management I</strong></div>
-                        <div class="edu-date">Fall 2024</div>
-                    </div>
+                    <p class="section-note" style="margin-top: 16px;">
+                        Full experience, teaching and service history is in the
+                        <a href="cv.html">CV</a>.
+                    </p>
                 </section>
 
                 <footer>
@@ -583,6 +335,8 @@
             </main>
         </div>
     </div>
+
+    <script src="assets/js/theme.js" defer></script>
 </body>
 
 </html>

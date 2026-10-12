@@ -11,12 +11,51 @@ html {
 :root {
     --bg-color: #ffffff;
     --secondary-bg: #f5f5f7;
+    --card-hover-bg: #ffffff;
+    --card-border: transparent;
+    --nav-bg: rgba(255, 255, 255, 0.8);
+    --nav-border: rgba(0, 0, 0, 0.1);
     --text-main: #1d1d1f;
     --text-secondary: #86868b;
     --accent-blue: #0071e3;
+    --accent-soft: rgba(0, 113, 227, 0.08);
     --border-color: #d2d2d7;
+    --figure-bg: #ffffff;
+    --btn-fill: #0071e3;
+    --btn-text: #ffffff;
+    --btn-hover-fill: #1d1d1f;
+    --btn-hover-text: #ffffff;
     --radius-card: 18px;
     --radius-pill: 20px;
+    --radius-chip: 7px;
+    color-scheme: light;
+}
+
+/* Dark theme. Applied when the visitor picks it, or when they have no stored
+   preference and their system asks for dark. Cards and chips keep a lifted
+   background plus a visible border so they stay legible against the page. */
+:root[data-theme="dark"] {
+    --bg-color: #0a0a0c;
+    --secondary-bg: #232329;
+    --card-hover-bg: #2e2e36;
+    --card-border: #3a3a42;
+    --nav-bg: rgba(10, 10, 12, 0.82);
+    --nav-border: rgba(255, 255, 255, 0.12);
+    --text-main: #f2f2f4;
+    --text-secondary: #9d9da5;
+    --accent-blue: #4ea3ff;
+    --accent-soft: rgba(78, 163, 255, 0.14);
+    --border-color: #35353c;
+    --figure-bg: #f7f7f8;
+    --btn-fill: #4ea3ff;
+    --btn-text: #0a0a0c;
+    --btn-hover-fill: #ffffff;
+    --btn-hover-text: #0a0a0c;
+    color-scheme: dark;
+}
+
+body {
+    transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 * {
@@ -55,11 +94,11 @@ a:hover {
 nav {
     position: sticky;
     top: 0;
-    background: rgba(255, 255, 255, 0.8);
+    background: var(--nav-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     z-index: 1000;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid var(--nav-border);
 }
 
 .nav-content {
@@ -215,7 +254,8 @@ h3 {
     letter-spacing: 0;
     padding: 4px 11px;
     border-radius: var(--radius-pill);
-    background: var(--secondary-bg);
+    /* page background, not card background, so tags read against both */
+    background: var(--bg-color);
     color: var(--text-main);
     border: 1px solid var(--border-color);
     white-space: nowrap;
@@ -256,7 +296,7 @@ h3 {
 
 .pub-card {
     background: var(--secondary-bg);
-    border: 1px solid transparent;
+    border: 1px solid var(--card-border);
     margin-bottom: 20px;
     padding: 22px 24px;
     border-radius: var(--radius-card);
@@ -264,7 +304,7 @@ h3 {
 }
 
 .pub-card:hover {
-    background: #fff;
+    background: var(--card-hover-bg);
     border-color: var(--border-color);
 }
 
@@ -282,7 +322,22 @@ h3 {
     width: 100%;
     border-radius: 10px;
     border: 1px solid var(--border-color);
+    background: var(--figure-bg);
     display: block;
+}
+
+/* teaser figure from the paper itself */
+.pub-teaser {
+    flex: 0 0 240px;
+}
+
+.pub-teaser img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background: var(--figure-bg);
+    padding: 6px;
 }
 
 .pub-details {
@@ -365,18 +420,18 @@ h3 {
     display: inline-block;
     padding: 6px 16px;
     border-radius: var(--radius-pill);
-    background: var(--accent-blue);
-    color: #fff;
+    background: var(--btn-fill);
+    color: var(--btn-text);
     font-size: 13px;
     font-weight: 500;
-    transition: background 0.3s ease;
-    border: none;
+    transition: background 0.25s ease, color 0.25s ease;
+    border: 1px solid transparent;
     cursor: pointer;
 }
 
 .btn:hover {
-    background: var(--text-main);
-    color: #fff;
+    background: var(--btn-hover-fill);
+    color: var(--btn-hover-text);
     text-decoration: none;
 }
 
@@ -392,9 +447,68 @@ h3 {
 }
 
 .btn-ghost:hover {
-    background: var(--secondary-bg);
+    background: var(--accent-soft);
     color: var(--accent-blue);
 }
+
+/* Squared link boxes on publication entries: [arXiv] [Code] [OpenReview] */
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 11px;
+    border-radius: var(--radius-chip);
+    border: 1px solid var(--border-color);
+    background: var(--bg-color);
+    color: var(--accent-blue);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.chip:hover {
+    background: var(--accent-blue);
+    border-color: var(--accent-blue);
+    color: var(--btn-text);
+    text-decoration: none;
+}
+
+.chip i {
+    font-size: 11px;
+    opacity: 0.85;
+}
+
+/* --- Theme toggle ------------------------------------------------------- */
+
+.theme-toggle {
+    margin-left: 20px;
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--text-main);
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    vertical-align: middle;
+}
+
+.theme-toggle:hover {
+    background: var(--secondary-bg);
+    color: var(--accent-blue);
+    border-color: var(--accent-blue);
+}
+
+/* swap which glyph shows; the other is hidden in each theme */
+.theme-toggle .icon-dark { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-light { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-dark { display: inline; }
 
 /* --- Compact list rows (education, teaching, awards, service) ----------- */
 
@@ -402,7 +516,7 @@ h3 {
     margin-bottom: 12px;
     padding: 16px 20px;
     background: var(--secondary-bg);
-    border: 1px solid transparent;
+    border: 1px solid var(--card-border);
     border-radius: var(--radius-card);
     display: flex;
     justify-content: space-between;
@@ -412,7 +526,7 @@ h3 {
 }
 
 .edu-entry:hover {
-    background: #fff;
+    background: var(--card-hover-bg);
     border-color: var(--border-color);
 }
 
@@ -461,7 +575,7 @@ h3 {
 
 .honor-card {
     background: var(--secondary-bg);
-    border: 1px solid transparent;
+    border: 1px solid var(--card-border);
     padding: 22px 24px;
     border-radius: var(--radius-card);
     display: flex;
@@ -472,7 +586,7 @@ h3 {
 }
 
 .honor-card:hover {
-    background: #fff;
+    background: var(--card-hover-bg);
     border-color: var(--border-color);
 }
 
@@ -539,7 +653,8 @@ footer {
         flex-direction: column;
     }
 
-    .pub-figure {
+    .pub-figure,
+    .pub-teaser {
         flex: 1 1 auto;
         width: 100%;
     }
@@ -632,7 +747,7 @@ footer {
 
 .blog-card {
     background: var(--secondary-bg);
-    border: 1px solid transparent;
+    border: 1px solid var(--card-border);
     margin-bottom: 20px;
     padding: 22px 24px;
     border-radius: var(--radius-card);
@@ -643,7 +758,7 @@ footer {
 }
 
 .blog-card:hover {
-    background: #fff;
+    background: var(--card-hover-bg);
     border-color: var(--border-color);
     text-decoration: none;
 }

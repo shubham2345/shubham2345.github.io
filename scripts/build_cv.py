@@ -1,50 +1,78 @@
-"""Build the public CV from the source resume.
+#!/usr/bin/env python3
+"""Compile the LaTeX CV and publish it to assets/cv/.
 
-Removes the phone number and rebuilds the contact line so no gap is left
-behind. The line is redrawn in Helvetica -- the base-14 font that Nimbus Sans,
-the resume's own face, is a clone of, so the metrics match the untouched lines
-around it while the text stays selectable and searchable. (Re-embedding the
-resume's subsetted Type1 font was tried first: it has no `space` glyph, so the
-rebuilt line extracted as "Santa\x00Clara".) The bullet separator is drawn as a
-circle measured off the links line below, because Helvetica's own bullet sits
-differently from the one the rest of the document uses.
+    python3 scripts/build_cv.py
+
+Source of truth is `main 2.tex` in the repo root. This builds it with whichever
+TeX engine is on PATH and copies the result to assets/cv/Shubham_Gaur_CV.pdf,
+which is what cv.html renders and what the Download buttons serve.
+
+If no engine is installed, compile `main 2.tex` elsewhere (Overleaf works) and
+drop the PDF at that path by hand. A self-contained option that needs no TeX
+installation:
+
+    https://github.com/tectonic-typesetting/tectonic/releases
 """
-import fitz
+import shutil
+import subprocess
+import sys
+import tempfile
+from pathlib import Path
 
-SRC, OUT = "Shubham_phd_intern_27_resume.pdf", "assets/cv/Shubham_Gaur_CV.pdf"
-PHONE = "(408) 640-5717"
-LINE = fitz.Rect(182, 37.8, 430, 49.4)   # contact line, between the name and the links
-BASELINE, SIZE, FONT = 45.95, 8.47, "helv"
-BLACK, BLUE = (0, 0, 0), (26 / 255, 59 / 255, 221 / 255)
-DOT_R, DOT_RISE, DOT_GAP = 1.05, 2.39, 3.8   # measured off the links line below
-LOCATION, EMAIL = "Santa Clara, CA, USA", "gshubhaur@gmail.com"
+ROOT = Path(__file__).resolve().parent.parent
+SRC = ROOT / "main 2.tex"
+OUT = ROOT / "assets" / "cv" / "Shubham_Gaur_CV.pdf"
 
-doc = fitz.open(SRC)
-page = doc[0]
-assert any(p.search_for(PHONE) for p in doc), "phone number not found in source"
+# (binary, argv builder); first one found on PATH wins
+ENGINES = [
+    ("tectonic", lambda tex, outdir: ["tectonic", "-X", "compile", str(tex), "--outdir", str(outdir)]),
+    ("latexmk", lambda tex, outdir: ["latexmk", "-pdf", "-interaction=nonstopmode",
+                                     f"-outdir={outdir}", str(tex)]),
+    ("pdflatex", lambda tex, outdir: ["pdflatex", "-interaction=nonstopmode",
+                                      f"-output-directory={outdir}", str(tex)]),
+    ("xelatex", lambda tex, outdir: ["xelatex", "-interaction=nonstopmode",
+                                     f"-output-directory={outdir}", str(tex)]),
+]
 
-page.add_redact_annot(LINE, fill=(1, 1, 1))
-for other in doc:
-    if other is not page:
-        for rect in other.search_for(PHONE):
-            other.add_redact_annot(rect, fill=(1, 1, 1))
-for p in doc:
-    p.apply_redactions()
 
-w_loc = fitz.get_text_length(LOCATION, FONT, SIZE)
-w_email = fitz.get_text_length(EMAIL, FONT, SIZE)
-x = (page.rect.width - (w_loc + 2 * DOT_GAP + w_email)) / 2
-x_dot = x + w_loc + DOT_GAP
-x_email = x_dot + DOT_GAP
+def main() -> int:
+    if not SRC.exists():
+        sys.exit(f"missing source: {SRC}")
 
-page.insert_text((x, BASELINE), LOCATION, fontname=FONT, fontsize=SIZE, color=BLACK)
-page.draw_circle((x_dot, BASELINE - DOT_RISE), DOT_R, color=BLACK, fill=BLACK, width=0)
-page.insert_text((x_email, BASELINE), EMAIL, fontname=FONT, fontsize=SIZE, color=BLUE)
-page.insert_link({
-    "kind": fitz.LINK_URI,
-    "from": fitz.Rect(x_email, LINE.y0, x_email + w_email, LINE.y1),
-    "uri": f"mailto:{EMAIL}",
-})
+    engine = next(((name, build) for name, build in ENGINES if shutil.which(name)), None)
+    if engine is None:
+        sys.exit("no TeX engine found (looked for: "
+                 + ", ".join(name for name, _ in ENGINES)
+                 + ").\nSee the docstring in this file for how to build without one.")
+    name, build = engine
 
-doc.save(OUT, garbage=4, deflate=True)
-print("wrote", OUT)
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp = Path(tmp)
+        # copy to a space-free name: some engines mishandle spaces in paths
+        tex = tmp / "cv.tex"
+        tex.write_bytes(SRC.read_bytes())
+
+        # pdflatex/xelatex need two passes to settle references; latexmk and
+        # tectonic handle that themselves
+        passes = 2 if name in ("pdflatex", "xelatex") else 1
+        for _ in range(passes):
+            result = subprocess.run(build(tex, tmp), cwd=tmp,
+                                    capture_output=True, text=True)
+            if result.returncode != 0:
+                sys.stderr.write(result.stdout[-4000:] + result.stderr[-4000:])
+                sys.exit(f"{name} failed with exit code {result.returncode}")
+
+        pdf = tmp / "cv.pdf"
+        if not pdf.exists():
+            sys.exit(f"{name} reported success but produced no PDF")
+
+        OUT.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(pdf, OUT)
+
+    print(f"built with {name}: {OUT.relative_to(ROOT)} "
+          f"({OUT.stat().st_size // 1024} KiB)")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
