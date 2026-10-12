@@ -4,856 +4,584 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shubham Gaur | Portfolio</title>
-    <meta name="description" content="Portfolio of Shubham Gaur, Masters Student in NLP at UC Santa Cruz.">
+    <title>Shubham Gaur</title>
+    <meta name="description"
+        content="Shubham Gaur is a Ph.D. student in Computer Science at UC Santa Cruz working on LLM post-training, factuality, and the safety-focused evaluation of language models and agents.">
     <link rel="canonical" href="https://shubham2345.github.io/">
 
-    <!-- Open Graph (using placeholders) -->
-    <meta property="og:title" content="Shubham Gaur | NLP Researcher">
-    <meta property="og:description" content="AI Researcher at UC Santa Cruz">
+    <meta property="og:title" content="Shubham Gaur | Ph.D. Student, UC Santa Cruz">
+    <meta property="og:description"
+        content="LLM post-training, factuality, and safety-focused evaluation of language models and agents.">
     <meta property="og:url" content="https://shubham2345.github.io/">
+    <meta property="og:type" content="website">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 70px;
-        }
-
-        :root {
-            /* Apple Palette */
-            --bg-color: #ffffff;
-            --secondary-bg: #f5f5f7;
-            --text-main: #1d1d1f;
-            --text-secondary: #86868b;
-            --accent-blue: #0071e3;
-            --border-color: #d2d2d7;
-            --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
-            /* Apple structural transition */
-            --apple-structure-timing: 0.8s cubic-bezier(0.25, 1, 0.5, 1);
-            /* Apple text/color transition */
-            --apple-text-timing: 0.1s ease;
-        }
-
-        * {
-            box-sizing: border-box;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.47059;
-            font-weight: 400;
-            letter-spacing: -0.022em;
-            color: var(--text-main);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 0 22px;
-        }
-
-        /* Sticky Navigation */
-        nav {
-            position: sticky;
-            top: 0;
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        .nav-content {
-            height: 52px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 16px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-main);
-            margin-left: 20px;
-            opacity: 0.8;
-            transition: opacity 0.3s;
-        }
-
-        .nav-links a:hover {
-            opacity: 1;
-            color: var(--accent-blue);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 80px 0 60px;
-            display: flex;
-            align-items: center;
-            gap: 60px;
-        }
-
-        .hero-img {
-            width: 300px;
-            height: 300px;
-            border-radius: 65px;
-            object-fit: cover;
-            object-position: top center;
-            background-color: var(--secondary-bg);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        }
-
-        .hero-content h1 {
-            font-size: 48px;
-            line-height: 1.08349;
-            font-weight: 600;
-            letter-spacing: -0.003em;
-            margin: 0 0 10px 0;
-        }
-
-        .hero-subtitle {
-            font-size: 21px;
-            color: var(--text-secondary);
-            margin-bottom: 24px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .social-links a {
-            font-size: 22px;
-            color: var(--text-main);
-            transition: color 0.3s;
-        }
-
-        .social-links a:hover {
-            color: var(--accent-blue);
-        }
-
-        /* Typography & Headings */
-        h2 {
-            font-size: 32px;
-            font-weight: 600;
-            margin-top: 30px;
-            margin-bottom: 10px;
-        }
-
-        a {
-            color: var(--accent-blue);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Education Layout */
-        .edu-entry {
-            margin-bottom: 20px;
-            padding: 20px;
-            background: var(--secondary-bg);
-            border-radius: 18px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition:
-                transform var(--apple-text-timing),
-                box-shadow var(--apple-structure-timing),
-                background-color var(--apple-structure-timing),
-                color var(--apple-structure-timing);
-        }
-
-        .edu-entry:hover {
-            transform: scale(1.005);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-            background: #fff;
-            border-color: transparent;
-        }
-
-        .edu-info strong {
-            font-size: 18px;
-        }
-
-        .edu-date {
-            color: var(--text-secondary);
-            font-size: 15px;
-            text-align: right;
-        }
-
-        /* Publication Cards */
-        .pub-card {
-            background: var(--secondary-bg);
-            margin-bottom: 32px;
-            padding: 24px;
-            border-radius: 24px;
-            transition:
-                transform var(--apple-text-timing),
-                box-shadow var(--apple-structure-timing),
-                background-color var(--apple-structure-timing),
-                color var(--apple-structure-timing);
-        }
-
-        .pub-card:hover {
-            transform: scale(1.005);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-            background: #fff;
-            border-color: transparent;
-        }
-
-        .pub-container {
-            display: flex;
-            gap: 30px;
-            align-items: flex-start;
-            /* Modified for better text alignment when no image */
-        }
-
-        .pub-figure {
-            flex: 0 0 240px;
-        }
-
-        .pub-figure img {
-            width: 100%;
-            border-radius: 12px;
-            border: 1px solid #eee;
-        }
-
-        .pub-details {
-            flex: 1;
-        }
-
-        /* Added flexibility */
-
-        .pub-title {
-            font-size: 20px;
-            font-weight: 600;
-            display: block;
-            margin-bottom: 8px;
-            line-height: 1.3;
-        }
-
-        .pub-authors {
-            font-size: 15px;
-            color: var(--text-secondary);
-            margin-bottom: 8px;
-            display: block;
-        }
-
-        /* Highlighting author name */
-        .me {
-            color: var(--text-main);
-            font-weight: 600;
-            text-decoration: underline;
-        }
-
-        .btn-group {
-            margin-top: 15px;
-            display: flex;
-            gap: 10px;
-        }
-
-        /* Buttons */
-        .btn {
-            padding: 6px 16px;
-            border-radius: 20px;
-            background: #0071e3;
-            color: #fff;
-            font-size: 13px;
-            font-weight: 500;
-            transition: background 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background: var(--text-main);
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .btn-primary {
-            background: #0071e3;
-            color: #fff;
-        }
-
-        /* Grid Layouts for Skills/Honors */
-        .honors-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .honor-card {
-            background: var(--secondary-bg);
-            padding: 24px;
-            border-radius: 20px;
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-            transition:
-                transform var(--apple-text-timing),
-                box-shadow var(--apple-structure-timing),
-                background-color var(--apple-structure-timing),
-                color var(--apple-structure-timing);
-            height: 100%;
-        }
-
-        .honor-card:hover {
-            transform: scale(1.005);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-            background: #fff;
-            border-color: transparent;
-        }
-
-        .honor-icon {
-            font-size: 24px;
-            color: var(--accent-blue);
-            margin-top: 4px;
-        }
-
-        .honor-content strong {
-            display: block;
-            font-size: 17px;
-            color: var(--text-main);
-            margin-bottom: 4px;
-            line-height: 1.2;
-        }
-
-        .honor-desc {
-            font-size: 14px;
-            color: var(--text-secondary);
-            line-height: 1.4;
-        }
-
-        /* Experience Bullet Points */
-        .exp-list {
-            padding-left: 20px;
-            margin-top: 10px;
-            color: var(--text-main);
-            font-size: 15px;
-            list-style-type: disc;
-            /* Rounded bullet points */
-        }
-
-        .exp-list li {
-            margin-bottom: 5px;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                padding-top: 40px;
-            }
-
-            .pub-container {
-                flex-direction: column;
-            }
-
-            .hero-img {
-                width: 180px;
-                height: 180px;
-            }
-
-            h1 {
-                font-size: 36px;
-            }
-        }
-
-        .prose {
-            text-align: justify;
-            text-justify: inter-word;
-            hyphens: auto;
-        }
-
-        .prose-narrow {
-            max-width: 980px;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/site.css">
 </head>
 
 <body>
     <nav>
         <div class="container nav-content">
-            <div style="font-weight: 600; font-size: 21px;"><a href="/"
-                    style="color: inherit; text-decoration: none; margin-left: 0;">Shubham Gaur</a></div>
+            <div class="nav-brand"><a href="/">Shubham Gaur</a></div>
             <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#experience">Experience</a>
-                <a href="#publications">Publications</a>
-                <a href="#posters">Posters</a>
-                <a href="#skills">Skills</a>
-                <a href="#education">Education</a>
-                <a href="#teaching">Teaching</a>
+                <a href="/" class="active">About</a>
+                <a href="publications.html">Publications</a>
+                <a href="cv.html">CV</a>
                 <a href="blog.html">Blog</a>
+                <a href="misc.html">Misc</a>
             </div>
         </div>
     </nav>
 
     <div class="container">
-        <!-- Hero Section -->
-        <section class="hero" id="about">
-            <img src="assets/img/nye.jpeg" alt="Shubham Gaur" class="hero-img">
-            <div class="hero-content">
+        <div class="layout">
+
+            <!-- ---------------------------------------------------------- -->
+            <!-- Profile rail                                               -->
+            <!-- ---------------------------------------------------------- -->
+            <aside class="sidebar">
+                <img src="assets/img/nye.jpeg" alt="Shubham Gaur" class="profile-img">
                 <h1>Shubham Gaur</h1>
-                <p class="hero-subtitle">AI Researcher at UC Santa Cruz</p>
+                <p class="sidebar-role">Ph.D. Student, Computer Science<br>University of California, Santa Cruz</p>
+                <p class="sidebar-meta">Advised by <a href="https://scholar.google.com/citations?user=t1_WKx4AAAAJ"
+                        target="_blank" rel="noopener">Dr. Ian Lane</a></p>
+                <p class="sidebar-meta">Santa Clara, CA</p>
+
                 <div class="social-links">
-                    <a href="mailto:gshubhaur@gmail.com"><i class="fas fa-envelope"></i></a>
-                    <a href="#"><i class="fas fa-graduation-cap"></i></a> <!-- Google Scholar Placeholder -->
-                    <a href="https://github.com/shubham2345"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/shubhamggaur"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:gshubhaur@gmail.com" aria-label="Email" title="Email"><i
+                            class="fas fa-envelope"></i></a>
+                    <a href="https://scholar.google.com/citations?user=afguXvoAAAAJ" target="_blank" rel="noopener"
+                        aria-label="Google Scholar" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                    <a href="https://github.com/shubham2345" target="_blank" rel="noopener" aria-label="GitHub"
+                        title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/shubhamggaur" target="_blank" rel="noopener" aria-label="LinkedIn"
+                        title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 </div>
-                <div style="margin-top: 30px;">
-                    <!-- Placeholder for CV -->
-                    <a href="https://drive.google.com/file/d/1_m4kCvjgYq22rph-e5kM6Pu_3GVgldWJ/view?usp=sharing"
-                        class="btn btn-primary" style="font-size: 15px; padding: 10px 24px;">Download CV</a>
+
+                <div class="sidebar-actions">
+                    <a href="cv.html" class="btn">View CV</a>
+                    <a href="assets/cv/Shubham_Gaur_CV.pdf" class="btn btn-ghost" download>Download PDF</a>
                 </div>
-            </div>
-        </section>
+            </aside>
 
-        <!-- About Me -->
-        <section>
-            <h2>About Me</h2>
-            <p class="prose prose-narrow" style="font-size: 19px; color: var(--text-secondary); line-height: 1.6;">
-                I am a machine learning engineer and researcher with 5+ years of experience across Nokia, Adani Group,
-                and BlackRock. My research interests center on <strong>AI Safety</strong> and <strong>Agentic
-                    AI</strong>,
-                with an emphasis on post-training behavior, evaluation, and alignment—understanding where capable models
-                fail and how to make their behavior more predictable and robust in practice.
-            </p>
+            <!-- ---------------------------------------------------------- -->
+            <!-- Content                                                    -->
+            <!-- ---------------------------------------------------------- -->
+            <main class="content">
 
-        </section>
-
-        <section id="experience">
-            <h2>Experience</h2>
-
-            <!-- Research Experience -->
-            <h3 style="font-size: 24px; margin-top:20px; margin-bottom:15px; color: var(--text-main);">Research
-                Experience</h3>
-
-            <div class="pub-card">
-                <div class="pub-container">
-                    <div class="pub-details">
-                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-                            <div>
-                                <span class="pub-title" style="margin-bottom: 4px;">Graduate Research Assistant</span>
-                                <span class="pub-authors">
-                                    <a href="https://cgraywang.github.io/" target="_blank"
-                                        style="color: inherit; text-decoration: none; border-bottom: 1px dashed var(--text-secondary);">Dr.
-                                        Chenguang Wang</a>’s Lab
-                                </span>
-                            </div>
-                            <div
-                                style="text-align: right; color: var(--text-secondary); font-size: 15px; min-width: 140px; line-height: 1.4;">
-                                Oct 2025 - Present<br>Santa Clara, USA
-                            </div>
-                        </div>
-                        <ul class="exp-list">
-                            <li>Contributing to <strong>MassGen</strong>, an open-source multi-agent system that
-                                coordinates multiple language models to solve complex tasks.
-                                <div style="margin-top: 8px;"><a href="https://github.com/massgen/MassGen" class="btn"
-                                        style="padding: 4px 12px; font-size: 12px;">Code</a></div>
-                            </li>
-                            <li>Exploring research directions to add diversity in agent’s responses, voting in
-                                multi-agents to solve open-ended tasks.</li>
-                            <li>Developing <strong>RCABench</strong>, a benchmark for evaluating agent-based root-cause
-                                localization via multi-hop causal reasoning over codebases.
-                                <div style="margin-top: 8px;"><a href="https://github.com/JianhongTu/RCAbench"
-                                        class="btn" style="padding: 4px 12px; font-size: 12px;">Code</a></div>
-                            </li>
-                        </ul>
+                <section id="about">
+                    <h2>About</h2>
+                    <p class="prose">
+                        I am a first-year Ph.D. student in Computer Science at UC Santa Cruz, advised by
+                        <a href="https://scholar.google.com/citations?user=t1_WKx4AAAAJ" target="_blank" rel="noopener">Dr. Ian Lane</a>.
+                        My research is on <strong>LLM post-training, factuality, and the safety-focused evaluation of
+                            language models and agents</strong> &mdash; where capable models quietly fail, and how to
+                        measure it well enough to fix it.
+                    </p>
+                    <p class="prose" style="margin-top: 14px;">
+                        That work currently spans agent benchmarks, reward hacking in agent evaluation infrastructure,
+                        and how supportive language models shape a user's reliance on them. Before returning to
+                        research I spent six years building production ML at Nokia Bell Labs, Adani Group, and
+                        BlackRock, at 100M+ user scale.
+                    </p>
+                    <div class="tag-row">
+                        <span class="tag tag-accent">LLM Agents</span>
+                        <span class="tag tag-accent">Alignment &amp; Safety</span>
+                        <span class="tag tag-accent">Human-Centered AI</span>
                     </div>
-                </div>
-            </div>
+                </section>
 
-            <div class="pub-card">
-                <div class="pub-container">
-                    <div class="pub-details">
-                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-                            <div>
-                                <span class="pub-title" style="margin-bottom: 4px;">Research Apprentice</span>
-                                <span class="pub-authors"><a href="https://sra.samsung.com/" target="_blank"
-                                        style="color: inherit; text-decoration: none; border-bottom: 1px dashed var(--text-secondary);">Samsung
-                                        Research America</a> (advised by <a href="http://www.bethannhockey.com/"
-                                        target="_blank"
-                                        style="color: inherit; text-decoration: none; border-bottom: 1px dashed var(--text-secondary);">Dr.
-                                        Beth Ann Hockey</a>)</span>
-                            </div>
-                            <div
-                                style="text-align: right; color: var(--text-secondary); font-size: 15px; min-width: 140px; line-height: 1.4;">
-                                Apr 2025 - Present<br>Santa Clara, USA
-                            </div>
-                        </div>
-                        <ul class="exp-list">
-                            <li>Developing a <strong>novel data collection pipeline</strong> for capturing high-quality
-                                human interaction trajectories on ServiceNow using the WorkArena benchmark.</li>
-                            <li>Designed end-to-end preprocessing and post-processing of JavaScript interaction events
-                                to BrowserGym compatible actions.
-                                <div style="margin-top: 8px;"><a href="https://github.com/jclymo/event-capture"
-                                        class="btn" style="padding: 4px 12px; font-size: 12px;">Code</a></div>
-                            </li>
-                            <li>Collected <strong>50+ human trajectories</strong> on WorkArena L1 tasks, showing a 30s
-                                reduction in agent (GPT-5) execution time via in-context learning.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+                <section id="news">
+                    <h2>News</h2>
+                    <ul class="news-list">
+                        <li>
+                            <span class="news-date">Oct 2026</span>
+                            <span><strong>RELATE</strong> is under review at ICLR 2027 (co-first author) &mdash;
+                                <a href="https://arxiv.org/abs/2610.09569" target="_blank" rel="noopener">arXiv</a></span>
+                        </li>
+                        <li>
+                            <span class="news-date">Sep 2026</span>
+                            <span>Started my Ph.D. at UC Santa Cruz with Dr. Ian Lane, supported by the UCSC Regents
+                                Award and the International Doctoral Recruitment Fellowship.</span>
+                        </li>
+                        <li>
+                            <span class="news-date">Sep 2026</span>
+                            <span><strong>BenchShield</strong> preprint is out, on reward integrity in LLM-agent
+                                evaluation infrastructure &mdash;
+                                <a href="https://arxiv.org/abs/2609.11028" target="_blank" rel="noopener">arXiv</a></span>
+                        </li>
+                        <li>
+                            <span class="news-date">Jul 2026</span>
+                            <span>Joined <a href="https://www.benchflow.ai/" target="_blank" rel="noopener">BenchFlow</a>
+                                as an open-source contributor.</span>
+                        </li>
+                        <li>
+                            <span class="news-date">Jun 2026</span>
+                            <span><strong>Signal-Driven Observation for Long-Horizon Web Agents</strong> accepted to the
+                                ICML 2026 FAGEN workshop &mdash;
+                                <a href="https://arxiv.org/abs/2606.06708" target="_blank" rel="noopener">arXiv</a></span>
+                        </li>
+                        <li>
+                            <span class="news-date">Jun 2026</span>
+                            <span><strong>SkillOptimizer</strong> and <strong>FAULTLOC</strong> accepted to the ICML
+                                2026 AIWILD workshop on safety, security, and beyond.</span>
+                        </li>
+                        <li>
+                            <span class="news-date">2026</span>
+                            <span>1st place, Cybersecurity Agent track,
+                                <a href="https://agentbeats.dev/shubham2345/rcabench-green-agent" target="_blank"
+                                    rel="noopener">UC Berkeley AgentBeats Competition</a>.</span>
+                        </li>
+                        <li>
+                            <span class="news-date">2026</span>
+                            <span>Winner, <a
+                                    href="https://www.linkedin.com/feed/update/urn:li:activity:7443033828970917888/"
+                                    target="_blank" rel="noopener">NVIDIA GTC PyTorch Helion Hackathon</a>
+                                (LLM-guided Triton kernel optimization).</span>
+                        </li>
+                        <li>
+                            <span class="news-date">2026</span>
+                            <span>Selected for the <a href="https://bluedot.org/certification?id=recnD2SmHRuWdEyF0"
+                                    target="_blank" rel="noopener">BlueDot Impact AI Safety Fellowship</a>.</span>
+                        </li>
+                        <li>
+                            <span class="news-date">2025</span>
+                            <span>Received a Thinking Machines Lab Tinker Research Grant with
+                                <a href="https://cgraywang.github.io/" target="_blank" rel="noopener">Dr. Chenguang
+                                    Wang</a>.</span>
+                        </li>
+                    </ul>
+                </section>
 
-            <div class="pub-card">
-                <div class="pub-container">
-                    <div class="pub-details">
-                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-                            <div>
-                                <span class="pub-title" style="margin-bottom: 4px;">Graduate Research Assistant (NLP 244
-                                    Coursework)</span>
-                                <span class="pub-authors">
-                                    <a href="https://jflanigan.github.io/" target="_blank"
-                                        style="color: inherit; text-decoration: none; border-bottom: 1px dashed var(--text-secondary);">Dr.
-                                        Jeffrey Flanigan</a>
-                                </span>
-                            </div>
-                            <div
-                                style="text-align: right; color: var(--text-secondary); font-size: 15px; min-width: 140px; line-height: 1.4;">
-                                Apr 2025 - Jun 2025<br>Santa Clara, USA
-                            </div>
-                        </div>
-                        <ul class="exp-list">
-                            <li>Benchmarked <strong>diffusion language models (LLaDA)</strong> against autoregressive
-                                LLMs (LLaMA-3, SmolLM) for faithfulness on summarization datasets.
-                                <div style="margin-top: 8px;"><a
-                                        href="https://github.com/shubham2345/llada-faithful-summarization" class="btn"
-                                        style="padding: 4px 12px; font-size: 12px;">Code</a></div>
-                            </li>
-                            <li>Analyzed robustness under zero-shot, chain-of-thought, and adversarial prompting
-                                settings.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+                <section id="research">
+                    <h2>Research</h2>
+                    <p class="section-note">Four threads, and the projects that sit under each.</p>
 
-            <div class="pub-card">
-                <div class="pub-container">
-                    <div class="pub-details">
-                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-                            <div>
-                                <span class="pub-title" style="margin-bottom: 4px;">Graduate Research Assistant (NLP 243
-                                    Coursework)</span>
-                                <span class="pub-authors">
-                                    <a href="https://www.linkedin.com/in/amita-misra/" target="_blank"
-                                        style="color: inherit; text-decoration: none; border-bottom: 1px dashed var(--text-secondary);">Dr.
-                                        Amita Misra</a>
-                                </span>
+                    <div class="pub-card">
+                        <div class="pub-details">
+                            <span class="pub-title">Agent Evaluation &amp; Benchmarks</span>
+                            <p class="prose" style="font-size: 15px; margin: 0;">
+                                Benchmarks fail quietly: an agent can raise its score by exploiting the reward-relevant
+                                trajectory instead of solving the task, and a benchmark that never asks the hard
+                                question cannot report that it was missed. I build evaluation infrastructure that
+                                makes those failures measurable &mdash; <strong>FAULTLOC</strong> for fault
+                                localization from crash to cause, <strong>RCABench</strong> for multi-hop causal
+                                reasoning over large codebases, and reward-hacking adjudication for
+                                <strong>BenchShield</strong>.
+                            </p>
+                            <div class="tag-row">
+                                <span class="tag">Agent Evaluation</span>
+                                <span class="tag">Alignment &amp; Safety</span>
                             </div>
-                            <div
-                                style="text-align: right; color: var(--text-secondary); font-size: 15px; min-width: 140px; line-height: 1.4;">
-                                Sept 2024 - Dec 2025<br>Santa Clara, USA
+                            <div class="btn-group">
+                                <a href="https://github.com/JianhongTu/FLBench" class="btn btn-sm" target="_blank"
+                                    rel="noopener">FAULTLOC code</a>
+                                <a href="https://github.com/wang-research-lab/RCAbench" class="btn btn-sm"
+                                    target="_blank" rel="noopener">RCABench code</a>
+                                <a href="https://arxiv.org/abs/2609.11028" class="btn btn-sm" target="_blank"
+                                    rel="noopener">BenchShield</a>
                             </div>
                         </div>
-                        <ul class="exp-list">
-                            <li>Contributed to an <strong>ACL 2025 Workshop paper</strong> from SemEval-2025 Task 1
-                                (AdMIRe), studying idiomatic sentence–image ranking where pretrained VLMs exhibit strong
-                                literal bias.</li>
-                            <li>Developed a prompting-based approach using GPT-4 to generate idiomatic definitions prior
-                                to ranking, improving Top-1 accuracy from 43% to 87%.
-                                <div style="margin-top: 8px;"><a href="https://github.com/azernik/semeval_2025_task1"
-                                        class="btn" style="padding: 4px 12px; font-size: 12px;">Code</a></div>
-                            </li>
-                        </ul>
                     </div>
-                </div>
-            </div>
 
-            <!-- Industry Experience -->
-            <h3 style="font-size: 24px; margin-top:20px; margin-bottom:15px; color: var(--text-main);">Industry
-                Experience</h3>
-
-            <div class="pub-card">
-                <div class="pub-container">
-                    <div class="pub-details">
-                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-                            <div>
-                                <span class="pub-title" style="margin-bottom: 4px;">Applied Research Intern</span>
-                                <span class="pub-authors"><a href="https://www.nokia.com/" target="_blank"
-                                        style="color: inherit; text-decoration: none; border-bottom: 1px dashed var(--text-secondary);">Nokia
-                                        Bell Labs</a></span>
+                    <div class="pub-card">
+                        <div class="pub-details">
+                            <span class="pub-title">Long-Horizon Web Agents</span>
+                            <p class="prose" style="font-size: 15px; margin: 0;">
+                                Web agents re-ingest the full DOM and accessibility tree at every action step, so
+                                context degrades long before the task ends. I argue this coupling of observation to
+                                action is an architectural mistake, and propose <strong>Signal-Driven
+                                    Observation</strong>: re-read only when a lightweight signal fires. Related work on
+                                human interaction trajectories for WorkArena feeds the same question from the data
+                                side.
+                            </p>
+                            <div class="tag-row">
+                                <span class="tag">LLM Agents</span>
                             </div>
-                            <div
-                                style="text-align: right; color: var(--text-secondary); font-size: 15px; min-width: 140px; line-height: 1.4;">
-                                Jun 2025 - Aug 2025<br>Naperville, USA
+                            <div class="btn-group">
+                                <a href="https://arxiv.org/abs/2606.06708" class="btn btn-sm" target="_blank"
+                                    rel="noopener">Paper</a>
+                                <a href="https://github.com/jclymo/event-capture" class="btn btn-sm" target="_blank"
+                                    rel="noopener">Event capture code</a>
                             </div>
                         </div>
-                        <ul class="exp-list">
-                            <li>Built <strong>Graph Neural Network</strong>-based anomaly detection models, applied
-                                PageRank algorithms, and developed transformer based forecasting pipeline for software
-                                releases.</li>
-                            <li>Developed an <strong>agentic multimodal RAG pipeline</strong> for enterprise knowledge
-                                retrieval.</li>
-                        </ul>
                     </div>
-                </div>
-            </div>
 
-            <div class="pub-card">
-                <div class="pub-container">
-                    <div class="pub-details">
-                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-                            <div>
-                                <span class="pub-title" style="margin-bottom: 4px;">Founding Lead ML Engineer</span>
-                                <span class="pub-authors"><a href="https://www.adani.com/" target="_blank"
-                                        style="color: inherit; text-decoration: none; border-bottom: 1px dashed var(--text-secondary);">Adani
-                                        Group</a></span>
+                    <div class="pub-card">
+                        <div class="pub-details">
+                            <span class="pub-title">Human-Centered Alignment</span>
+                            <p class="prose" style="font-size: 15px; margin: 0;">
+                                Evaluations of supportive models ask whether a response is safe, empathetic, or
+                                helpful. <strong>RELATE</strong> asks a different question: where does the model point
+                                the user for support next &mdash; back to itself, or outward to the people in their
+                                life? Measured at the sentence level across multi-turn dialogue.
+                            </p>
+                            <div class="tag-row">
+                                <span class="tag">Human-Centered AI</span>
+                                <span class="tag">Alignment &amp; Safety</span>
                             </div>
-                            <div
-                                style="text-align: right; color: var(--text-secondary); font-size: 15px; min-width: 140px; line-height: 1.4;">
-                                Nov 2021 - Aug 2024<br>Gurgaon, India
+                            <div class="btn-group">
+                                <a href="https://arxiv.org/abs/2610.09569" class="btn btn-sm" target="_blank"
+                                    rel="noopener">Paper</a>
                             </div>
                         </div>
-                        <ul class="exp-list">
-                            <li>Developed and deployed LLM-based systems (GPT, BERT) for large-scale text understanding
-                                tasks, including feedback analysis and churn modeling.</li>
-                            <li>Built and evaluated an <strong>LLM-powered</strong>, multi-tenant conversational agent
-                                with vector search over enterprise data using Delta Lake–backed retrieval.</li>
-                            <li>Fine-tuned GPT-3.5 models for controlled text generation (hotel descriptions) across 33K
-                                listings.</li>
-                            <li><a href="https://www.mongodb.com/company/blog/events/congratulations-2023-apac-innovation-award-winners"
-                                    target="_blank">Received <strong>MongoDB APAC Innovation Award 2024</strong> - Batch
-                                    to
-                                    Real-Time Category</a>
-                                for building an AI-powered product catalog.</li>
-                        </ul>
                     </div>
-                </div>
-            </div>
 
-            <div class="pub-card">
-                <div class="pub-container">
-                    <div class="pub-details">
-                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-                            <div>
-                                <span class="pub-title" style="margin-bottom: 4px;">ML Engineer</span>
-                                <span class="pub-authors"><a href="https://www.blackrock.com/" target="_blank"
-                                        style="color: inherit; text-decoration: none; border-bottom: 1px dashed var(--text-secondary);">BlackRock</a></span>
+                    <div class="pub-card">
+                        <div class="pub-details">
+                            <span class="pub-title">Post-Training, Unlearning &amp; Factuality</span>
+                            <p class="prose" style="font-size: 15px; margin: 0;">
+                                Causal, Why-type knowledge is nearly absent from standard unlearning benchmarks, which
+                                lets a method look good in aggregate while failing exactly where it matters.
+                                <strong>5WBench</strong> and <strong>MAAT</strong> address that gap; alongside it I am
+                                investigating long-tail factual recall in LLMs through reasoning and post-training, and
+                                skill optimization without task supervision in <strong>SkillOptimizer</strong>.
+                            </p>
+                            <div class="tag-row">
+                                <span class="tag">Post-Training</span>
+                                <span class="tag">Unlearning</span>
                             </div>
-                            <div
-                                style="text-align: right; color: var(--text-secondary); font-size: 15px; min-width: 140px; line-height: 1.4;">
-                                Jul 2019 - Oct 2021<br>Mumbai, India
+                            <div class="btn-group">
+                                <a href="https://arxiv.org/abs/2605.30514" class="btn btn-sm" target="_blank"
+                                    rel="noopener">MAAT</a>
                             </div>
                         </div>
-                        <ul class="exp-list">
-                            <li>Developed a neural network-based solution for portfolio and index tree generation,
-                                scaling to 100 portfolios.</li>
-                            <li>Built and deployed ETL tools for data validation and securities loading, saving time
-                                equivalent to 7 FTEs.</li>
-                            <li>Designed XGBoost and Random Forest–based models for risk scoring and ranking investment
-                                instruments.</li>
-                        </ul>
                     </div>
-                </div>
-            </div>
+                </section>
 
-        </section>
+                <section id="publications">
+                    <h2>Selected Publications</h2>
+                    <p class="section-note">* denotes equal contribution. <a href="publications.html">See all
+                            publications &rarr;</a></p>
 
-        <section id="publications">
-            <h2>Publications</h2>
-
-            <div class="pub-card">
-                <div class="pub-container">
-                    <div class="pub-details">
-                        <span class="pub-title">UCSC NLP T6 at SemEval-2025 Task 1: Leveraging LLMs and VLMs for
-                            Idiomatic Understanding</span>
-                        <span class="pub-authors">Judith Clymo, Adam Zernik, <span class="me">Shubham Gaur</span></span>
-                        <div style="color: var(--accent-blue); font-weight: 500; font-size: 14px; margin-bottom: 10px;">
-                            <i>In Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025),
-                                pages 2103–2115, Vienna, Austria. Association for Computational Linguistics.</i>
-                        </div>
-                        <div class="btn-group">
-                            <a href="https://aclanthology.org/2025.semeval-1.274/" class="btn">Paper</a>
-                            <a href="https://github.com/azernik/semeval_2025_task1" class="btn">Code</a>
+                    <div class="pub-card">
+                        <div class="pub-details">
+                            <span class="pub-title">RELATE: An Evaluation Framework for Measuring Relational
+                                Orientation of Large Language Models</span>
+                            <span class="pub-authors">Shivam Shukla*, Jihye Kim*, <span class="me">Shubham
+                                    Gaur</span>*, Mahnaz Roshanaei, Magy Seif El-Nasr</span>
+                            <div class="pub-venue">Under review at ICLR 2027</div>
+                            <div class="tag-row" style="margin-top: 0;">
+                                <span class="tag">Human-Centered AI</span>
+                                <span class="tag">Alignment &amp; Safety</span>
+                            </div>
+                            <p class="pub-highlight">Across 1,596 dialogues and seven LLMs, supportive models drift
+                                inward: the share of sentences positioning the AI as the user's ongoing source of
+                                support is higher at the sixth assistant turn than the first, while language
+                                encouraging real-world human connection is substantially lower for hesitant, indirect
+                                users than for explicit ones.</p>
+                            <div class="btn-group">
+                                <a href="https://arxiv.org/abs/2610.09569" class="btn" target="_blank"
+                                    rel="noopener">arXiv</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="pub-card">
-                <div class="pub-container">
-                    <div class="pub-details">
-                        <span class="pub-title">Advancing Web-Based Visual Question Answering with Efficient Image-Text
-                            Alignment</span>
-                        <span class="pub-authors">Saketh Kilaru, <span class="me">Shubham Gaur</span>, Spandan
-                            Rout</span>
-                        <div style="color: var(--accent-blue); font-weight: 500; font-size: 14px; margin-bottom: 10px;">
-                            <i>Proceedings of the International Conference on Recent Advancements in Artificial
-                                Intelligence (ICRAAI 2024).</i>
-                        </div>
-                        <div class="btn-group">
-                            <a href="https://link.springer.com/chapter/10.1007/978-981-97-1111-6_28"
-                                class="btn">Paper</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pub-card">
-                <div class="pub-container">
-                    <div class="pub-details">
-                        <span class="pub-title">Extraction of Cumulative Blobs Using Dynamic Gestures</span>
-                        <span class="pub-authors">Rishabh Naulakha, <span class="me">Shubham Gaur</span>, Dhairya Lodha,
-                            Mehek Tulsyan, Utsav Kotecha</span>
-                        <div style="color: var(--accent-blue); font-weight: 500; font-size: 14px; margin-bottom: 10px;">
-                            <i>International Journal of Scientific Research (IJSR), 2021.</i>
-                        </div>
-                        <div class="btn-group">
-                            <a href="https://arxiv.org/abs/2501.04002" class="btn">Paper</a>
+                    <div class="pub-card">
+                        <div class="pub-details">
+                            <span class="pub-title">FAULTLOC: Evaluating AI Coding Agents for Fault Localization from
+                                Crash to Cause</span>
+                            <span class="pub-authors">J. Tu, <span class="me">Shubham Gaur</span>, R. Murtinty, Z.
+                                Wang, T. Shi, D. Song, C. Wang</span>
+                            <div class="pub-venue">ICML 2026 AIWILD Workshop: Safety, Security, and Beyond</div>
+                            <div class="tag-row" style="margin-top: 0;">
+                                <span class="tag">Agent Evaluation</span>
+                            </div>
+                            <p class="pub-highlight">A 900-CVE benchmark tracing a crash back to its root cause:
+                                frontier coding agents recover the true root cause in only 40% of cases.</p>
+                            <div class="btn-group">
+                                <a href="https://openreview.net/forum?id=3q6yWfaQ8R" class="btn" target="_blank"
+                                    rel="noopener">OpenReview</a>
+                                <a href="https://github.com/JianhongTu/FLBench" class="btn" target="_blank"
+                                    rel="noopener">Code</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="posters">
-            <h2>Poster Presentations</h2>
-            <div class="pub-card">
-                <div class="pub-container" style="align-items: center;">
-                    <div class="pub-details">
-                        <span class="pub-title">What Web Agents Need Isn't Data - It's High Quality Data</span>
-                        <div style="color: var(--text-secondary); font-size: 14px; margin-top:5px;">Capstone
-                            Presentation, UC Santa Cruz (2025)</div>
+                    <div class="pub-card">
+                        <div class="pub-details">
+                            <span class="pub-title">Signal-Driven Observation for Long-Horizon Web Agents</span>
+                            <span class="pub-authors"><span class="me">Shubham Gaur</span>, Ian Lane</span>
+                            <div class="pub-venue">ICML 2026 Workshop on Failure Modes in Agentic AI (FAGEN),
+                                position paper</div>
+                            <div class="tag-row" style="margin-top: 0;">
+                                <span class="tag">LLM Agents</span>
+                            </div>
+                            <p class="pub-highlight">Long-horizon web agents re-ingest tens of thousands of DOM tokens
+                                at every action step, eroding reasoning before the task completes. Decoupling
+                                observation from action &mdash; re-reading only when a URL change, a newly visible
+                                element, or an action failure fires &mdash; makes observation compression an
+                                architectural decision rather than a prompting one.</p>
+                            <div class="btn-group">
+                                <a href="https://arxiv.org/abs/2606.06708" class="btn" target="_blank"
+                                    rel="noopener">arXiv</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="pub-figure" style="flex: 0 0 150px; margin-left: 20px;">
-                        <a href="assets/img/capstone-poster.png" target="_blank">
-                            <img src="assets/img/capstone-poster.png" alt="Poster Thumbnail"
-                                style="width: 100%; border-radius: 8px; border: 1px solid #eee;">
-                        </a>
+                </section>
+
+                <section id="experience">
+                    <h2>Experience</h2>
+
+                    <h3>Research</h3>
+
+                    <div class="pub-card">
+                        <div class="pub-details">
+                            <div class="pub-head">
+                                <div>
+                                    <span class="pub-title">Graduate Researcher</span>
+                                    <span class="pub-authors">University of California, Santa Cruz &middot; advised by
+                                        <a href="https://scholar.google.com/citations?user=t1_WKx4AAAAJ" target="_blank"
+                                            rel="noopener">Dr. Ian Lane</a></span>
+                                </div>
+                                <div class="pub-meta">Apr 2026 &ndash; Present<br>Santa Cruz, CA</div>
+                            </div>
+                            <ul class="exp-list">
+                                <li>Investigating long-tail factual recall in LLMs via reasoning and post-training.</li>
+                                <li>Defined observation over-ingestion as a root cause of context rot and goal drift in
+                                    long-horizon web agents, and proposed Signal-Driven Observation (first author, ICML
+                                    2026 FAGEN).</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="pub-card">
-                <div class="pub-container" style="align-items: center;">
-                    <div class="pub-details">
-                        <span class="pub-title">Advancing Web-Based Visual Question Answering with Efficient Image-Text
-                            Alignment</span>
-                        <div style="color: var(--text-secondary); font-size: 14px; margin-top:5px;">SciML Symposium,
-                            Georgia Tech (2024)</div>
+
+                    <div class="pub-card">
+                        <div class="pub-details">
+                            <div class="pub-head">
+                                <div>
+                                    <span class="pub-title">Graduate Research Assistant</span>
+                                    <span class="pub-authors"><a href="https://cgraywang.github.io/" target="_blank"
+                                            rel="noopener">Dr. Chenguang Wang</a>'s Research Lab &middot; with UC
+                                        Berkeley RDI (<a href="https://dawnsong.io/" target="_blank"
+                                            rel="noopener">Prof. Dawn Song</a>)</span>
+                                </div>
+                                <div class="pub-meta">Oct 2025 &ndash; Aug 2026<br>Santa Clara, CA</div>
+                            </div>
+                            <ul class="exp-list">
+                                <li>Designed <strong>FAULTLOC</strong>, a 900-CVE benchmark evaluating AI coding agents
+                                    on fault localization, with ablations across frontier models.</li>
+                                <li>Built <strong>RCABench</strong>, benchmark infrastructure for multi-hop causal
+                                    reasoning and root-cause localization over large codebases; surfaced systematic
+                                    multi-agent coordination failures under realistic security conditions.</li>
+                                <li>Developed <strong>SkillOptimizer</strong>, improving agent skills without task
+                                    supervision via subskill DAG decomposition and coverage-driven optimization.</li>
+                                <li>Contributed to <strong>MassGen</strong>, an open-source multi-agent framework for
+                                    coordinating heterogeneous models on open-ended tasks.
+                                    <div class="btn-group" style="margin-top: 8px;">
+                                        <a href="https://github.com/massgen/MassGen" class="btn btn-sm" target="_blank"
+                                            rel="noopener">Code</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="pub-figure" style="flex: 0 0 150px; margin-left: 20px;">
-                        <a href="assets/img/webqa_poster.png" target="_blank">
-                            <img src="assets/img/webqa_poster.png" alt="Poster Thumbnail"
-                                style="width: 100%; border-radius: 8px; border: 1px solid #eee;">
-                        </a>
+
+                    <div class="pub-card">
+                        <div class="pub-details">
+                            <div class="pub-head">
+                                <div>
+                                    <span class="pub-title">Open-Source Contributor</span>
+                                    <span class="pub-authors"><a href="https://www.benchflow.ai/" target="_blank"
+                                            rel="noopener">BenchFlow</a></span>
+                                </div>
+                                <div class="pub-meta">Jul 2026 &ndash; Present</div>
+                            </div>
+                            <ul class="exp-list">
+                                <li>Adjudicated reward-hacking trajectories for 35 tasks against a structured rubric for
+                                    BenchShield, contributing to a 456-trajectory human-adjudicated corpus drawn from
+                                    31,000+ agent runs.</li>
+                                <li>Contributing to <a href="https://www.benchflow.ai/frontierphysics" target="_blank"
+                                        rel="noopener">FrontierPhysics</a>, a benchmark of specialist-level physics
+                                    research tasks: surveyed the physics-evaluation literature, built a platform
+                                    connecting the project with Nobel laureate physicists, and fixed bugs in
+                                    BenchFlow's evaluation infrastructure.</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="skills">
-            <h2>Technical Skills</h2>
-            <div class="honors-grid">
-                <div class="honor-card">
-                    <div class="honor-icon"><i class="fas fa-robot"></i></div>
-                    <div class="honor-content">
-                        <strong>AI Safety & Alignment</strong>
-                        <span class="honor-desc">Faithfulness, Hallucination Eval, Robustness Testing, Adversarial
-                            Prompting, RLHF, PPO.</span>
+                    <div class="pub-card">
+                        <div class="pub-details">
+                            <div class="pub-head">
+                                <div>
+                                    <span class="pub-title">Research Apprentice</span>
+                                    <span class="pub-authors"><a href="https://sra.samsung.com/" target="_blank"
+                                            rel="noopener">Samsung Research America</a> &middot; advised by <a
+                                            href="http://www.bethannhockey.com/" target="_blank" rel="noopener">Dr. Beth
+                                            Ann Hockey</a></span>
+                                </div>
+                                <div class="pub-meta">Apr 2025 &ndash; Present<br>Santa Clara, CA</div>
+                            </div>
+                            <ul class="exp-list">
+                                <li>Built a data collection pipeline for capturing high-quality human interaction
+                                    trajectories on ServiceNow using the WorkArena benchmark, including preprocessing
+                                    of raw JavaScript interaction events into BrowserGym-compatible actions.
+                                    <div class="btn-group" style="margin-top: 8px;">
+                                        <a href="https://github.com/jclymo/event-capture" class="btn btn-sm"
+                                            target="_blank" rel="noopener">Code</a>
+                                    </div>
+                                </li>
+                                <li>Collected 50+ human trajectories on WorkArena L1 tasks, showing a 30s reduction in
+                                    agent (GPT-5) execution time via in-context learning.</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
 
-                <div class="honor-card">
-                    <div class="honor-icon"><i class="fas fa-brain"></i></div>
-                    <div class="honor-content">
-                        <strong>Models & Analysis</strong>
-                        <span class="honor-desc">PyTorch, Transformers, Diffusion Models, Causal Reasoning,
-                            Interpretability.</span>
+                    <h3>Industry</h3>
+
+                    <div class="pub-card">
+                        <div class="pub-details">
+                            <div class="pub-head">
+                                <div>
+                                    <span class="pub-title">Applied Research Intern</span>
+                                    <span class="pub-authors"><a href="https://www.nokia.com/" target="_blank"
+                                            rel="noopener">Nokia Bell Labs</a></span>
+                                </div>
+                                <div class="pub-meta">Jun 2025 &ndash; Aug 2025<br>Naperville, IL</div>
+                            </div>
+                            <ul class="exp-list">
+                                <li>Designed a multimodal retrieval pipeline for enterprise knowledge search over vector
+                                    databases (FAISS, Chroma), evaluating retrieval latency and ranking quality with
+                                    custom metrics and A/B tests.</li>
+                                <li>Built transformer-based time-series forecasting and graph neural network anomaly
+                                    detection, optimizing serving via GPU acceleration and ONNX conversion.</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
 
-                <div class="honor-card">
-                    <div class="honor-icon"><i class="fas fa-network-wired"></i></div>
-                    <div class="honor-content">
-                        <strong>Agentic Systems</strong>
-                        <span class="honor-desc">Multi-Agent Systems, Agent Routing, Tool-Calling LLMs,
-                            Human-in-the-Loop.</span>
+                    <div class="pub-card">
+                        <div class="pub-details">
+                            <div class="pub-head">
+                                <div>
+                                    <span class="pub-title">Founding Lead Machine Learning Engineer</span>
+                                    <span class="pub-authors"><a href="https://www.adani.com/" target="_blank"
+                                            rel="noopener">Adani Group</a></span>
+                                </div>
+                                <div class="pub-meta">Nov 2021 &ndash; Aug 2024<br>Gurgaon, India</div>
+                            </div>
+                            <ul class="exp-list">
+                                <li>Architected ML infrastructure for a 100M+ user personalization system, running
+                                    controlled A/B experiments across 50+ model variants.</li>
+                                <li>Built an end-to-end PyTorch training and deployment pipeline with data and model
+                                    drift monitoring and automated retraining, cutting model refresh time by 60%.</li>
+                                <li>Part of the team that won the <a
+                                        href="https://www.mongodb.com/company/blog/events/congratulations-2023-apac-innovation-award-winners"
+                                        target="_blank" rel="noopener">MongoDB APAC Innovation Award 2023</a> (From
+                                    Batch to Real-Time) for re-architecting the AdaniOne SuperApp data platform from
+                                    batch to real-time event streaming.</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
 
-                <div class="honor-card">
-                    <div class="honor-icon"><i class="fas fa-server"></i></div>
-                    <div class="honor-content">
-                        <strong>Engineering & Infra</strong>
-                        <span class="honor-desc">Docker, Kubernetes, FastAPI, MLflow, Airflow, Vector Databases (FAISS,
-                            Qdrant).</span>
+                    <div class="pub-card">
+                        <div class="pub-details">
+                            <div class="pub-head">
+                                <div>
+                                    <span class="pub-title">Machine Learning Engineer</span>
+                                    <span class="pub-authors"><a href="https://www.blackrock.com/" target="_blank"
+                                            rel="noopener">BlackRock</a></span>
+                                </div>
+                                <div class="pub-meta">Jul 2019 &ndash; Oct 2021<br>Mumbai, India</div>
+                            </div>
+                            <ul class="exp-list">
+                                <li>Built deep neural networks for fixed-income and equity portfolio optimization,
+                                    cutting inference latency 60% via quantization and pruning.</li>
+                                <li>Developed risk-scoring ensembles with SHAP explainability and
+                                    significance-tested model comparisons.</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
+                </section>
 
-                <div class="honor-card">
-                    <div class="honor-icon"><i class="fas fa-code"></i></div>
-                    <div class="honor-content">
-                        <strong>Languages</strong>
-                        <span class="honor-desc">Python (NumPy, SciPy, pandas), SQL, C/C++, Java, Bash.</span>
+                <section id="awards">
+                    <h2>Honors &amp; Awards</h2>
+                    <ul class="list-compact">
+                        <li><strong>2026</strong> &middot; UC Santa Cruz Regents Award and International Doctoral
+                            Recruitment Fellowship.</li>
+                        <li><strong>2026</strong> &middot; Winner, <a
+                                href="https://www.linkedin.com/feed/update/urn:li:activity:7443033828970917888/"
+                                target="_blank" rel="noopener">NVIDIA GTC PyTorch Helion Hackathon</a> &mdash;
+                            LLM-guided Triton kernel optimization.</li>
+                        <li><strong>2026</strong> &middot; 1st place, Cybersecurity Agent track, <a
+                                href="https://agentbeats.dev/shubham2345/rcabench-green-agent" target="_blank"
+                                rel="noopener">UC Berkeley AgentBeats Competition</a>.</li>
+                        <li><strong>2026</strong> &middot; <a href="https://bluedot.org/certification?id=recnD2SmHRuWdEyF0"
+                                target="_blank" rel="noopener">BlueDot Impact AI Safety Fellowship</a>, a selective
+                            cohort-based AI alignment program.</li>
+                        <li><strong>2025</strong> &middot; Thinking Machines Lab Tinker Research Grant, with Dr.
+                            Chenguang Wang.</li>
+                        <li><strong>2023</strong> &middot; MongoDB APAC Innovation Award (team), From Batch to
+                            Real-Time.</li>
+                        <li><a href="https://www.credly.com/users/shubham-gaur.de11763d/badges/credly" target="_blank"
+                                rel="noopener">NVIDIA Certified Associate &amp; Professional</a>: Generative AI
+                            LLMs.</li>
+                    </ul>
+                </section>
+
+                <section id="service">
+                    <h2>Service</h2>
+                    <ul class="list-compact">
+                        <li><strong>Peer Reviewer</strong> &middot; ICLR 2026, ACL 2025.</li>
+                        <li><strong>Open source</strong> &middot; <a href="https://github.com/massgen/MassGen"
+                                target="_blank" rel="noopener">MassGen</a> (multi-agent LLM framework) and <a
+                                href="https://www.benchflow.ai/" target="_blank" rel="noopener">BenchFlow</a>
+                            evaluation infrastructure.</li>
+                    </ul>
+                </section>
+
+                <section id="education">
+                    <h2>Education</h2>
+                    <div class="edu-entry">
+                        <div class="edu-info">
+                            <strong>University of California, Santa Cruz</strong><br>
+                            <span style="color: var(--text-secondary)">Ph.D., Computer Science &middot; advised by Dr.
+                                Ian Lane</span>
+                        </div>
+                        <div class="edu-date">Sep 2026 &ndash; expected Dec 2029<br>Santa Cruz, CA</div>
                     </div>
-                </div>
-            </div>
-        </section>
+                    <div class="edu-entry">
+                        <div class="edu-info">
+                            <strong>University of California, Santa Cruz</strong><br>
+                            <span style="color: var(--text-secondary)">M.S., Natural Language Processing (AI) &middot;
+                                GPA 4.0/4.0 &middot; advised by Dr. Chenguang Wang</span>
+                        </div>
+                        <div class="edu-date">Sep 2024 &ndash; Mar 2026<br>Santa Clara, CA</div>
+                    </div>
+                    <div class="edu-entry">
+                        <div class="edu-info">
+                            <strong>SRM Institute of Science &amp; Technology</strong><br>
+                            <span style="color: var(--text-secondary)">B.S., Computer Science &middot; GPA 3.8/4.0
+                                &middot; advised by Dr. A. Shanthini</span>
+                        </div>
+                        <div class="edu-date">Jul 2015 &ndash; May 2019<br>Chennai, India</div>
+                    </div>
+                </section>
 
-        <!-- Education -->
-        <section id="education">
-            <h2>Education</h2>
-            <div class="edu-entry">
-                <div class="edu-info">
-                    <strong>University of California, Santa Cruz</strong><br>
-                    <span style="color: var(--text-secondary)">Masters in Natural Language Processing (4.0/4.0)</span>
-                </div>
-                <div class="edu-date">Sept, 2024 - March 2026<br>Santa Clara, USA</div>
-            </div>
+                <section id="teaching">
+                    <h2>Teaching</h2>
+                    <p class="section-note">Teaching Assistant, UC Santa Cruz.</p>
+                    <div class="edu-entry">
+                        <div class="edu-info"><strong>ARTG 91: Introduction to Game Art Production</strong></div>
+                        <div class="edu-date">Winter 2026</div>
+                    </div>
+                    <div class="edu-entry">
+                        <div class="edu-info"><strong>THEA 80C: Monsters</strong></div>
+                        <div class="edu-date">Fall 2025</div>
+                    </div>
+                    <div class="edu-entry">
+                        <div class="edu-info"><strong>TIM 172B: Introduction to Technology Management II</strong></div>
+                        <div class="edu-date">Winter 2025</div>
+                    </div>
+                    <div class="edu-entry">
+                        <div class="edu-info"><strong>TIM 172A: Introduction to Technology Management I</strong></div>
+                        <div class="edu-date">Fall 2024</div>
+                    </div>
+                </section>
 
-            <div class="edu-entry">
-                <div class="edu-info">
-                    <strong>SRM Institute of Science and Technology</strong><br>
-                    <span style="color: var(--text-secondary)">Bachelors in Information Technology (3.8/4.0)</span>
-                </div>
-                <div class="edu-date">July 2015 - May 2019<br>Chennai, India</div>
-            </div>
-        </section>
-
-        <section id="teaching">
-            <h2>Teaching Experience (TA)</h2>
-            <div class="edu-entry">
-                <div class="edu-info">
-                    <strong>ARTG 91: Intro to Game Art Production</strong>
-                </div>
-                <div class="edu-date">Present (Winter 2026)</div>
-            </div>
-            <div class="edu-entry">
-                <div class="edu-info">
-                    <strong>THEA 80C: Monsters</strong>
-                </div>
-                <div class="edu-date">Fall 2025</div>
-            </div>
-            <div class="edu-entry">
-                <div class="edu-info">
-                    <strong>TIM 172B: Intro to Tech Management II</strong>
-                </div>
-                <div class="edu-date">Winter 2025</div>
-            </div>
-            <div class="edu-entry">
-                <div class="edu-info">
-                    <strong>TIM 172A: Introduction to Technology Management I</strong>
-                </div>
-                <div class="edu-date">Fall 2024</div>
-            </div>
-        </section>
-
-
-        <footer
-            style="margin: 80px 0 40px; padding-top: 40px; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 13px;">
-            <p>© 2026 Shubham Gaur.</p>
-        </footer>
+                <footer>
+                    <p>&copy; 2026 Shubham Gaur &middot; Last updated October 2026</p>
+                </footer>
+            </main>
+        </div>
     </div>
 </body>
 
