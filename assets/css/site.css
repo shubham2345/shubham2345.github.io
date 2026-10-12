@@ -40,6 +40,8 @@ html {
     --on-accent: #ffffff;
     --accent-tint: 8%;
     --accent-edge: 40%;
+    --scroll-thumb: #c2c2c8;
+    --scroll-thumb-hover: #9a9aa2;
 
     --radius-card: 18px;
     --radius-pill: 20px;
@@ -79,6 +81,8 @@ html {
     --on-accent: #0a0a0c;
     --accent-tint: 14%;
     --accent-edge: 55%;
+    --scroll-thumb: #51515c;
+    --scroll-thumb-hover: #6e6e7c;
 
     color-scheme: dark;
 }
@@ -314,11 +318,47 @@ h3 {
 
 /* --- News --------------------------------------------------------------- */
 
+/* The feed scrolls in place so ten entries don't push the rest of the page
+   down. The border sits on the wrapper, not the list, so it stays put while
+   the entries move under it. */
+.news-scroll {
+    max-height: 340px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    border-top: 1px solid var(--border-color);
+    padding-right: 14px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-thumb) var(--secondary-bg);
+}
+
+.news-scroll:focus-visible {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+.news-scroll::-webkit-scrollbar {
+    width: 9px;
+}
+
+.news-scroll::-webkit-scrollbar-track {
+    background: var(--secondary-bg);
+    border-radius: 5px;
+}
+
+.news-scroll::-webkit-scrollbar-thumb {
+    background: var(--scroll-thumb);
+    border-radius: 5px;
+}
+
+.news-scroll::-webkit-scrollbar-thumb:hover {
+    background: var(--scroll-thumb-hover);
+}
+
 .news-list {
     list-style: none;
     margin: 0;
     padding: 0;
-    border-top: 1px solid var(--border-color);
 }
 
 .news-list li {
