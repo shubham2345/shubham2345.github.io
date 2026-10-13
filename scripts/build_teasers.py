@@ -4,7 +4,7 @@
     python3 scripts/build_teasers.py
 
 Downloads each paper, finds the named figure, crops the artwork above its
-caption and writes a web-sized PNG to assets/img/teasers/. Re-run it when a
+caption and writes a web-sized PNG to assets/img/figures/. Re-run it when a
 paper is updated or a new one is added; it is deliberately idempotent.
 
 Papers behind a bot wall (OpenReview) or a paywall (Springer) cannot be
@@ -12,7 +12,7 @@ fetched, so those entries carry no teaser and their cards render text-only.
 
 The gesture-recognition paper is deliberately absent: its only diagram is a
 face-recognition figure from its own literature review, which misrepresents the
-work, so assets/img/teasers/blobs.svg is drawn by hand instead. Do not
+work, so assets/img/figures/blobs.svg is drawn by hand instead. Do not
 regenerate it from the PDF.
 """
 import io
@@ -24,7 +24,7 @@ import fitz
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / "assets" / "img" / "teasers"
+OUT = ROOT / "assets" / "img" / "figures"
 TARGET_WIDTH = 1400         # rendered px; cards show these ~670px wide, so this
                             # stays sharp on 2x displays
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/131.0 Safari/537.36"

@@ -15,8 +15,8 @@ Static HTML built and served by GitHub Pages.
 | `assets/css/site.css` | Shared stylesheet for every page (light + dark themes) |
 | `assets/js/theme.js` | Light/dark toggle |
 | `assets/cv/Shubham_Gaur_CV.pdf` | The published CV, built from `main 2.tex` |
-| `assets/img/teasers/` | Publication teaser figures, extracted from the papers |
-| `assets/img/teasers/blobs.svg` | Hand-drawn; see `scripts/build_teasers.py` for why |
+| `assets/img/figures/` | Publication teaser figures, extracted from the papers |
+| `assets/img/figures/blobs.svg` | Hand-drawn; see `scripts/build_teasers.py` for why |
 
 ## Local preview
 
@@ -49,6 +49,6 @@ python3 scripts/build_teasers.py
 ```
 
 Downloads each paper, crops the figure named in the script's `PAPERS` table, and
-writes web-sized PNGs to `assets/img/teasers/`. Papers behind a bot wall
+writes web-sized PNGs to `assets/img/figures/`. Papers behind a bot wall
 (OpenReview) or a paywall (Springer) cannot be fetched; those cards render
 text-only until an image is added by hand.
