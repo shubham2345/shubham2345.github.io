@@ -11,10 +11,10 @@ Static HTML built and served by GitHub Pages.
 | `publications.html` | Full publication list with labels and per-paper highlights, posters, code |
 | `blog.html` | Links to writing hosted on Notion and Medium |
 | `misc.html` | Non-research page (placeholder) |
-| `main 2.tex` | CV source |
+| `Shubham_Gaur_CV.tex` | CV source |
 | `assets/css/site.css` | Shared stylesheet for every page (light + dark themes) |
 | `assets/js/theme.js` | Light/dark toggle |
-| `assets/cv/Shubham_Gaur_CV.pdf` | The published CV, built from `main 2.tex` |
+| `assets/cv/Shubham_Gaur_CV.pdf` | The published CV, built from `Shubham_Gaur_CV.tex` |
 | `assets/img/figures/` | Publication teaser figures, extracted from the papers |
 | `assets/img/figures/blobs.svg` | Hand-drawn; see `scripts/build_teasers.py` for why |
 
@@ -28,7 +28,7 @@ Then open <http://localhost:8000>.
 
 ## Updating the CV
 
-`main 2.tex` is the source of truth. Edit it, then:
+`Shubham_Gaur_CV.tex` is the source of truth. Edit it, then:
 
 ```bash
 python3 scripts/build_cv.py

@@ -3,11 +3,11 @@
 
     python3 scripts/build_cv.py
 
-Source of truth is `main 2.tex` in the repo root. This builds it with whichever
+Source of truth is `Shubham_Gaur_CV.tex` in the repo root. This builds it with whichever
 TeX engine is on PATH and copies the result to assets/cv/Shubham_Gaur_CV.pdf,
 which is what the CV links on the site serve.
 
-If no engine is installed, compile `main 2.tex` elsewhere (Overleaf works) and
+If no engine is installed, compile `Shubham_Gaur_CV.tex` elsewhere (Overleaf works) and
 drop the PDF at that path by hand. A self-contained option that needs no TeX
 installation:
 
@@ -20,7 +20,7 @@ import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SRC = ROOT / "main 2.tex"
+SRC = ROOT / "Shubham_Gaur_CV.tex"
 OUT = ROOT / "assets" / "cv" / "Shubham_Gaur_CV.pdf"
 
 # (binary, argv builder); first one found on PATH wins
