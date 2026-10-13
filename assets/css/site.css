@@ -172,7 +172,7 @@ nav {
 /* Homepage: sticky profile rail beside the content. */
 .layout {
     display: grid;
-    grid-template-columns: 260px minmax(0, 1fr);
+    grid-template-columns: 300px minmax(0, 1fr);
     gap: 56px;
     padding: 56px 0 0;
     align-items: start;
@@ -190,7 +190,7 @@ nav {
 
 .profile-img {
     width: 100%;
-    max-width: 240px;
+    max-width: 300px;
     aspect-ratio: 1 / 1;
     border-radius: 24px;
     object-fit: cover;
@@ -387,7 +387,6 @@ h3 {
 .accent-vision { --card-accent: var(--theme-vision); }
 
 .pub-card {
-    --card-accent: var(--accent-blue);
     background: var(--secondary-bg);
     border: 1px solid var(--card-border);
     margin-bottom: 20px;
@@ -397,15 +396,15 @@ h3 {
 }
 
 .pub-card:hover {
-    background: color-mix(in srgb, var(--card-accent) var(--accent-tint), var(--card-hover-bg));
-    border-color: color-mix(in srgb, var(--card-accent) var(--accent-edge), var(--border-color));
-    box-shadow: inset 3px 0 0 var(--card-accent);
+    background: color-mix(in srgb, var(--card-accent, var(--accent-blue)) var(--accent-tint), var(--card-hover-bg));
+    border-color: color-mix(in srgb, var(--card-accent, var(--accent-blue)) var(--accent-edge), var(--border-color));
+    box-shadow: inset 3px 0 0 var(--card-accent, var(--accent-blue));
 }
 
-/* the label the colour belongs to fills in, tying hue to meaning */
-.pub-card:hover .tag-row .tag:first-child {
-    background: var(--card-accent);
-    border-color: var(--card-accent);
+/* each label lights in its own theme colour, so a hovered row reads as a key */
+.pub-card:hover .tag-row .tag {
+    background: var(--card-accent, var(--accent-blue));
+    border-color: var(--card-accent, var(--accent-blue));
     color: var(--on-accent);
 }
 
@@ -421,6 +420,7 @@ h3 {
 
 .pub-figure img {
     width: 100%;
+    height: auto;
     border-radius: 10px;
     border: 1px solid var(--border-color);
     background: var(--figure-bg);
@@ -442,6 +442,7 @@ h3 {
 
 .pub-teaser img {
     width: 100%;
+    height: auto;
     display: block;
     border-radius: 10px;
     border: 1px solid var(--border-color);
@@ -803,7 +804,6 @@ footer {
 /* --- Blog cards --------------------------------------------------------- */
 
 .blog-card {
-    --card-accent: var(--accent-blue);
     background: var(--secondary-bg);
     border: 1px solid var(--card-border);
     margin-bottom: 20px;
@@ -816,9 +816,9 @@ footer {
 }
 
 .blog-card:hover {
-    background: color-mix(in srgb, var(--card-accent) var(--accent-tint), var(--card-hover-bg));
-    border-color: color-mix(in srgb, var(--card-accent) var(--accent-edge), var(--border-color));
-    box-shadow: inset 3px 0 0 var(--card-accent);
+    background: color-mix(in srgb, var(--card-accent, var(--accent-blue)) var(--accent-tint), var(--card-hover-bg));
+    border-color: color-mix(in srgb, var(--card-accent, var(--accent-blue)) var(--accent-edge), var(--border-color));
+    box-shadow: inset 3px 0 0 var(--card-accent, var(--accent-blue));
     text-decoration: none;
 }
 
