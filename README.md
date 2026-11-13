@@ -8,7 +8,8 @@ Static HTML built and served by GitHub Pages.
 | Path | What it is |
 | --- | --- |
 | `index.html` | About, news, research threads, selected publications, experience |
-| `publications.html` | Full publication list with labels and per-paper highlights, posters, code |
+| `publications.html` | Full publication list with labels and per-paper highlights, code |
+| `posters.html` | Conference and capstone posters, with PDF links |
 | `blog.html` | Links to writing hosted on Notion and Medium |
 | `misc.html` | Non-research page (placeholder) |
 | `Shubham_Gaur_CV.tex` | CV source |

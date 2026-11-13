@@ -684,6 +684,46 @@ a.pub-teaser {
     margin-bottom: 6px;
 }
 
+/* --- Misc page photo ---------------------------------------------------- */
+
+.misc-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.misc-item img {
+    width: 300px;
+    height: 300px;
+    flex: none;
+    object-fit: cover;
+    border-radius: var(--radius-card);
+}
+
+@media (max-width: 640px) {
+    .misc-item {
+        flex-direction: column;
+    }
+
+    .misc-item img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        aspect-ratio: 1;
+    }
+}
+
+.misc-title {
+    display: block;
+    font-weight: 600;
+}
+
+.misc-item .prose {
+    font-size: 15px;
+    margin: 4px 0 0;
+}
+
 /* --- Card grid ---------------------------------------------------------- */
 
 .honors-grid {

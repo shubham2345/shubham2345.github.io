@@ -8,3 +8,6 @@ Shubham_Research_26*.pdf
 
 # ad-hoc screenshots dropped in the repo root while reviewing
 Screenshot*.png
+
+# original HEIC, the site uses the JPEG
+*.HEIC
