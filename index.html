@@ -72,6 +72,8 @@
                         title="GitHub"><i class="fab fa-github"></i></a>
                     <a href="https://linkedin.com/in/shubhamggaur" target="_blank" rel="noopener" aria-label="LinkedIn"
                         title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/shubhamgaur98" target="_blank" rel="noopener" aria-label="X (Twitter)"
+                        title="X (Twitter)"><i class="fab fa-twitter"></i></a>
                 </div>
 
                 <div class="sidebar-actions">
@@ -112,6 +114,21 @@
                     <h2>News</h2>
                     <div class="news-scroll" tabindex="0" role="region" aria-label="News, scrollable">
                         <ul class="news-list">
+                            <li>
+                                <span class="news-date">Nov 2026</span>
+                                <span><strong>FrontierPhysics</strong>, a benchmark for agents doing end-to-end
+                                    physics research, is out on arXiv (co-author) &mdash;
+                                    <a href="https://arxiv.org/abs/2611.06910" target="_blank"
+                                        rel="noopener">arXiv</a>,
+                                    <a href="https://x.com/xdotli/status/2118420819097575553" target="_blank"
+                                        rel="noopener">Twitter</a></span>
+                            </li>
+                            <li>
+                                <span class="news-date">Oct 2026</span>
+                                <span>Presented <strong>Signal-Driven Observation</strong> at BayLearn 2026 &mdash;
+                                    <a href="assets/posters/SDO_poster_A1.pdf" target="_blank"
+                                        rel="noopener">poster</a></span>
+                            </li>
                             <li>
                                 <span class="news-date">Oct 2026</span>
                                 <span><strong>RELATE</strong> is under review at ICLR 2027 (co-first author) &mdash;
@@ -217,8 +234,41 @@
                         </div>
                     </div>
 
+                    <div class="pub-card accent-agents">
+                        <div class="pub-container">
+                            <a class="pub-teaser" href="assets/img/figures/sdo.png" target="_blank" rel="noopener">
+                                <img src="assets/img/figures/sdo.png" width="680" height="712"
+                                alt="Signal-Driven Observation architecture: root LM, browser, signal detector and sub-RLM"
+                                loading="lazy">
+                            </a>
+                            <div class="pub-details">
+                                <span class="pub-title">Signal-Driven Observation for Long-Horizon Web Agents</span>
+                                <span class="pub-authors"><span class="me">Shubham Gaur</span>, Ian Lane</span>
+                                <div class="pub-venue">ICML 2026 Workshop on Failure Modes in Agentic AI (FAGEN),
+                                    position paper &middot; First author</div>
+                                <div class="tag-row" style="margin-top: 0;">
+                                    <span class="tag accent-agents">LLM Agents</span>
+                                </div>
+                                <p class="pub-highlight">Long-horizon web agents re-ingest tens of thousands of DOM
+                                    tokens at every action step, eroding reasoning before the task completes.
+                                    Decoupling observation from action &mdash; re-reading only when a URL change, a
+                                    newly visible element, or an action failure fires &mdash; makes observation
+                                    compression an architectural decision rather than a prompting one.</p>
+                                <div class="btn-group">
+                                    <a href="https://arxiv.org/abs/2606.06708" class="chip" target="_blank"
+                                        rel="noopener"><i class="fas fa-file-lines"></i> arXiv</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="pub-card accent-eval">
                         <div class="pub-container">
+                            <a class="pub-teaser" href="assets/img/figures/faultloc.png" target="_blank" rel="noopener">
+                                <img src="assets/img/figures/faultloc.png" width="1124" height="628"
+                                alt="FAULTLOC construction pipeline: verifying OSS-Fuzz vulnerabilities, then evaluating an agent in a sandboxed codebase"
+                                loading="lazy">
+                            </a>
                             <div class="pub-details">
                                 <span class="pub-title">FAULTLOC: Evaluating AI Coding Agents for Fault Localization
                                     from Crash to Cause</span>
@@ -242,27 +292,57 @@
 
                     <div class="pub-card accent-agents">
                         <div class="pub-container">
-                            <a class="pub-teaser" href="assets/img/figures/sdo.png" target="_blank" rel="noopener">
-                                <img src="assets/img/figures/sdo.png" width="1402" height="686"
-                                alt="Signal-Driven Observation architecture: root LM, browser, signal detector and sub-RLM"
+                            <a class="pub-teaser" href="assets/img/figures/skilloptimizer.png" target="_blank" rel="noopener">
+                                <img src="assets/img/figures/skilloptimizer.png" width="1124" height="754"
+                                alt="SkillOptimizer subskill DAG for a data-analysis skill and an example SUBSKILL.md"
                                 loading="lazy">
                             </a>
                             <div class="pub-details">
-                                <span class="pub-title">Signal-Driven Observation for Long-Horizon Web Agents</span>
-                                <span class="pub-authors"><span class="me">Shubham Gaur</span>, Ian Lane</span>
-                                <div class="pub-venue">ICML 2026 Workshop on Failure Modes in Agentic AI (FAGEN),
-                                    position paper &middot; First author</div>
+                                <span class="pub-title">SkillOptimizer: Agent Skill Optimization Through Subskills
+                                    Without Task Supervision</span>
+                                <span class="pub-authors">N. Crispino, <span class="me">Shubham Gaur</span>, X. Yang,
+                                    A. Yu, B. Ercevik, C. Sapugay, Y. Potter, D. Song, C. Wang</span>
+                                <div class="pub-venue">ICML 2026 AIWILD Workshop: Safety, Security, and Beyond</div>
                                 <div class="tag-row" style="margin-top: 0;">
                                     <span class="tag accent-agents">LLM Agents</span>
+                                    <span class="tag accent-training">Post-Training</span>
                                 </div>
-                                <p class="pub-highlight">Long-horizon web agents re-ingest tens of thousands of DOM
-                                    tokens at every action step, eroding reasoning before the task completes.
-                                    Decoupling observation from action &mdash; re-reading only when a URL change, a
-                                    newly visible element, or an action failure fires &mdash; makes observation
-                                    compression an architectural decision rather than a prompting one.</p>
+                                <p class="pub-highlight">Improves an agent's skills with no task supervision by
+                                    decomposing each skill into a subskill DAG and optimizing for coverage, raising
+                                    task pass rates across 192 skills and three agent families.</p>
                                 <div class="btn-group">
-                                    <a href="https://arxiv.org/abs/2606.06708" class="chip" target="_blank"
-                                        rel="noopener"><i class="fas fa-file-lines"></i> arXiv</a>
+                                    <a href="https://openreview.net/forum?id=nZYF0aPAMP" class="chip" target="_blank"
+                                        rel="noopener"><i class="fas fa-file-lines"></i> OpenReview</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pub-card accent-vision">
+                        <div class="pub-container">
+                            <a class="pub-teaser" href="assets/img/figures/semeval.png" target="_blank" rel="noopener">
+                                <img src="assets/img/figures/semeval.png" width="1247" height="424"
+                                alt="Image ranking for an idiomatic phrase: literal, idiomatic and distractor candidates"
+                                loading="lazy">
+                            </a>
+                            <div class="pub-details">
+                                <span class="pub-title">UCSC NLP T6 at SemEval-2025 Task 1: Leveraging LLMs and VLMs
+                                    for Idiomatic Understanding</span>
+                                <span class="pub-authors">Judith Clymo, Adam Zernik, <span class="me">Shubham
+                                        Gaur</span></span>
+                                <div class="pub-venue">Proceedings of the 19th International Workshop on Semantic
+                                    Evaluation (SemEval-2025), pp. 2103&ndash;2115, ACL</div>
+                                <div class="tag-row" style="margin-top: 0;">
+                                    <span class="tag accent-vision">Vision-Language</span>
+                                </div>
+                                <p class="pub-highlight">Pretrained vision-language models carry a strong literal bias
+                                    on idiomatic phrases. Prompting GPT-4 to state the idiom's meaning <em>before</em>
+                                    ranking candidate images lifts Top-1 accuracy from 43% to 87%.</p>
+                                <div class="btn-group">
+                                    <a href="https://aclanthology.org/2025.semeval-1.274/" class="chip" target="_blank"
+                                        rel="noopener"><i class="fas fa-file-lines"></i> Paper</a>
+                                    <a href="https://github.com/azernik/semeval_2025_task1" class="chip"
+                                        target="_blank" rel="noopener"><i class="fas fa-code"></i> Code</a>
                                 </div>
                             </div>
                         </div>
@@ -305,7 +385,6 @@
                             evaluation infrastructure.</li>
                     </ul>
                 </section>
-
 
                 <footer>
                     <p>&copy; 2026 Shubham Gaur &middot; Last updated October 2026</p>
